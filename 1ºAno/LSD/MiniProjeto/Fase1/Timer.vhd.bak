@@ -1,0 +1,42 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all;
+
+entity Timer is
+	port(clk      : in  std_logic;
+		  start    : in  std_logic;
+		  reset    : in  std_logic;
+		  out_sec  : out std_logic_vector(5 downto 0);
+		  out_cent : out std_logic_vector(6 downto 0);
+		  out_led  : out std_logic);
+end Timer;
+
+architecture Behavioral of Timer is
+	signal count_sec  : unsigned(5 downto 0);
+	signal count_cent : unsigned(6 downto 0);
+begin
+	process(clk, reset, start)
+	begin
+		if(reset = '1')then
+			count_sec  <= "111011";
+			count_cent <= "1100011";
+			out_led <= '0';
+		else
+			if(rising_edge(clk))then
+				if(((count_sec) = "111011") and (count_cent = "1100011"))then
+					if(start = '1')then
+						if( not (count_cent = "0000000"))then
+							count_cent <= count_cent-1;
+						elsif((count_cent = "0000000") and (not (count_sec = "000000")))then
+							count_cent <= "1100011";
+							count_sec  <= count_sec - 1;
+						elsif((count_cent = "0000000") and (count_sec = "000000"))then
+							out_led <= '1';
+						end if;
+					end if;
+				end if;
+			end if;
+		end if;
+	end Process;
+end Behavioral;
+						
