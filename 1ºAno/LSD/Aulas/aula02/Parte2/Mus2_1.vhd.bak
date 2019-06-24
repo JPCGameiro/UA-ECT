@@ -1,0 +1,15 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity Mux2_1 is
+begin
+	port(sel     : in  std_logic;
+		  dataIn0 : in  std_logic;
+		  dataIn1 : in  std_logic;
+		  dataOut : out std_logic);
+end Mux2_1;
+
+architecture MuxBehav of Mux2_1 is
+begin
+	dataOut <= (not sel and dataIn0) or (sel and dataIn1);
+end MuxBehav;
