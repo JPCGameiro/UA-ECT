@@ -1,0 +1,6 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity SeqDetFSM_Tb is
+end SeqDetFSM_Tb;
+
