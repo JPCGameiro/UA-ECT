@@ -1,0 +1,165 @@
+@misc{Wikipedia1,
+author = {Wikipedia},
+title = {{Wikipedia} Segunda Guerra Mundial},
+year = 2018,
+url = {https://pt.wikipedia.org/wiki/Segunda_Guerra_Mundial},
+urldate = {2018-11-17},
+}
+
+@misc{Wikipedia2,
+author = {Wikipedia},
+title = {{Wikipedia} Invasão da Polônia},
+year = 2018,
+url = {https://pt.wikipedia.org/wiki/Invas%C3%A3o_da_Pol%C3%B4nia},
+urldate = {2018-11-17},
+}
+
+@misc{Infoescola,
+author = {Pedro Eurico Rodrigues},
+title = {{Pedro Eurico Rodrigues}Blitzkrieg},
+url = {https://www.infoescola.com/historia/blitzkrieg/},
+urldate = {2018-11-17},
+}
+
+@misc{Wikipedia3,
+author = {Wikipedia},
+title = {{Wikipedia} Guerra de Inverno},
+year = 2018,
+url = {https://pt.wikipedia.org/wiki/Guerra_de_Inverno},
+urldate = {2018-11-18},
+}
+
+@misc{Wikipedia4,
+author = {Wikipedia},
+title = {{Wikipedia} Guerra de Inverno},
+year = 2018,
+url = {https://en.wikipedia.org/wiki/Molotov_cocktail},
+urldate = {2018-11-18},
+}
+
+@misc{Noruega,
+author = {Wikipedia},
+title = {{Wikipedia} Campanha da Noruega },
+year = 2018,
+url = {https://pt.wikipedia.org/wiki/Campanha_da_Noruega},
+urldate = {2018-11-18},
+}
+
+@misc{Dinamarca,
+author = {Wikipedia},
+title = {{Wikipedia} Operação Weserübung },
+year = 2018,
+url = {https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Weser%C3%BCbung},
+urldate = {2018-11-18},
+}
+
+@misc{Mentira,
+author = {Luísa Rita Cardoso},
+title = {{Luísa Rita Cardoso} Guerra de Mentira (1939-1940)},
+url = {https://www.infoescola.com/historia/guerra-de-mentira/},
+urldate = {2018-11-19},
+}
+
+@misc{Franca,
+author = {Wikipedia},
+title = {{Wikipedia} Batalha da França},
+year = 2018,
+url = {https://pt.wikipedia.org/wiki/Batalha_de_Fran%C3%A7a},
+urldate = {2018-11-19},
+}
+
+@misc{Belgica,
+author = {Wikipedia},
+title = {{Wikipedia} Batalha da Bélgica},
+year = 2018,
+url = {https://pt.wikipedia.org/wiki/Batalha_da_B%C3%A9lgica},
+urldate = {2018-11-19},
+}
+
+@misc{Baixox,
+author = {Wikipedia},
+title = {{Wikipedia} Batalha dos Países Baixos},
+year = 2018,
+url = {https://pt.wikipedia.org/wiki/Batalha_dos_Pa%C3%ADses_Baixos},
+urldate = {2018-11-19},
+}
+
+@misc{Luxemburgo,
+author = {Wikipedia},
+title = {{Wikipedia} Ocupação Alemã de Luxemburgo},
+year = 2018,
+url = {https://pt.wikipedia.org/wiki/Ocupa%C3%A7%C3%A3o_alem%C3%A3_de_Luxemburgo_durante_a_Segunda_Guerra_Mundial},
+urldate = {2018-11-19},
+}
+
+@misc{Blitz,
+author = {Wikipedia},
+title = {{Wikipedia} Blitz},
+year = 2018,
+url = {https://pt.wikipedia.org/wiki/Blitz},
+urldate = {2018-11-20},
+}
+
+@misc{Operacao,
+author = {Wikipedia},
+title = {{Wikipedia} Operação Barbarossa },
+year = 2018,
+url = {https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Barbarossa},
+urldate = {2018-11-21},
+}
+
+@misc{Aliados,
+author = {Antonio Gasparetto Junior},
+title = {{Antonio Gasparetto Junior} Aliados },
+year = 2018,
+url = {https://www.infoescola.com/segunda-guerra/aliados/},
+urldate = {2018-11-21},
+}
+
+@misc{Desembarques,
+author = {Wikipedia},
+title = {{Wikipedia} Desembarques da Normandia},
+year = 2018,
+url = {https://pt.wikipedia.org/wiki/Desembarques_da_Normandia},
+urldate = {2018-11-22},
+}
+
+@misc{Bombas,
+author = {Wikipedia},
+title = {{Wikipedia} Bombardeamentos de Hiroshima e Nagasaki},
+year = 2018,
+url = {https://pt.wikipedia.org/wiki/Bombardeamentos_de_Hiroshima_e_Nagasaki},
+urldate = {2018-11-22},
+}
+
+@misc{ImgFr,
+author = {Wikipedia},
+title = {{Wikipedia} Ocupação italiana da França},
+year = 2018,
+url = {https://pt.wikipedia.org/wiki/Ocupa%C3%A7%C3%A3o_italiana_da_Fran%C3%A7a#/media/File:France_map_Lambert-93_with_regions_and_departments-occupation-pt.svg},
+urldate = {2018-11-22},
+}
+
+@misc{ImgJpn,
+author = {Wikipedia},
+title = {{Wikipedia} Potências do Eixo},
+year = 2018,
+url = {https://pt.wikipedia.org/wiki/Pot%C3%AAncias_do_Eixo},
+urldate = {2018-11-22},
+}
+
+@misc{diad,
+author = {Brasil Escola},
+title = {{Brasil Escola} Dia D},
+year = 2018,
+url = {https://brasilescola.uol.com.br/historiag/dia-d.htm},
+urldate = {2018-11-22},
+}
+
+@misc{mapa,
+author = {Khey Pard},
+title = {{Khey Pard} Nazi Germany : Every Month},
+year = 2018,
+url = {https://www.youtube.com/watch?v=dKjVG4nMQ9A},
+urldate = {2018-11-22},
+}
