@@ -1,0 +1,386 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Acerca</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+    * { cursor: url(mila.cur), default}
+    html
+    {
+      scroll-behavior: smooth;
+    }
+    body
+    {
+      font: 600 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
+      margin: 12px 0;
+    }
+    /*Estilo dos retângulos relativos ao Autor João  Gameiro*/
+      .div1
+      {
+        width:240px;
+        height: 100px;
+        background: #4d94ff;
+        -webkit-transition: background-color 1s;
+        transition: background-color 1s
+        text-align: center;
+      }
+
+      .div1:hover
+      {
+        width: 240px;
+        height: 100px;
+        background-color:#ff3333;
+      }
+    /*Estilo dos bretângulos relativos ao autor Joaquim Andrade*/
+      .div2
+      {
+        width: 240px;
+        height: 100px;
+        background: #47d147;
+        -webkit-transition: background-color 1s;
+        transition: background-color 1s
+        text-align: center;
+      }
+
+      .div2:hover
+      {
+        width: 240px;
+        height: 100px;
+        background-color: #ffb84d;
+      }
+
+    </style>
+  </head>
+  <body>
+    <!--Barra De Navegação-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="file:index.html">WW2</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="file:index.html">Home</a></li>
+          <li><a href="file:pagina1.html">Antecedentes</a></li>
+          <li><a href="file:Pagina2.html">A Guerra</a></li>
+          <li><a href="file:pagina3.html">Conclusão</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown">Acerca<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#Autores">Autores e Outras Imformações</a></li>
+              <li><a href="#Recursos">Recursos Externos</a></li>
+              <li><a href="#Adicionais">Imformações Adicionais</a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+    <!--Título "Acerca"-->
+    <div id="Presentation" class="jumbotron text-center">
+      <h1 align="center">Acerca</h1>
+    </div>
+
+    <!--Autores e as suas imformações-->
+    <div id="Autores" class="container">
+      <div>
+        <div class="row"><br>
+          <h2 align="center">Autores</h2><br><br>
+
+          <!--Imformações do primeiro autor-->
+          <div class="col-sm-4">
+            <div class="div1">
+              <br>
+              <h4 style="color: white" align="center"><b>João Gameiro</b></h4>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="div1">
+              <br>
+              <h4 style="color: white" align="center"><b>Nº Mecanográfico: 93097</b></h4>
+            </div>
+          </div>
+          <div class="col-sm-4"align="left">
+            <div class="div1">
+              <br>
+              <h4 style="color: white" align="center"><b>Email: joao.gameiro@ua.pt</b></h4>
+            </div>
+          </div>
+
+      <!--Imformações do segundo autor-->
+        <div class="col-sm-4"><br>
+          <div class="div2"><br>
+            <h4 style="color: white" align="center"><b>Joaquim Andrade</b></h4>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <br>
+          <div class="div2">
+            <br>
+            <h4 style="color: white" align="center"><b>Nº Mecanográfico: 93432</b></h4>
+          </div>
+        </div>
+        <div class="col-sm-4"align="left">
+          <br>
+          <div class="div2">
+            <br>
+            <h4 style="color: white" align="center"><b>Email: joaquimandrade@ua.pt</b></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Contribuições, Conteúdo e Datas-->
+    <div>
+      <div class="col-sm-4">
+        <br><br><br>
+        <h4 align="left">Contribuições</h4>
+        João Gameiro - Páginas Home, A Guerra e Acerca
+        <br>Joaquim Andrade - Páginas Antecedentes e Conclusão<br>
+         No entanto cada um dos autores, contribuiu igualmente para o desenvolvimento deste projeto,
+        trabalhando em conjunto, no desenvolvimento e aperfeiçoamento do código e discussão de ideias
+        e estruturas em todas as páginas.
+      </div>
+      <div class="col-sm-4">
+        <br><br><br>
+        <h4 align="left">Conteúdo</h4>
+        O conteúdo apresentado neste trabalho foi baseado num relatório realizado pelos mesmos
+        autores, em que no mesmo se apresenta a respetiva bibliografia que serviu de base, tanto para
+        relatório, como para esta página.
+      </div>
+      <div class="col-sm-4">
+        <br><br><br>
+        <h4 align="left">Datas</h4>
+        As ideias e estruturas começaram a ser discutidas a partir de 13 de Dezembro de 2018, no entanto,
+        só foram postas em prática no dia 16 de Dezembro de 2018. O projeto foi finalizado no dia 16 de Janeiro de 2018.
+      </div>
+    </div>
+  </div><br><br>
+
+
+  <!--Recursos Externos-->
+  <div style="background-color: #f2f2f2" id="Recursos">
+    <br><br>
+    <h2 align="center">Recursos Externos</h2>
+    <br><br>
+
+    <!--Bibliotecas usadas para o design, gráficos e mapas-->
+    <div class="container">
+    <div class="col-sm-6"align="left">
+      <div class="panel panel-info">
+        <div class="panel-heading">Design</div>
+        <div class="panel-body">O design e estilo da página foram desenvolvidos com recurso ao Twitter Bootstrap</div>
+      </div>
+      <div class="panel panel-danger">
+        <div class="panel-heading">Gráficos</div>
+        <div class="panel-body">Os gráficos foram feitos com recurso às bibliotecas Highcharts JS, Google Charts JS e Cloudflare (cdnjs)</div>
+      </div>
+      <div class="panel panel-success">
+        <div class="panel-heading">Mapas</div>
+        <div class="panel-body">Os Mapas foram feitos com recurso à bilbioteca LeaftFlet JS</div>
+      </div>
+    </div>
+
+    <!--Fontes Adicionais-->
+    <div class="col-sm-6">
+      No auxilio do desenvolvimento do código, referem-se duas fontes essenciais:
+        <ul>
+          <li>Os guiões fornecidos nas aulas;</li>
+          <li>O site w3schools (<a href="https://www.w3schools.com/html/">w3schools</a>).</li>
+        </ul>
+
+        <!--Imagens usadas-->
+        <h4 align="left">Imagens</h4>
+        Ao carregar nos seguitens botões, irão ser apresentados, todos os links para todas as imagens utilizadas.<br><br>
+      <div class="col-sm-4">
+        <!--Botão Imagens Página Home-->
+        <div class="container">
+          <button type="button" class="btn btn-info btn-info" data-toggle="modal" data-target="#myModal"> Home</button>
+          <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Links das imagens usadas na página Home, de acordo com a sua ordem de aparecimento</h4>
+                </div>
+                <div class="modal-body">
+                  <ul>
+                  <li><a href="http://www.miguelarcanjoprado.com/2015/07/23/70-anos-do-fim-da-2a-guerra-mundial-ganham-serie-no-sbt/" target="_blank">1ªImagen</a></li>
+                  <li><a href="https://steemit.com/blog/@lapilipinas/what-was-the-blitzkrieg" target="_blank">2ªImagem</a></li>
+                  <li><a href="https://retalhoclub.com.br/cinema/7-filmes-sobre-a-segunda-guerra-mundial/" target="_blank">3ªImagem</a></li>
+                  <li><a href="https://www.polennieuws.nl/tag/defensie-ministerie/" target="_blank">4ªImagem</a></li>
+                  <li><a href="https://en.wikipedia.org/wiki/Crisis:_The_Japanese_Attack_on_Pearl_Harbor_and_Southeast_Asia" target="_blank">5ªImagem</a></li>
+                  <li><a href="https://www.estudopratico.com.br/biografia-de-adolf-hitler/" target="_blank">6ªImagem</a></li>
+                  <li><a href="https://www.americamagazine.org/arts-culture/2017/04/06/examining-american-peace-movement-prior-world-war-i" target="_blank">7ªImagem</a></li>
+                  <li><a href="https://pixabay.com/pt/eua-tio-sam-quero-te-ex%C3%A9rcito-49909/" target="_blank">8ªImagem</a></li>
+                  <li><a href="https://kleio-amsterdam.nl/solliciteer-voor-algemeen-lid-in-de-sollicitatiecommissie/" target="_blank">9ªImagem</a></li></p>
+                </ul>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Botão Imagens na Página 1-->
+        <br>
+        <div class="container">
+          <button type="button" class="btn btn-info btn-info" data-toggle="modal" data-target="#myModal1">Antecedentes</button>
+          <div class="modal fade" id="myModal1" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Links das imagens usadas na Antecedentes, de acordo com a sua ordem de aparecimento</h4>
+                </div>
+                <div class="modal-body">
+                  <ul>
+                    <li>Alemanha pós-primeira guerra</li>
+                    <ul>
+                      <li><a href="https://af.wikipedia.org/wiki/Tweede_W%C3%AAreldoorlog#/media/File:German_losses_after_WWI.svg" target="_blank">1ªImagem</a></li>
+                      <li><a href="https://sites.google.com/site/curshistoriacontemporania/los-totalitarismos" target="_blank">2ªImagem</a></li>
+                      <li><a href="https://noogatoday.6amcity.com/adolf-hitler-has-no-place-in-modern-american-politics/" target="_blank">3ªImagem</a></li>
+                    </ul>
+                    <li>Itália</li>
+                      <ul>
+                        <li><a href="https://guerras.brasilescola.uol.com.br/seculo-xx/primeira-guerra-mundial.htm" target="_blank">1ªImagem</a></li>
+                        <li><a href="https://medium.com/@laudaz20/sue%C3%B1os-imperiales-la-aventura-italiana-en-la-segunda-guerra-mundial-205fee60a4d1" target="_blank">2ªImagem</a></li>
+                        <li><a href="https://2.bp.blogspot.com/-NiULT7l0SVw/Vugqo0VXKPI/AAAAAAAAADY/LkjMQoymXlUgUkeJxoKFjNHu3PvP6iY_w/s1600/mussolini-hitler%2B%25281%2529.jpg" target="_blank">3ªImagem</a></li>
+                      </ul>
+                    <li>Japão</li>
+                      <ul>
+                        <li><a href="http://www.contextolivre.com.br/2015/02/interesse-nacional-e-justica-o-caso-do.html" target="_blank">1ªImagem</a></li>
+                        <li><a href="https://pt.wikipedia.org/wiki/Pacto_Anticomintern" target="_blank">2ªImagem</a></li>
+                        <li><a href="https://holocaustworldwar2fortin.weebly.com/why-did-the-japanese-use-kamikaze.html" target="_blank">3ªImagem</a></li>
+                      </ul>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Botão Imagens na Página 2-->
+        <br>
+        <div class="container">
+          <button type="button" class="btn btn-info btn-info" data-toggle="modal" data-target="#myModal2">A Guerra</button>
+          <div class="modal fade" id="myModal2" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Links das imagens usadas na página A Guerra, de acordo com a sua ordem de aparecimento</h4>
+                </div>
+                <div class="modal-body">
+                  <ul>
+                    <li>Invasão à Polónia</li>
+                    <ul>
+                      <li><a href="https://en.wikipedia.org/wiki/Flag_of_China" target="_blank">1ªImagem</a></li>
+                      <li><a href="https://de.wikipedia.org/wiki/Datei:Flag_of_the_United_Kingdom.svg" target="_blank">2ªImagem</a></li>
+                      <li><a href="https://en.wikipedia.org/wiki/Flag_of_the_United_States" target="_blank">3ªImagem</a></li>
+                      <li><a href="https://en.wikipedia.org/wiki/Flag_of_France" target="_blank">4ªImagem</a></li>
+                      <li><a href="https://festileaks.com/cross-wrong/" target="_blank">5ªImagem</a></li>
+                      <li><a href="https://www.iconfinder.com/icons/1516747/check_box_check_mark_check_square_correct_not_wrong_test_tick_icon" target="_blank">6ªImagem</a></li>
+                    </ul>
+                    <li>A Guerra de Inverno</li>
+                    <ul>
+                      <li><a href="https://pt.wikipedia.org/wiki/Guerra_de_Inverno" target="_blank">1ªImagem</a></li>
+                      <li><a href="https://www.businessinsider.com/ussr-russia-finald-wwii-winter-war-photos-2017-3" target="_blank">2ªImagem</a></li>
+                      <li><a href="https://direitasja.com.br/2016/07/24/guerra-muito-fria-parte-ii/" target="_blank">3ªImagem</a></li>
+                    </ul>
+                    <li>A Guerra De Mentira</li>
+                      <ul>
+                        <li>Invasão à França</li>
+                        <ul>
+                          <li><a href="https://www.youtube.com/watch?v=wIf1tqIZ0JA" target="_blank">1ª e 2ªImagem</a></li>
+                        </ul>
+                        <li>Invasão à Bélgica</li>
+                        <ul>
+                          <li><a href="https://giphy.com/gifs/slow-tank-mo-DeogflZGx6EkE" target="_blank">1ªImagem</a></li>
+                          <li><a href="https://homdor.com/a-bridge-too-far-1977-1080p-world-war-ii-sean-connery-robert-redford-hd/smoggyredfossa/detail" target="_blank">2ªImagem</a></li>
+                        </ul>
+                    </ul>
+                    <li>Operação Barbarossa</li>
+                    <ul>
+                      <li><a href="https://www.historiadomundo.com.br/idade-contemporanea/operacao-barbarossa.htm" target="_blank">1ªImagem</a></li>
+                      <li><a href="https://mundoeducacao.bol.uol.com.br/historiageral/operacao-barbarossa.htm" target="_blank">2ªImagem</a></li>
+                      <li><a href="https://www.kidbentinho.com/2013/11/operacao-barbarrosa-segunda-guerra.html" target="_blank">3ªImagem</a></li>
+                    </ul>
+                    <li>Dia D</li>
+                    <ul>
+                      <li><a href="https://brasilescola.uol.com.br/historiag/dia-d.htm" target="_blank">1ªImagem</a></li>
+                    </ul>
+                    <li>As Bombas Atómicas no Japão</li>
+                    <ul>
+                      <li><a href="https://pt.wikipedia.org/wiki/Little_Boy" target="_blank">1ªImagem</a></li>
+                      <li><a href="https://pt.wikipedia.org/wiki/Fat_Man" target="_blank">2ªImagem</a></li>
+                      <li><a href="https://giphy.com/gifs/HhTXt43pk1I1W" target="_blank">3ªImagem</a></li>
+                    </ul>
+                    <li>Icones usados nos mapas</li>
+                    <ul>
+                      <li><a href="https://mapicons.mapsmarker.com/" target="_blank">Icones</a></li>
+                    </ul>
+                </ul>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Botão das Imagens da Página 3-->
+        <br>
+        <div class="container">
+          <button type="button" class="btn btn-info btn-info" data-toggle="modal" data-target="#myModal3">Conclusão</button>
+          <div class="modal fade" id="myModal3" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Links das imagens usadas na Conclusão, de acordo com a sua ordem de aparecimento</h4>
+                </div>
+                <div class="modal-body">
+                  <ul>
+                    <li>Reflexão</li>
+                    <ul>
+                      <li><a href="https://www.gentedeopiniao.com.br/colunista/aroldo-vasconcelos/que-seja-uma-semana-de-paz-e-decisao-democratica-por-aroldo-vasconcelos" target="_blank">1ªImagem</a></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!--Link para o codeUA-->
+      <div class="col-sm-7">
+        No desenvolvimento deste projeto foi usado um projeto na plataforma codeUA para coordenação de tarefas, que
+        pode ser visualizado no link seguinte:<br><a href="http://code.ua.pt/projects/labi2018-ap1-g10" target="_blank">labi2018-ap1-g10</a>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!--Universidade, curso e disciplina-->
+    <div id="Adicionais">
+      <br><br>
+      <h2 align="center">Imformações Adicionais</h2><br>
+      <p align="center">Este trabalho foi realizado no âmbito da discilplina de Laboratórios de Imformática (LABI),
+        do curso Engenharia de Computadores e Telemática (ECT), da Universidade de Aveiro (UA).<br><br><br>
+        <img src="Img/logo.png" align="center" width="20%" alt="Logo da UA"><br><br>
+    </div>
+  </body>
+</html>

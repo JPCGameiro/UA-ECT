@@ -1,0 +1,189 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Segunda Guerra Mundial</title>
+    <script type="text/jscript" src="ex.js"></script>
+    <style>
+    /*Estilo de Letra*/
+    body
+    {
+      font: 600 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
+      margin: 12px 0;
+    }
+    /*cursor*/
+    *
+    { cursor: url(mila.cur), default}
+    /*Scroll "dezlizante"*/
+    html
+    {
+      scroll-behavior: smooth;
+    }
+    /*Botões para as ligações das páginas*/
+    .button
+    {
+      border: none;
+      color: white;
+      padding: 16px 40px;
+      text-align: center;
+      font-size: 16px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+    }
+    .button1
+    {
+      background-color: black;
+      color: white;
+      border: 2px solid black;
+    }
+    .button1:hover
+    {
+      background-color: white;
+      color: black;
+    }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="ex.js" type="text/javascript"></script>
+  </head>
+  <body>
+
+<!--Barra De Navegação-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#file:index.html">WW2</a>
+        </div>
+        <ul class="nav navbar-nav">
+           <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown">Home<span class="caret"></span></a>
+             <ul class="dropdown-menu">
+               <li><a href="#myCarousel">Inicío</a></li>
+               <li><a href="#intro">Introdução</a></li>
+               <li><a href="#topic">Conteúdo</a></li>
+               <li><a href="#content">O que vais ver</a></li>
+             </ul>
+           </li>
+          <li><a href="file:pagina1.html">Antecedentes</a></li>
+          <li><a href="file:Pagina2.html">A Guerra</a></li>
+          <li><a href="file:pagina3.html">Conclusão</a></li>
+          <li><a href="file:about.html">Acerca</a></li>
+        </ul>
+      </div>
+    </nav>
+
+<!--Slides de Imagens iniciais-->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="Img/soldier.jpg" alt="Soldier" width="100%">
+        <div class="carousel-caption">
+          <h2><b>2ª GUERRA MUNDIAL</b></h2>
+        </div>
+      </div>
+      <div class="item">
+        <img src="Img/tank.jpg" alt="Tank" width="100%">
+        <div class="carousel-caption">
+          <h2><b>2ª GUERRA MUNDIAL</b></h2>
+        </div>
+      </div>
+      <div class="item">
+        <img src="Img/run.jpg" alt="Soldier" width="100%">
+        <div class="carousel-caption">
+          <h2 align="top"><b>2ª GUERRA MUNDIAL</b></h2>
+        </div>
+      </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+
+<!--Introdução-->
+  <div id="intro">
+    <h2>Uma breve introdução</h2>
+    <div class="row">
+      <div class="col-sm-6">
+        <p class="big"><h4>Este site aborda a Segunda Guerra Mundial, que ocorreu entre 1939
+          e 1945, e que se caracteriza como sendo o maior, mais devastador e mais abrangente
+          conflito até há presente data.</p> Nos seus seis anos de duração, assistiu-se a
+          um confronto entre 72 países, do qual resultaram aproximadamente
+          85 milhões de mortes, sendo que perto de 50 milhões das mesmas foram civis, 35
+          milhões de feridos e ainda 3 milhões de desaparecidos.<br><br>
+          <br>
+      </div>
+      <div class="col-sm-6" align="center">
+          <img src="Img/plane.jpeg" width="400px" height="300px" class="img-thumbnail"></img>
+        <br><br>
+      </div>
+    </div>
+  </div>
+
+  <!--Conteúdo-->
+  <div id="topic" class="jumbotron text-center">
+    <h2 align="center"><b>Conteúdo</b></h2><br>
+      <div class="row">
+        <div class="col-sm-4">
+        <p> Será apresentada uma descrição da Segunda Guerra Mundial, referindo
+          os acontecimentos mais marcantes que contribuiram para o conflito e que ficaram
+          para sempre marcados na história. </p><br>
+          <img src="Img/pearlharbor.jpg" class="img-circle" style="width: 260px" alt="Pearl Harbor"></img>
+        </div>
+        <div class="col-sm-4">
+          <p> Serão referidas as personalidades que mais se destacaram, neste confronto,
+            os regimes que imperavam na altura, as alianças e maiores rivalidades.</p><br><br>
+            <img src="Img/hitler.jpg" class="img-circle" style="width:250px" alt="Hitler"></img>
+        </div>
+        <div class="col-sm-4">
+          <p> No final, esperamos que estejas sensibilizado
+             para a gravidade deste acontecimento e para a ideia que o mesmo deve ser irrepetível. </p><br><br><br><br>
+            <img src="Img/img.jpg" class="img-circle" style="width:310px" alt="Peace"></img>
+        </div>
+      </div>
+    </div>
+
+    <!--O conteúdo de cada página e as ligações para as mesmas-->
+    <div id="content" class="container-fluid">
+      <h2 align="center">O que vais ver</h2>
+      <div class="col-sm-4">
+      <a href="file:pagina1.html"><button align="left" class="button button1"> <span class="glyphicon glyphicon-fire">
+        Página 1</span></button><br><br></a>
+      <a href="file:Pagina2.html"><button align="left" class="button button1"><span class="glyphicon glyphicon-fire">
+         Página 2</span></button><br><br></a>
+      <a href="file:pagina3.html"><button align="left" class="button button1" href="file:pagina3.html"> <span class="glyphicon glyphicon-fire">
+         Página 3</span></button> <br><br></a>
+      <a href="file:about.html"><button align="left" class="button button1"><span class="glyphicon glyphicon-fire">
+          Página 4</span></button><br><br></a>
+      </div>
+      <div class="col-sm-4 text-center">
+        <br><br>
+        <h4><br><p>A primeira página contém conteúdos relativos ao periodo pré-guerra.</p>
+        Na segunda, o tema dominate é o tempo compreendido entre o início e o fim da guerra.<br><br>
+        Na terceira, irá ser abordado o período pós-guerra.<br><br>
+        A página final é sobre os recursos usados nestas páginas, contribuições dos autores e fontes ultilizadas.<br><br>
+        Esperamos que gostes!!!</h4>
+    </div>
+    <!--Imagem com função que é ativada quando o rato passa por cima-->
+    <div class="col-sm-4 tex-center"><!--disponivel em no ficheiro ex.js-->
+      <img src="Img/you.jpg" id="ImageButton1" alt="We Want You" width="60%" align="right"onmouseover = "mouseOverImage()"  onmouseout="mouseOutImage()"></img>
+    </div>
+    <div class="col-sm-4">
+    </div>
+  </div>
+
+  </body>
+</html>

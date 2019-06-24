@@ -1,0 +1,683 @@
+<html>
+  <head><meta charset="utf-8">
+    <title>Page 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"  type="text/css"href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="ajuda.js"></script>
+    <script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
+     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <style>
+    /*cursor granada*/
+    *
+    { cursor: url(mila.cur), default}
+    /*scroll deslizante*/
+    html
+    {
+      scroll-behavior: smooth;
+    }
+    /*tipo de letra*/
+    body
+    {
+      font: 600 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
+      margin: 12px 0;
+    }
+    .accordion
+    {
+      background-color: #4CAF50;
+      color: #444;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      font-size: 15px;
+      transition: 0.4s;
+    }
+
+    .active, .accordion:hover
+    {
+      background-color: white;
+    }
+    .panel
+    {
+      padding: 0 18px;
+      display: none;
+      background-color: white;
+      overflow: hidden;
+    }
+    .button
+    {
+      background-color: rgb(153, 153, 153);
+      border: none;
+      color: white;
+      padding: 9px 30px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      margin: 2px 2px;
+      cursor: pointer;
+      -webkit-transition-duration: 0.4s;
+      transition-duration: 0.4s;
+    }
+    .button1:hover
+    {
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 13px 45px  rgba(0,0,0,0.19);
+    }
+
+    .container
+    {
+    position: relative;
+    width: 50%;
+    }
+
+    .image
+    {
+      display: block;
+      width: 160%;
+      height: auto;
+    }
+
+    .overlay
+    {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 150%;
+      opacity: 0;
+      transition: .5s ease;
+      background-color: grey;
+    }
+
+    .container:hover .overlay
+    {
+      opacity: 1;
+    }
+
+    .text
+    {
+      color: white;
+      font-size: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    /*Imagem a tremer*/
+    .img1:hover
+    {
+      animation: shake 0.5s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes shake
+    {
+      0% { transform: translate(1px, 1px) rotate(0deg); }
+      10% { transform: translate(-1px, -2px) rotate(-1deg); }
+      20% { transform: translate(-3px, 0px) rotate(1deg); }
+      30% { transform: translate(3px, 2px) rotate(0deg); }
+      40% { transform: translate(1px, -1px) rotate(1deg); }
+      50% { transform: translate(-1px, 2px) rotate(-1deg); }
+      60% { transform: translate(-3px, 1px) rotate(0deg); }
+      70% { transform: translate(3px, 1px) rotate(-1deg); }
+      80% { transform: translate(-1px, -1px) rotate(1deg); }
+      90% { transform: translate(1px, 2px) rotate(0deg); }
+      100% { transform: translate(1px, -2px) rotate(-1deg); }
+    }
+    /*Tabela com as rivalidades (Eixo, Aliados, etc)*/
+    table
+    {
+      width: 70%;
+    }
+    table, th, td
+    {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th, td
+    {
+      padding: 10px;
+      text-align: left;
+    }
+    table th
+    {
+      background-color: black;
+      color: white;
+    }
+    table tr:nth-child(even)
+    {
+      background-color: #f2f2f2;
+    }
+    table tr:nth-child(odd)
+    {
+      background-color: #d9d9d9;
+    }
+    .buttond
+    {
+      background-color: red;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+    </style>
+  </head>
+  <body>
+
+<!--Barra de Navegação-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="file:index.html">WW2</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="file:index.html">Home</a></li>
+          <li><a href="file:pagina1.html">Antecedentes</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown">A Guerra<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#Polonia">Invasão à Polónia</a></li>
+              <li><a href="#Inverno">Guerra de Inverno</a></li>
+              <li><a href="#Dn">Invasões à Dinamarca e Noruega</a></li>
+              <li><a href="#Mentira">Guerra de Mentira</a></li>
+              <li><a href="#Blitz">Blitz</a></li>
+              <li><a href="#USSR">Operação Barbarossa</a></li>
+              <li><a href="#Japan">Japão e as Alianças</a></li>
+              <li><a href="#DayD">Dia D</a></li>
+              <li><a href="#Atomic">Bombas Atómicas no Japão</a></li>
+            </ul>
+          </li>
+          <li><a href="file:pagina3.html">Conclusão</a></li>
+          <li><a href="file:about.html">Acerca</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--Invasão à Polónia-->
+    <div id="Polonia" class="jumbotron text-center">
+      <br><br>
+      <h2>Invasão à Polónia</h2>
+      <br>
+      No verão de 1939, a 1 de Agosto, a Europa encontrava-se à beira da guerra,
+      quando uma estação em Gleiwitz, Alta Silésia, na Alemanha foi atacada por
+      um grupo de soldados da Polónia. No entanto, esta operação foi executada por
+      soldados alemães que possuíam uniformes polacos e que tinham como objetivo
+      encenar um ataque da Polónia à Alemanha, dando assim um motivo à Alemanha
+      para poder invadir a Polónia. Com este ato, começava oficialmente a Segunda
+      Guerra Mundial.<br><br>
+      Em defesa da Polónia, dois países declararam guerra à Alemanha em 1939.
+      Consegues adivinhar quais foram?<br><br>
+      <button onclick="ajuda()" type="button" class="btn btn-info">Ajuda</button><!--javascript no ficheiro ajuda.js-->
+      <button type="button" class="btn btn-success">Resposta</button>
+      <br><br><br>
+      <div class="row"><!--Funções seguintes no ficheiro ajuda.js-->
+        <div class="col-sm-3">
+          <img id="China" src="Img/China.jpg" width="50%" alt="China" onclick="Click()"></img>
+        </div>
+        <div class="col-sm-3">
+          <img id="UK" src="Img/Uk.jpg" width="55%" alt="United Kingdom" onclick="Click2()"></img>
+        </div>
+        <div class="col-sm-3">
+          <img id=EUA src="Img/Usa.jpg" width="60%" alt="United States" onclick="Click1()"></img>
+        </div>
+        <div class="col-sm-3">
+          <img id="France" src="Img/France.png" width="50%" alt="France" onclick="Click3()"></img>
+        </div>
+      </div>
+      <br><br>
+      Enquanto a Polónia tentava sobreviver à invasão dos alemães, um pacto foi assinado
+      entre a Alemanha e a União Soviética que pretendia dividir a Polónia
+      com a Alemanha. Assim, a invasão da Polónia foi realizada não
+      só pelos nazis, mas também pelos soviéticos. Os polacos resistiram
+      à invasão dos dois países apenas até 28 de Setembro, momento em que Varsóvia,
+      a capital do mesmo país, se rendeu aos alemães.<br><br>
+      <div align="center">
+      <div id="grafico-linhas" style="width: 400px; height: 300px;"></div>
+      <button class="btn btn-primary" onclick="Grafic()">Grafico de Linhas</button><!--javascript no ficheiro ajuda.js-->
+    </div>
+  </div>
+
+    <!--Guerra De inverno-->
+    <div id="Inverno">
+      <div class="row">
+      <h2 align="center">A Guerra de Inverno</h2><br><br>
+      <div class="col-sm-6">
+        A 30 de Novembro de 1939, a União Soviética invadiu
+        a Finlândia, dando origem a um confronto intitulado a Guerra de Inverno, que
+        durou até Março de 1940.<br> À primeira vista, o que parecia ser uma vitória fácil
+        para os soviéticos acabou por se revelar algo mais complicado. Com táticas fora
+        do comum, os finlandeses resistiram aos soviéticos durante meses, o
+        que levou a que, apesar da vitória, Joseph Stalin investisse mais nos seus exércitos,
+        em modernizá-los, contratar profissionais mais competentes e armas mais
+        avançadas.<br>
+        No dia 12 de Março de 1940, foi assinado um tratado de paz em que 10% do território
+        finlandês e 20% da sua capacidade industrial foram cedidos aos soviéticos.<br><br><br>
+        <div class="col-sm-3">
+          Falta de espírito por parte dos soviéticos.
+        </div>
+        <div align="center" class="col-sm-3"><!--Funções seguintes no ficehiro ajuda.js-->
+          <button class="button button1" onclick="Mais()"><span class="glyphicon glyphicon-plus"></button>
+        </div>
+        <div class="col-sm-5" id="divMais">
+        </div><br><br><br><br>
+        <div class="col-sm-3">
+          <button class="button button1" onclick="Mais1()"><span class="glyphicon glyphicon-plus-sign"></button>
+        </div>
+        <div class="col-sm-4" id="divMais1">
+        </div>
+        <div class="col-sm-3" align="right" align="center">
+          <button class="button button1" onclick="Seta()"><span class="glyphicon glyphicon-arrow-down"></button>
+        </div><br><br><br><br>
+        <div class="col-sm-3" id="divMais2">
+        </div>
+        <div class="col-sm-3">
+            <button class="button button1" onclick="Mais2()"><span class="glyphicon glyphicon-plus"></button>
+        </div>
+        <div class="col-sm-4" id="divSeta">
+        </div>
+    </div>
+        <div class="col-sm-6" >
+        <div  id="myCarousel" class="carousel slide" data-ride="carousel" align="right">
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <img src="Img/aa.jpg" alt="Soldier" width="100%">
+              </div>
+              <div class="item">
+                <img src="Img/winter.jpg" alt="Tank" width="100%">
+              </div>
+              <div class="item">
+                <img src="Img/ww.jpg" alt="Soldier" width="100%">
+              </div>
+            </div>
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <br><br>
+    </div>
+
+  <!--Invasões da Dinamarca e da Noruega-->
+  <div id="Dn"style="background-color:rgb(102,102,102);">
+    <div class="row">
+      <br><br>
+      <h2 align="center" style="color:white">Invasões à Noruega e Dinamarca</h2>
+      <br><br>
+      <p style="color:white" align="center"> Durante a Guerra de Inverno, o líder dos alemães tinha intenção de invadir dois países
+      neutros, a Noruega e a Dinamarca, planos que foram intitulados de Operação
+      Weserübung e a Campanha da Noruega.<br> A invasão destes dois países era um ponto estratégico essencial, pois
+      iria permitir aos alemães usar poder marítimo contra os adversários (especialmente contra a Grã-Bretanha).</p>
+      <br><br><br>
+      <div class="col-sm-5">
+        <div class="row">
+        <p style="color:white" align="center"> Como podemos ver no mapa, com ambos os países no seu domínio, os
+          alemães controlariam uma secção do Mar do Norte entre Londres e as respetivas capitais de cada
+          país, o que facilitava uma possível invasão aos Britânicos.</p><br><br>
+          <div class="col-sm-6">
+            <h4 style="color: white" align="center"><b>Noruega</b></h4>
+            <p style="color:white"> Os alemães atacaram
+              em todas as frentes e apenas pararam quando toda a superfície territorial da
+              Noruega lhes foi cedida, dando assim fim à intitulada Campanha da Noruega.</p><br>
+          </div>
+          <div class="col-sm-6">
+            <h4 style="color: white" align="center"><b>Dinamarca</b></h4>
+            <p style="color:white"> A Noruega foi mais resistente que a Dinamarca (que se rendeu rapidamente),
+              e ofereceram uma resistência forte chegando mesmo a afundar um navio de guerra nazi.
+            </div>
+        </div>
+      </div>
+      <div class="col-sm-6" align="right">
+        <div id="MapNor" style="width: 500px; height: 400px"></div><!--javascript disponivel em ajuda.js-->
+        <script type="text/javascript" src="ajuda.js"></script>
+        <br><br>
+      </div>
+    </div>
+  </div>
+
+
+  <!--A Guerra de Mentira-->
+  <div id="Mentira">
+    <div class="row">
+    <br><br>
+    <h2 align="center">Guerra de Mentira</h2><br><br>
+    Quando a Polónia foi invadida, França e Inglaterra declararam
+    guerra à Alemanha, mas, até este momento, nenhuma operação militar tinha sido
+    executada contra os alemães. A intenção dos dois países era evitar um conflito
+    da dimensão do da primeira guerra mundial. Deste modo, estavam a agir
+    de forma cautelosa, daí o termo "Guerra de Mentira".
+    <br><br><br>
+    <h3 align="center"> Invasões </h3>
+    <ul class="nav nav-tabs">
+       <li class="active"><a data-toggle="tab" href="#Fran">França</a></li>
+       <li><a data-toggle="tab" href="#Bel">Bélgica</a></li>
+       <li><a data-toggle="tab" href="#Lux">Países Baixos e Luxemburgo</a></li>
+     </ul>
+     <!--Invasão à França-->
+     <div class="tab-content">
+       <div id="Fran" class="tab-pane fade in active"><br>
+         <h3 align="center">Invasão à França</h3><br>
+         No dia 10 de Março, a França foi invadida pelos nazis e ocorreu assim a Batalha de França.<br>
+         Os alemães vieram da Floresta das Ardenas e flanquearam a Linha Maginot (representada a vermelho no mapa), que era
+         constituída por um conjunto de trincheiras criadas pelos franceses e tinha
+         como objetivos: evitar um ataque surpresa, permitir que o exército se organizasse
+         e poupar recursos.<br><br>
+         <div class="col-sm-7" align="center">
+         <div id="LinhaM" style="width: 600px; height: 400px"></div>
+         <script type="text/javascript" src="Mapa.js"></script><br><br><!--Função Dispon+ivel no ficheiro Mapa.js-->
+       </div>
+       <div class="col-sm-5">
+         No entanto, a linha não ajudou os franceses, pois as forças alemãs
+         rapidamente a romperam e facilmente atacaram a França, com a ajuda dos italianos.
+         <br><br>Após a invasão, a França ficou dividida em duas metades: a metade Livre (Sul)
+        e a metade sob o controlo Nazi (Norte).<br><br>
+        <div class="col-sm-3"><!--Funções disponiveis no ficehiro ajuda.js-->
+          <button type="button" class="btn btn-primary" onclick="Fr2()">Mapa de França Antes da Invasão Alemã</button><br><br>
+          <button type="button" class="btn btn-primary" onclick="Fr1()">Mapa de França Depois da Invasão Alemã</button><br><br>
+          <img id="Fr1" src="Img/fr1.png" width="250%"></img><br><br>
+        </div>
+       </div>
+    </div>
+    <!--Invasão à Bélgica-->
+       <div id="Bel" class="tab-pane fade"><br>
+         <h3 align="center">Invasão à Bélgica</h3><br>
+         Outro dos países invadidos pelos alemães no dia 10 de Março de 1940 foi a Bélgica, sendo que
+         este, ao fim de 18 dias, se rendeu às forças nazis. A invasão foi intitulada Campanha dos 18 dias.
+         Desta invasão destacam-se dois acontecimentos: <br><br>
+
+         <div class="media">
+           <div class="media-left" style="background-color: rgb(242, 242, 242)">
+             <img src="Img/tank.gif" class="media-object" style="width:300px">
+           </div>
+           <div class="media-body" style="background-color: rgb(242, 242, 242)">
+             <h4 class="media-heading">Batalha de Hannut</h4>
+             <p>A Batalha de Hannut foi a primeira e uma das maiores batalhas de tanques que alguma vez aconteceu.</p>
+             <p>Nunca antes tinha existido um confronto de tanques de tamanha proporção como o que aconteceu<br>
+               nesse dia na Bélgica!</p>
+           </div>
+         </div>
+         <div class="media" align="right">
+           <div class="media-body">
+             <div class="media-right">
+               <h4 class="media-heading">Batalha da Fortaleza Eben-Emael</h4>
+               <p>Esta batalha ficou marcada pela maneira como os alemães tomaram de assalto a referida fortaleza:</p>
+               <p>500 paraquedistas em planadores foram lançados em direção à fortaleza,
+              rapidamente a atacaram e capturaram os militares belgas.</p>
+               <p>Foi a primeira vez que esta tática foi usada.</p>
+             </div>
+            <div class="media-right">
+             <img src="Img/para.gif" class="media-object" style="width:300px">
+           </div>
+         </div>
+        </div><br><br>
+      </div>
+       <!--Invasões a Países Baixos e Luxemburgo-->
+       <div id="Lux" class="tab-pane fade">
+         <br><br>
+         <h3 align="center">Invasões a Países Baixos e Luxemburgo</h3><br>
+        Os últimos dois países dos quatro a serem invadidos no dia 10 de Março, foram
+        os Países Baixos e o Luxemburgo.<br><br><br>
+        <button class="accordion">Países Baixos</button>
+        <div class="panel">
+          <p>A invasão dos Países Baixos, tal como a da Bélgica, usou a técnica inovadora
+            de lançar paraquedistas alemães nos "pontos chave" do país, incluindo os principais
+            aeroportos e as cidades de Roterdão e Haia. Em aproximadamente 7 dias,
+            o país inteiro foi tomado, graças também aos bombardeamentos devastadores alemães.</p>
+        </div>
+        <button class="accordion">Luxemburgo</button>
+        <div class="panel">
+          <p>O Luxemburgo, num
+            curto espaço de tempo, foi completamente ocupado pelos alemães. A invasão
+            deste país foi justificada pelo facto de que Hitler necessitava de colocar
+            os seus exércitos num local perto da vizinha França. Por isso mesmo, foi permitido
+            ao Luxemburgo manter o seu governo, mas continuaram a ser assolados
+            com a presença militar alemã.</p>
+        </div>
+        <script type="text/javascript" src="Paineis.js"></script><br><br><br><!--Função disponivel nos ficheiro Paineis.js-->
+      </div>
+    </div>
+    </div>
+  </div>
+
+
+    <!--Blitz-->
+    <div style="background-color: rgb(77,77,77)" id="Blitz">
+      <div class="row"><br><br>
+      <h2 style="color: white" align="center">Blitz</h2><br>
+      <p style="color: white" align="center">No dia 7 de Setembro de 1940, começou
+        a ocorrer um ataque como nunca antes visto na Inglaterra, intitulado
+        Blitz (relâmpago), que consistiu numa série de bombardeamentos
+        realizados pela Luftwaffe em pontos estratégicos do Reino Unido. Este ataque
+        teve a duração de 57 noites e atingiu um grande número de cidades inglesas
+        (identificadas no mapa).<br><br>
+
+        <div class="col-sm-6" align="center">
+        <div id="England" style="width: 600px; height: 400px"></div>
+        <script type="text/javascript" src="Mapa1.js"></script><br><br><!--Disponivel no ficehiro Mapa1.js-->
+      </div>
+      <div class="col-sm-6" align="center">
+         <div id="Blt" style="width: 600px; height: 400px;"></div>
+         <script type="text/javascript" src="ajuda.js"></script><!--Disponivel no ficheiro ajuda.js-->
+      </div>
+    </div>
+      <br><p style="color:white">Apesar da força destruidora que estes ataques representaram,
+      fracassaram nos seus objetivos que eram: danificar o país, enfraquecer as defesas
+      e desmoralizar o povo, que acabou por não acontecer. Consequentemente, os futuros planos
+      de invasão ao Reino Unido foram postos de parte por Hitler.</p><br><br>
+  </div>
+
+
+  <!--Operação Barbarossa-->
+  <div id="USSR">
+    <br><br>
+    <h2 align="center"> Operação Barbarossa</h2><br>
+    A 22 de junho de 1941, foi posta em prática a operação Barbarossa, que consistiu
+    na invasão da União Soviética pela Alemanha.<br><br>
+    <div class="row">
+    <div class="col-sm-4">
+      <div class="container">
+        <img src="Img/barb.jpg" alt="Barbarossa" class="image">
+        <div class="overlay">
+          <div class="text">Operação Barbarossa</div>
+        </div>
+      </div>
+      <br><br>
+      <p align="right">
+      Desde a invasão da Finlândia, Hitler tinha ideia de que o Exército
+      Vermelho não iria oferecer muita resistência pela sua desorganização
+      e incompetência. Por outro lado, Joseph Stalin
+      tinha aperfeiçoado as suas forças e devido à dimensão destas, ao estado industrial
+      e militar do seu país, não pensava que Hitler o invadisse.</p><br><br>
+    </div>
+    <div class="col-sm-4">
+      <div class = "container">
+        <img src="Img/b.jpg" alt="Barbarossa" class="image">
+        <div class="overlay">
+          <div class="text">Operação Barbarossa</div>
+        </div>
+      </div>
+      <br><br>
+      <p align="right">Em fevereiro de 1941, tropas alemãs começavam a ser reunidas nas fronteiras
+      soviéticas. Assim sendo, no dia 22 de junho de 1941, foram atacadas as frentes que o
+      exército vermelho tinha preparado para a invasão e foram feitos bombardeamentos aéreos
+      em cidades e países que pertenciam à União Soviética.
+    </div>
+    <div class="col-sm-4">
+      <div class = "container">
+        <img src="Img/br.jpg" alt="Barbarossa" class="image">
+        <div class="overlay">
+          <div class="text">Operação Barbarossa</div>
+        </div>
+      </div>
+      <br><br>
+      <p align="right">Enquanto o confronto ocorria, os alemães iam percebendo que tinham
+        subestimado os soviéticos e iam sofrendo com os contra ataques dos mesmos e condições adversas. Apesar
+        da conquista de certos territórios, os alemães fracassaram na tomada de Moscovo e no seu objetivo
+        no geral.<br><br>
+      </div>
+      <div class="col-sm-8">
+        <div id="Barbarossa" style="width: 500px; height: 300px;"></div>
+        <script type="text/javascript" src="Mapa.js"></script><!--Disponivel no ficehiro Mapa.js-->
+      </div>
+    </div><br><br><br><br><br><br>
+    Esta operação foi a maior alguma vez vista, nunca tantos soldados, tanques,
+    armas e outros meios foram usados numa única ofensiva. Até ao momento, esta
+    revelou-se também o confronto mais violento da guerra, ou seja, nunca o números
+    de mortos e feridos tinha sido tão elevado.<br><br><br>
+  </div>
+
+
+    <!--As Alianças-->
+    <div style ="background-color: #e6e6e6" id="Japan">
+      <div class="row"><br><br>
+      <h2 align="center">Japão e as Alianças</h2><br>
+      <p align="center">  No final de 1941, o Japão atacou territórios britânicos
+      e americanos, sendo que o mais conhecido foi o ataque a Pearl Harbor,
+      base militar localizada no Havai, que matou cerca de 2403 pessoas e feriu outras
+      1178. <br>Assim sendo, os Estados Unidos declararam guerra aos japoneses
+      e consequentemente, as Potências do Eixo declararam guerra aos Estados Unidos.<br>
+      Na tabela seguinte, apresenta a divisão entre as Potências do Eixo, Aliados e Países Neutros.</p><br><br>
+
+      <table id="t01" align="center">
+        <tr>
+          <th>Aliados</th>
+          <th>Potências do Eixo</th>
+          <th>Neutros</th>
+        </tr>
+        <tr>
+          <td>Reino Unido</td>
+          <td>Alemanha</td>
+          <td>Portugal</td>
+        </tr>
+        <tr>
+          <td>França</td>
+          <td>Itália</td>
+          <td>Espanha</td>
+        </tr>
+        <tr>
+          <td>Estados Unidos</td>
+          <td>Japão</td>
+          <td>Suiça</td>
+        </tr>
+        <tr>
+          <td>China</td>
+          <td>Bulgária</td>
+          <td>Suécia</td>
+        </tr>
+      </table>
+      <br><br><br>
+      </div>
+    </div>
+
+
+    <!--Dia D-->
+    <div>
+      <br><br>
+      <h2 align="center" id="DayD"> Dia D</h2><br>
+      <div class="row">
+        <p align="center"><b>6 de Junho de 1944, foi um dos dias mais marcantes nesta grande guerra.</b><br>
+        Enquanto os alemães confrontavam a União Soviética, começou a ser elaborado um plano de
+        proporções inimagináveis que foi posto em prática no dia 6 de Junho.<br><br></p>
+        <div class="row">
+        <div class="col-sm-5">
+          Aproximadamente à meia-noite desse dia, a costa francesa começou a ser fortemente bombardeada.
+        </div>
+        <div class="col-sm-2" align="center">
+          <a class="buttond button1" onclick="DiaD1()"><span class="glyphicon glyphicon-arrow-right"></span></a><!--Função disponivel em ajuda.js-->
+        </div>
+        <div class"col-sm-5" id="D1">
+        </div>
+      </div>
+        <br><br><br>
+        Após os bem sucedidos desembarques, as unidades militares alemãs presentes
+        em França foram derrotadas com ajuda das tropas provenientes da metade livre
+        francesa e, assim, após umas breves semanas, a França foi libertada do domínio
+        alemão a 25 de agosto de 1944. (Local de desembarque das tropas e o respetivo desembarque)<br><br><br>
+        <div class="col-sm-6" align="center">
+        <div id="D" style="width: 600px; height: 400px"></div>
+        <script type="text/javascript" src="Mapa2.js"></script><br><br><!--Disponivel em Mapa2.js-->
+      </div>
+      <div class="col-sm-6" align="center">
+        <img class="img1" src="Img/D.jpg" width="600px" height="400px"></div>
+      </div>
+      Este foi um dos dias mais importantes de toda a guerra, pois após o mesmo,
+      as forças do Eixo não conseguiram ripostar a um ataque de tamanha dimensão
+      e, apesar do número de vítimas e de feridos, foi a partir deste dia que
+      começou a libertação da Europa do domínio nazi.<br>
+      No dia 25 de abril, as forças dos
+      aliados penetraram em Berlim, 5 dias depois, a 30 de abril, o prédio do
+      parlamento alemão (conhecido como Reichstag) foi capturado.<br>
+      A Europa estava finalmente livre do domínio alemão.<br><br><br>
+    </div>
+
+
+    <!-- As Bombas atómicas-->
+    <div style="background-color: #f2f2f2" id="Atomic"><br><br>
+      <h2 align="center">As Bombas Atómicas no Japão</h2><br>
+      A 8 de maio de 1945 foi assinada pela Alemanha uma rendição e a 26 de julho
+      de 1946 os Estados Unidos da América fizeram também um pedido ao Japão sob
+      ameaça de destruição total. Os japoneses não seguiram o exemplo dos alemães,
+      logo, um dos mais mortíferos ataques em toda a guerra ocorreu.<br><br>
+    <div class="row">
+      <div class="col-sm-6" align="center">
+        <img src="Img/Little Boy.jpg" id="LittleBoy" alt="Bomb Little Boy" width="60%" onclick="Bomb1()"><br><br><!--Função disponivel em ajuda.js-->
+         <figcaption>Bomba Little Boy</figcaption>
+      </div>
+      <div class="col-sm-6" align="center">
+        <img src="Img/Fat Man.jpg" id="FatMan" width="60%" alt="Bomb Fat Man" onclick="Bomb2()"><br><br><!--Função disponivel em ajuda.js-->
+        <figcaption>Bomba Fat Man</figcaption>
+      </div>
+    </div>
+    <br><br>
+    A primeira foi lançada sobre Hiroshima e a segunda sobre Nagasaki, sendo que este
+    acontecimento ficou registado como a primeira e única vez
+    em que foram usadas armas nucleares. Após isto, o Japão assinou uma rendição e originou assim ... <br><br>
+    <div class="container" align="center">
+      <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#myModal"> O Fim da Guerra</button>
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Segunda Guerra Mundial</h4>
+            </div>
+            <div class="modal-body">
+              <p>Terminou a 2 de Setembro de 1945.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br><br>
+  </div>
+
+  </body>
+</html>

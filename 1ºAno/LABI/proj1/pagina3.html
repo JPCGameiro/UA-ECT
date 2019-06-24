@@ -1,0 +1,178 @@
+<html>
+  <head><meta charset="utf-8">
+    <title>Conclusão</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="ajuda.js"></script>
+    <script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <style type="text/css">
+      * { cursor: url(mila.cur), default}
+      html
+      {
+        scroll-behavior: smooth;
+      }
+      body
+      {
+        font: 600 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
+        margin: 12px 0;
+      }
+      #limit
+      {
+        max-width: 500px;
+      }
+      table
+      {
+        border-collapse: collapse;
+      }
+      table, th, td
+      {
+          border: 1px solid black;
+      }
+      table
+      {
+          width: 50%;
+        }
+
+      th
+      {
+        height: 50px;
+        text-align: left;
+      }
+      th, td
+      {
+        padding: 15px;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+
+<!--Barra de Navegação-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="file:index.html">WW2</a>
+        </div>
+        <ul class="nav navbar-nav">
+           <li>
+            <a href="file:index.html">Home</a>
+           </li>
+           <li class="dropdown">
+             <a href="file:pagina1.html">Antecendentes</a>
+           </li>
+          <li>
+            <a href="file:Pagina2.html">Página 2</a>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown">Conclusão<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#conclusao1">Baixas e Perdas</a></li>
+              <li><a href="#conclusao2">Reflexão</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="file:about.html">Acerca</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <div id=conclusao class="jumbotron text-center">
+      <h1>Conclusão</h1>
+    </div>
+      <div id=conclusao1>
+        <h2>Baixas e perdas</h2><br><br>
+        A segunda guerra mundial ganhou esse mesmo nome, não só devido á participação de uma grande quantidade de países de todos os cantos do mundo, como também do número astronómico de baixas.
+        <br>Estes números arrasadores devem-se à revolução na indústria militar (ao aparecimento de novas armas e tecnologias de combate).
+        As baixas foram não só humanas e ao nível d<e i<br>nfraestruturas, mas também a nível moral.
+        <br>Apesar de não ser bem certo, podemos aproximar o número de mortes aos dados nos gráficos.<br><br><br>
+        <!--Gráficos-->
+        <div class="col-sm-6">
+          <div id="limit">
+            <canvas id="myChart"></canvas>
+            <script type="text/javascript" src="pag3.js"></script>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div id="limit">
+            <canvas id="myChart1"></canvas>
+            <script type="text/javascript" src="pag3.js"></script>
+          </div>
+        </div>
+        <div class="col-sm-12" align="center">
+        <div id="limit" align="center">
+          <canvas id="myChart2"></canvas>
+          <script type="text/javascript" src="pag3.js"></script>
+        </div>
+      </div>
+      <br><br><br>
+
+        <!--Tabelas-->
+      <table class="pontilhada" align="center">
+        <tr>
+          <th>Países</th>
+          <th>Mortes Militares</th>
+          <th>Mortes Civis</th>
+        </tr>
+        <tr>
+          <td>Rússia</td>
+          <td>8800000</td>
+          <td>18184000</td>
+        </tr>
+        <tr>
+          <td>França</td>
+          <td>217600</td>
+          <td>350000</td>
+        </tr>
+        <tr>
+          <td>Reino Unido</td>
+          <td>383600</td>
+          <td>67200</td>
+        </tr>
+        <tr>
+          <td>China</td>
+          <td>3750000</td>
+          <td>13191000</td>
+        </tr>
+        <tr>
+          <td>Japão</td>
+          <td>2120000</td>
+          <td>953000</td>
+        </tr>
+        <tr>
+          <td>Alemanha</td>
+          <td>5533000</td>
+          <td>3000000</td>
+        </tr>
+        <tr>
+          <td>Total</td>
+          <td>15000000</td>
+          <td>45000000</td>
+        </tr>
+      </table>
+      <br><br><br>
+    <div>
+      <div id="conclusao2">
+        <h2>Reflexão</h2>
+        Quando falamos de história, observamos que ao longo dos anos houve uma mudança nos números de mortes de uma guerra.
+        Enquanto no passado uma grande guerra levava apenas uns milhares de vítimas, nesta última grande guerra, é estimado o número de mais de 70000000.<br>
+        Isto remete-nos a pensar na moralidade da guerra e do uso de novas tecnologias e de um consequente futuro apocalíptico causado pela evolução humana conjuntamente com o ódio e invejas.
+        Assim sendo, no seguintes anos da grande guerra, houve uma grande preocupação por parte das nações de todo mundo em acabar com a guerra, e, quando não conseguissem, pelo menos amenizar o uso abusivo de novas tecnologias com consequências catastróficas.
+        Assim, embora com alguns conflitos, dos anos seguintes à guerra até ao presente, embora com momentos de tensões, a paz manteve-se e a humanidade pode agora focar-se em diversas outras atividades.
+        O principal objetivo deste site era a perceção dos erros cometidos no passado, e tentarmos evoluir no sentido de não voltarmos a cometê-los novamente.
+        <div align="center">
+          <br><br><img src="Img/conclusao1.jpg" style="width:20%" alt="Pomba da paz" align"center"></img>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
