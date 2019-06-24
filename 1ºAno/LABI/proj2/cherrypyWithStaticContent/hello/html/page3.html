@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>Page3</title>
+    <link rel="stylesheet" type="text/css"href="css/master.css" type="text/css"></link>
+    <script type="application/javascript"src="js/master.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  </head>
+  <body>
+
+
+    <ul>
+      <li><a class="active" href="/">WebAppName</a></li>
+      <li><a href="dynamic1">Page1</a></li>
+      <li><a href="dynamic2">Page2</a></li>
+      <li><a href="put">Page3</a></li>
+      <li><a href="dynamic4">Page4</a></li>
+      <li style="float: right"><a href="dynamic5">Page5</a></li>
+    </ul>
+    <br><br><br><br>
+
+    <h1>Página 3</h1>
+    <p>A partir desta página é possível o envio de uma imagem para o sistema.</p><br><br><br>
+
+    <form action="list">
+      <p>Select a file:</p>
+      <input type="file" name="names" accept= "image/*" onchange="updatePhoto(event);"><br><br>
+     <input type="submit" value="Submit">
+   </form>
+
+      <div class="card">
+		<span id="item1mobile" class="control-content active"><input type="submit"></span><canvas id="photo" width="530" height="400">
+      </div>
+
+    <footer>
+      <p id = "footertext">Realizado por: João Gameiro, Marco Ramos, Tiago Pedrosa, Pedro Pereira&nbsp;&nbsp;&nbsp;</p>
+    </footer>
+  </body>
+</html>

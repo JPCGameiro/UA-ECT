@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>CherryPy static example - page.html</title>
+    <link rel="stylesheet" type="text/css"href="css/master.css" type="text/css"></link>
+    <script type="application/javascript"src="js/master.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+  </head>
+  <body>
+
+    <ul>
+      <li><a class="active" href="/">WebAppName</a></li>
+      <li><a href="dynamic1">Page1</a></li>
+      <li><a href="dynamic2">Page2</a></li>
+      <li><a href="put">Page3</a></li>
+      <li><a href="dynamic4">Page4</a></li>
+      <li style="float: right"><a href="dynamic5">Page5</a></li>
+    </ul>
+    <br><br><br><br>
+
+    <h1> Página 1 </h1>
+    <p>Aqui é possível ver os objetos detetados</p>
+
+    <br><br>
+    <div align="center">
+      Carregue para ver os Objetos detetados<br><br>
+      <form action="/list">
+        <span id="item1mobile" class="control-content active"><input type="submit" value="JSON" name="detected"></span>
+      </form>
+    </div>
+
+
+
+
+    <footer>
+      <p id = "footertext">Realizado por: João Gameiro, Marco Ramos, Tiago Pedrosa, Pedro Pereira&nbsp;&nbsp;&nbsp;</p>
+    </footer>
+  </body>
+</html>

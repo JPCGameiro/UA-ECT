@@ -1,0 +1,69 @@
+body {margin:0;}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4d79ff;
+}
+
+.active:hover{
+  background-color: #0044cc;
+}
+
+h1 {
+  font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+  font-size: 60px;
+  line-height: 65px;
+  text-align: center;
+  padding-bottom : 10px;
+ }
+
+ p {
+  font-family: 'Vollkorn', Georgia, Times, serif;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: #777;
+ }
+
+ body {
+  background: url(beige-tiles.png) repeat 0 0;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #333333;
+}
+
+#footertext{
+  color: white;
+  text-align: right;
+}
