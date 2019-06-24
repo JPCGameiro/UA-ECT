@@ -1,0 +1,12 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity IterMultCore is
+	generic(numBits : positive := 8);
+		port(clk     : in  std_logic;
+			  reset   : in  std_logic;
+			  start   : in  std_logic;
+			  op0     : in  std_logic_vector((numbits-1) downto 0);
+			  op1     : in  std_logic_vector((numbits-1) downto 0);
+			  result  : out std_logic_vector((numbits-1) downto 0));
+end IterMultCore;

@@ -1,0 +1,21 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all;
+
+entity IterSqrCore is
+		generic(numBits   : positive := 8);
+			port(clk       : in  std_logic;
+				  reset     : in  std_logic;
+				  start     : in  std_logic;
+			     s         : in  std_logic_vector((numBits-1) downto 0);
+				  operand   : in  std_logic_vector((numBits-1) downto 0);
+				  regsShift : out std_logic;
+				  regsInit  : out std_logic;
+				  loadShift : out std_logic;
+				  enables   : out std_logic;
+				  enabled   : out std_logic;
+				  done      : out std_logic);
+end IterSqrCore;
+
+begin
+	

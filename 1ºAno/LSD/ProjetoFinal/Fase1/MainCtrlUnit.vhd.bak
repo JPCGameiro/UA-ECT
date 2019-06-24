@@ -1,0 +1,19 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity MainCtrlUnit is
+	port(clk      : in  std_logic;
+		  reset    : in  std_logic;
+		  start    : in  std_logic;
+		  sum      : in  std_logic;
+		  sub      : in  std_logic;
+		  mult     : in  std_logic;
+		  div      : in  std_logic;
+		  multDone : in  std_logic;
+		  divDone  : in  std_logic;
+		  sumStart : out std_logic;
+		  subStart : out std_logic;
+		  multStart: out std_logic;
+		  divStart : out std_logic
+		  multSel  : out std_logic_vector(1 downto 0));
+end MainCtrlUnit;

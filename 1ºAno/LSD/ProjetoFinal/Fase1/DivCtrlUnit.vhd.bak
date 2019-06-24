@@ -1,0 +1,18 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all;
+
+entity DivCtrlUnit is
+	generic(numBits   :   positive := 8);
+		port(clk       : in  std_logic;
+			  reset     : in  std_logic;
+			  start     : in  std_logic;
+			  enable    : in  std_logic;
+			  regsInit  : in  std_logic;
+			  op        : out std_logic;
+			  done      : out std_logic;
+			  shiftRegd : out std_logic;
+			  shiftRegq : out std_logic;
+			  Msbit     : out std_logic;
+			  bitquo    : out std_logic);
+end DivCtrlUnit;

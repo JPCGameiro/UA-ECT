@@ -1,0 +1,32 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all;
+entity SubUnit is
+	port(operand0 : in  std_logic_vector(7 downto 0);
+		  operand1 : in  std_logic_vector(7 downto 0);
+		  ovf      : out std_logic;
+		  result   : out std_logic_vector(7 downto 0));
+end SubUnit;
+
+architecture Behavioral of SubUnit is
+	signal op0, op1, res: signed(7 downto 0);
+
+begin
+	op0 <= signed(operand0);
+	op1 <= signed(operand1);
+	res <= op0 - op1;
+	
+	process(op0, op1, res)
+	begin
+		if not(op0(7) = op1(7)) then
+			if (op1(7) = res(7)) then
+				ovf <= '1';
+			else
+				ovf <= '0';
+			end if;
+		else
+			ovf <= '0';
+		end if;
+	end process;
+	result <= std_logic_vector(res);
+end Behavioral;

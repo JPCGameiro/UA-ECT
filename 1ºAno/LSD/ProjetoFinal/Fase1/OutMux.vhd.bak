@@ -1,0 +1,35 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all;
+
+entity OutMux is
+	port(l0			  : in  std_logic_vector(7 downto 0);
+		  l1			  : in  std_logic_vector(7 downto 0);
+		  l2			  : in  std_logic_vector(15 downto 0);
+		  l3			  : in  std_logic_vector(7 downto 0);
+		  SEL			  : in  std_logic_vector(1 downto 0);
+		  FINALRESULT : out std_logic_vector(15 downto 0));
+end OutMux;
+
+architecture Behavior of OutMux is
+
+begin
+	process(SEL)
+	begin
+		case SEL is
+			when "00" =>
+				FINALRESULT(15 downto 8) <= "00000000";
+				FINALRESULT(7 downto 0) <= l0;
+			when "01" =>
+				FINALRESULT(15 downto 8) <= "00000000";
+				FINALRESULT(7 downto 0) <= l1;
+			when "10" =>
+				FINALRESULT(15 downto 0) <= l2;
+			when "11" =>
+				FINALRESULT(15 downto 8) <= "00000000";
+				FINALRESULT(7 downto 0) <= l3;
+		end case;
+	end process;
+end Behavior;
+		
+		

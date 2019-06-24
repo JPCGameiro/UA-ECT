@@ -1,0 +1,71 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all;
+
+entity IterSqrUnit is
+	generic(numBits    : positive := 16)
+		port(clk        : in  std_logic;
+			  reset      : in  std_logic;
+			  start      : in  std_logic;
+			  operand    : in  std_logic_vector((numBits-1) downto 0);
+			  result     : out std_logic;
+			  done       : out std_logic);
+end IterSqrUnit;
+
+architecture Shell of IterSqrCtrlUnit is
+	signal s_s, s_regsShift, s_regsInit, s_loadShift, s_enables, s_enabled : std_logic_vector((numBits-1) downto 0);
+	signal s_regdout, s_regsout, s_regdplus  : std_logic_vector((numBits-1) downto 0);
+begin
+	
+	
+	fsm_core : entity work.SqrCtrlUnit(Behavioral)
+						generic map(numBits   => 16)
+							port map(clk       => clk,
+									   reset     => reset,
+									   start     => start,
+									   s         => "0000000000000100",
+									   operand   => operand,
+									   regsShift => s_regsShift,
+									   regsInit  => s_regsInit,
+									   loadShift => s_loadShift,
+									   enables   => s_enables,
+									   enabled   => s_enabled,
+									   done      => done);
+										
+	addSub_d : entity work.AddSubRegN(Behavioral)
+						generic map(N         => 16)
+							port map(clk       => clk,
+									   reset     => reset,
+										load      => s_regsInit,
+										enable    => s_enabled,
+										addSub    => '1',
+										loadData  => "0000000000000010",
+										dataIn    => "0000000000000010",
+										dataOut   => s_regdout);
+										
+	s_regdplus <= s_redout + "0000000000000001";
+	
+	addSub_s : entity work.AddSubRegN(Behavioral)
+						generic map(N         => 16)
+							port map(clk       => clk,
+									   reset     => reset,
+										load      => s_regsInit,
+										enable    => s_enables,
+										addSub    => '1',
+										loadData  => "0000000000000100",
+										dataIn    => s_regdplus,
+										dataOut   => s_regsout);
+	
+	result_reg : entity work.ShiftRegisterN(Behavioral)
+							generic map(N          => 16);
+								port map(clk        => clk,
+											reset      => reset,
+											load       => s_loadShift,
+											shiftLeft  => '0',
+											shiftRight => s_regsShift,
+											shLeftin   => '0',
+											shRightin  => '0',
+											dataIn     => s_regsout,
+											dataOut    => result);
+end Shell;
+					
