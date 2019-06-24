@@ -1,0 +1,24 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all;
+
+entity ShiftRegister_Demo is
+	generic(size : positive := 8);
+	port(CLOCK_50 : in  std_logic;
+		  LEDG     : out std_logic_vector(0 downto 0);
+		  LEDR     : out std_logic_vector(size downto 0));
+end ShiftRegister_Demo;
+
+architecture Shell of ShiftRegister_Demo is
+	signal clk_out : std_logic;
+begin
+	freq_core  : entity work.ClkDivider(Behavioral)
+						generic map(50000 => divFactor);
+						port map(clkIn  => CLOCK_50,
+									clkout => clk_out);
+									
+	shift_core : entity work.ShiftRegisterN(Behavioral)
+						generic map(size  => size);
+						port map(sin     => SW(0),
+									clk_out => clk,
+									dataOut => LEDR(size downto 0));
