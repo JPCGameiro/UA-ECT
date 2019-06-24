@@ -1,0 +1,40 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all;
+
+entity Bin2BCD is
+	port(BinIn   : in  std_logic_vector(3 downto 0);
+		  BcdOut0 : out std_logic_vector(3 downto 0);
+		  BcdOut1 : out std_logic_vector(3 downto 0));
+end Bin2BCD;
+
+architecture Behavior of Bin2BCD is
+begin
+	process(BinIn)
+		begin
+			if(BinIn <= "1001") then
+				BcdOut0 <= BinIn;
+				BcdOut1 <= "0000";
+			else
+				if(BinIn = "1010") then
+					BcdOut0 <= "0000";
+					BcdOut1 <= "0001";
+				elsif(BinIn = "1011") then
+						BcdOut0 <= "0001";
+						BcdOut1 <= "0001";
+				elsif(BinIn = "1100") then
+						BcdOut0 <= "0010";
+						BcdOut1 <= "0001";
+				elsif(BinIn = "1101") then
+						BcdOut0 <= "0011";
+						BcdOUt1 <= "0001";
+				elsif(BinIn = "1110") then
+						BcdOut0 <= "0100";
+						BcdOut1 <= "0001";
+				elsif(BinIn = "1111") then
+						BcdOut0 <= "0101";
+						BcdOut1 <= "0001";
+				end if;
+			end if;
+		end process;
+end Behavior;
