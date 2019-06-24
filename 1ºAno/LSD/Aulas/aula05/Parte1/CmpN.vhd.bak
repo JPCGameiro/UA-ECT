@@ -1,0 +1,21 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all;
+
+entity CmpN is
+	generic N
+	port(input0     : in  std_logic_vector(N downto 0);
+		  input1     : in  std_logic_vector(N downto 0);
+		  equal      : out std_logic;
+		  notEqual   : out std_logic;
+		  ItSigned   : out std_logic;
+		  ItUnsigned : out std_logic);
+end CmpN;
+
+architecture Behavioral of Cmp4 is
+begin
+	equal      <= '1' when (input0  = input1) else '0';
+	notEqual   <= '1' when (input0 /= input1) else '0';
+	ItSigned   <= '1' when (signed(input0) < signed(input1)) else '0';
+	ItUnsigned <= '1' when (unsigned(input0) < unsigned(input1)) else '0';
+end Behavioral;
