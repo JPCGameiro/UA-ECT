@@ -1,0 +1,15 @@
+--Bibliotecas
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+--Interface (Portas)
+entity NOTGate is 
+	port( inport0  : in std_logic;
+			outport0 : out std_logic);
+end NOTGate;
+
+--Implementação (Descrição da Funcionalidade)
+architecture Behavior of NOTGate is
+begin
+	outport0 <= not inport0;
+end Behavior;
