@@ -1,3 +1,6 @@
+//João Gameiro  Nº93097
+//P1-ECT-UA
+
 import java.util.Scanner;
 public class distancia
 {
