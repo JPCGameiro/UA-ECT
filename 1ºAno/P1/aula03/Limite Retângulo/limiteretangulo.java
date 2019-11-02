@@ -4,7 +4,7 @@ public class limiteretangulo
 	public static void main (String[] args)
 	{
 		Scanner ler = new Scanner (System.in);
-		int largura, altura, i,u ;
+		int largura, altura, linha=0, coluna=0;
 
 
 		System.out.printf("Digite um número inteiro positivo(largura): ");
@@ -12,44 +12,23 @@ public class limiteretangulo
 		System.out.printf("Digite outro número inteiro positivo(altura): ");
 		altura=ler.nextInt();
 		
-		if(largura>1 && altura>1) 
+		for(linha=0;linha<altura;linha++)
 		{
-			for(i=1;i<=altura;i++)
+			for(coluna=0;coluna<largura;coluna++)
 			{
-				for(u=1;u<=(largura);u++)
+				if(linha==0 || linha==(altura-1))
+					System.out.print("*");
+				else 
 				{
-						if(u==1)
-						{
-							System.out.printf("*");
-						}
-						else if(u>1 && u<(largura))
-						{
-							System.out.printf(" ");
-						}
-						else if(u==(largura))
-						{
-							System.out.printf("*");
-						}
-					}
-				if(i==1)
-				{
-					System.out.printf("*\n");
-				}
-				else if(i>1 && i<altura)
-				{
-					System.out.printf(" \n");
-				}
-				else if(i==altura)
-				{
-					System.out.printf("*\n");
+					if(coluna==0 || coluna==(largura-1))
+						System.out.print("*");
+					else
+						System.out.print(" ");
 				}
 			}
-			
+			System.out.print("\n");
 		}
 			
 	}		
 
 }
-
-
-
