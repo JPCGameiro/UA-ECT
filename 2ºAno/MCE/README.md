@@ -61,4 +61,8 @@
   * 3.7 - Indução electromagnética:
     * Lei de Faraday e Lei de Lenz; 
     * Auto-indutância e Indutância mútua.
+## Prática Laboratorial
+* Dinâmica de translação;
+* Estudo do movimento dos projéteis;
+* Bobinas de Helmholtz.
 
