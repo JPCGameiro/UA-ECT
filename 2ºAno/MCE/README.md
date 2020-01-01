@@ -66,3 +66,6 @@
 * Estudo do movimento dos projéteis;
 * Bobinas de Helmholtz.
 
+## Prática Numérica e Problemas
+Exercicios sobre os conteúdos leccionados nesta unidade curricular.
+
