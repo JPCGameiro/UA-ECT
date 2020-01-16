@@ -1,0 +1,167 @@
+\documentclass{report}
+\usepackage[T1]{fontenc} % Fontes T1
+\usepackage[utf8]{inputenc} % Input UTF8
+\usepackage[backend=biber, style=ieee]{biblatex} % para usar bibliografia
+\usepackage{csquotes}
+\usepackage[portuguese]{babel} %Usar língua portuguesa
+\usepackage{blindtext} % Gerar texto automaticamente
+\usepackage[printonlyused]{acronym}
+\usepackage{hyperref} % para autoref
+
+\usepackage{}\usepackage{graphicx}
+
+\bibliography{bibliografia}
+
+
+\begin{document}
+%%
+% Definições
+%
+\def\titulo{Aplicação We}
+\def\data{DATA}
+\def\autores{Autor1, Autor2, Autor3}
+\def\autorescontactos{(nmec1) autor1@ua.pt, (nmec2) autor2@ua.pt, (nmec3) autor3@ua.pt}
+\def\versao{VERSAO}
+\def\departamento{DEPARTAMENTO}
+\def\empresa{EMPRESA}
+\def\logotipo{ua.pdf}
+%
+%%%%%% CAPA %%%%%%
+%
+\begin{titlepage}
+
+\begin{center}
+%
+\vspace*{50mm}
+%
+{\Huge \titulo}\\ 
+%
+\vspace{10mm}
+%
+{\Large \empresa}\\
+%
+\vspace{10mm}
+%
+{\LARGE \autores}\\ 
+%
+\vspace{30mm}
+%
+\begin{figure}[h]
+\center
+\includegraphics{\logotipo}
+\end{figure}
+%
+\vspace{30mm}
+\end{center}
+%
+\begin{flushright}
+\versao
+\end{flushright}
+\end{titlepage}
+
+%%  Página de Título %%
+\title{%
+{\Huge\textbf{\titulo}}\\
+{\Large \departamento\\ \empresa}
+}
+%
+\author{%
+    \autores \\
+    \autorescontactos
+}
+%
+\date{\data}
+%
+\maketitle
+
+\pagenumbering{roman}
+
+%%%%%% RESUMO %%%%%%
+\begin{abstract}
+Resumo de 200-300 palavras.
+\end{abstract}
+
+%%%%%% Agradecimentos %%%%%%
+% Segundo glisc deveria aparecer após conclusão...
+\renewcommand{\abstractname}{Agradecimentos}
+\begin{abstract}
+Eventuais agradecimentos.
+Comentar bloco caso não existam agradecimentos a fazer.
+\end{abstract}
+
+
+\tableofcontents
+% \listoftables     % descomentar se necessário
+% \listoffigures    % descomentar se necessário
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Introdução}
+\label{chap.introducao}
+
+Introduz o tema, apresenta a motivação e finalmente a estrutura.
+
+Este documento está dividido em quatro capítulos.
+Depois desta introdução,
+no \autoref{chap.metodologia} é apresentada a metodologia seguida,
+no \autoref{chap.resultados} são apresentados os resultados obtidos,
+sendo estes discutidos no \autoref{chap.analise}.
+Finalmente, no \autoref{chap.conclusao} são apresentadas
+as conclusões do trabalho.
+
+\chapter{Metodologia}
+\label{chap.metodologia}
+Descreve os métodos utilizados para obtenção de resultados.
+
+Neste esqueleto de relatório aproveitamos este capítulo para exemplificar
+como se usam alguns elementos de {\LaTeX}.
+
+\section{Exemplos}
+
+\subsection{Utilização de acrónimos}
+Esta é a primeira invocação do acrónimo \ac{ua}.
+E esta é a segunda: \ac{ua}.
+
+Outras duas referências a \ac{miect}
+e \ac{miect}.
+
+\subsection{Referências bibliográficas}
+Informação relativa à estrutura formal de um relatório pode ser obtida
+na página do \ac{glisc}\cite{glisc}.
+
+\chapter{Resultados}
+\label{chap.resultados}
+Descreve os resultados obtidos.
+
+\chapter{Análise}
+\label{chap.analise}
+Analisa os resultados.
+
+\chapter{Conclusões}
+\label{chap.conclusao}
+Apresenta conclusões.
+
+\chapter*{Contribuições dos autores}
+Resumir aqui o que cada autor fez no trabalho.
+Usar abreviaturas para identificar os autores,
+por exemplo AS para António Silva.
+No fim indicar a percentagem de contribuição de cada autor.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{Acrónimos}
+\begin{acronym}
+\acro{ua}[UA]{Universidade de Aveiro}
+\acro{miect}[MIECT]{Mestrado Integrado em Engenharia de Computadores e Telemática}
+\acro{lei}[LEI]{Licenciatura em Engenharia Informática}
+\acro{glisc}[GLISC]{Grey Literature International Steering Committee}
+\end{acronym}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\printbibliography
+
+\end{document}

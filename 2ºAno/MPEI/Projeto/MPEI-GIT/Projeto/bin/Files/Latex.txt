@@ -1,0 +1,392 @@
+\documentclass{report}
+\usepackage[T1]{fontenc} % Fontes T1
+\usepackage[utf8]{inputenc} % Input UTF8
+\usepackage{biblatex} % para usar bibliografia
+\usepackage{csquotes}
+\usepackage[portuguese]{babel} %Usar língua portuguesa
+\usepackage{blindtext} % Gerar texto automaticamente
+\usepackage[printonlyused]{acronym}
+\usepackage{hyperref} % para autoref
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\usepackage{textcomp}
+
+\pgfplotsset{width=10cm,compat=1.9}
+
+\bibliography{bibliografia}
+
+
+\begin{document}
+%%
+% Definições
+%
+\def\titulo{2ª Guerra Mundial}
+\def\data{Novembro 2018}
+\def\autores{Joaquim Andrade , João Gameiro}
+\def\autorescontactos{(93432) joaquimandrade@ua.pt, (93097) joao.gameiro@ua.pt}
+\def\empresa{Universidade de Aveiro}
+\def\departamento{DETI}
+\def\versao{VERSÃO}
+\def\logotipo{ua.pdf}
+%
+%%%%%% CAPA %%%%%%
+%
+\begin{titlepage}
+
+\begin{center}
+%
+\vspace*{50mm}
+%
+{\Huge \titulo}\\ 
+%
+\vspace{10mm}
+%
+{\Large \empresa}\\
+%
+\vspace{10mm}
+%
+{\LARGE \autores}\\ 
+%
+\vspace{30mm}
+%
+\begin{figure}[h]
+\center
+\includegraphics{\logotipo}
+\end{figure}
+%
+\vspace{30mm}
+\end{center}
+%
+\begin{flushright}
+\versao
+\end{flushright}
+\end{titlepage}
+
+%%  Página de Título %%
+\title{%
+{\Huge\textbf{\titulo}}\\
+{\Large \departamento\\ \empresa}
+}
+%
+\author{%
+    \autores \\
+    \autorescontactos
+}
+%
+\date{\data}
+%
+\maketitle
+
+\pagenumbering{roman}
+
+
+%%%%%% Agradecimentos %%%%%%
+% Segundo glisc deveria aparecer após conclusão...
+
+
+
+\tableofcontents
+% \listoftables     % descomentar se necessário
+% \listoffigures    % descomentar se necessário
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Introdução}
+\label{chap.introducao}
+
+\paragraph{}Este relatório centra-se na Segunda Guerra Mundial, que ocorreu entre 1939 e 1945, e que se caracteriza como sendo o maior, mais devastador e mais abrangente conflito até há presente data. Nos seus seis anos de duração assistiu-se a um confronto entre um total de 72 países,do qual resultaram aproximadamente 85 milhões de mortes,sendo que perto 50 milhões das mesmas foram civis, 35 milhões de feridos e ainda 3 milhões de desaparecidos. Os vários regimes ditatoriais de extrema direita que surgiram por toda a Europa, contribuíram para o desenvolver de um conflito.
+
+Com este relatório temos como objetivo fazer uma análise a este acontecimento, aos motivos que levaram ao mesmo, aos regimes que se viviam na altura, aos principais líderes dos mesmos regimes, referindo alguns momentos históricos e ainda para além de tudo o já mencionado, referir personalidades que tiveram um impacto fundamental neste evento e informações consideradas pertinentes para a compreensão do mesmo.
+Apesar desta guerra ter ocorrido há mais de 70 anos, continua a estar bem presente em áreas como a arte (ex., cinema, literatura, entre outras) ou a educação (ex.:escolas e  universidades), mas  especialmente na mente do ser humano, por ter sido um acontecimento tão marcante e devastador. Isso leva-nos a mais uma questão, ou seja sempre que é feito algo à cerca desta guerra, quer seja um filme ou um trabalho de investigação, estamos a ser relembrados para que não sejam cometidos os mesmos erros do passado, e com este relatório temos também como objetivo isso mesmo, ou seja relembrar para que algo como a 3ª Guerra Mundial, ou qualquer tipo de conflito que possa eventualmente existir no futuro, façam apenas parte de uma realidade não existente. 
+Este documento está dividido em cinco capítulos.
+
+Após esta introdução, no \autoref{chap.antecedentes} é apresentada uma visão dos tempos vividos antes da grande guerra, a qual inclui uma análise aos mesmos para que se possa compreender as razões pelas quais a guerra ocorreu, no \autoref{chap.guerra} são descritos e analisados os acontecimentos ocorridos durante a guerra e posteriormente no \autoref{chap.baixas} são discutidos os efeitos que este confronto teve. Finalmente, no \autoref{chap.conclusao} são apresentadas as conclusões que foram tiradas deste trabalho.
+
+\chapter{Antecedentes da Guerra}
+\label{chap.antecedentes}
+\cite{Wikipedia1}
+\paragraph{}Quando falamos em 2ºguerra Mundial, é, de conhecimento comum, que a Alemanha a começou. Mas que motivos e ódios teriam levado o povo alemão a iniciar tamanha guerra? A resposta é óbvia se analisarmos o período pós-1ª Guerra Mundial até á 2ª Guerra Mundial.
+
+A Alemanha saiu derrotada da primeira guerra mundial, e como tal, sujeitou-se, para lá da humilhação, às condições dadas pelos países vencedores no tratado de Versalhes.As condições foram severas, tanto a dívida aos vários países que participaram nela, como as limitações a nível de exército e de controlo. 
+Todas estas condições agregadas a uma crise económica a nível mundial, levou a um grande descontentamento por parte do povo alemão, que sofria com a fome e a inflação.Com tamanha carga em cima, o revoltado e esfomeado povo alemão, refugiou-se nos discursos de Hitler.
+
+Hitler era um homem austríaco nascido perto de Linz em 20 de abril de 1889.Mudou-se para a Alemanha em 1913, mesmo a tempo de participar na 1º grande guerra e receber uma condecoração pelos seus serviços sob alçada do exército alemão. Em 1919 juntou-se ao partido dos trabalhadores Alemão, precursor do partido nazi, e em 1921 tornou-se líder do mesmo. Após uma tentativa de tomada de poder falhada em 1923, Hitler foi preso. Durante o período de encarceramento, escreveu um livro, a sua biografia, que é, ainda agora conhecido a nível mundial. Este homem possuía um certo ódio pela etnia judaica, a qual considerava ser culpada de uma conspiração contra o mundo e com os seus discursos redirecionava o ódio do povo alemão, ás diversas raças diferentes, em especial ao povo judaico e às potências que humilharam a Alemanha na primeira grande guerra(França e Inglaterra). Em 1932 Hitler possui o maior partido alemão, no entanto, ainda não suficientemente grande para obter uma maioria. No ano seguinte, 1933, por persuasão de alguns líderes conservadores, Hitler torna-se Chanceler Alemão. No ano seguinte, por fim, acaba com a República de Weimar, atual ideologia política adotada, e transforma a Alemanha em Alemanha Nazi, uma ditadura de partido único. Com a sua ideologia política, a Alemanha levantou-se da grande depressão, através de uma grande recuperação económica, reaveu algumas das antigas terras habitadas por alemães e ainda obteve a revogação das restrições impostas na primeira guerra mundial, fazendo com que Hitler e o partido Alemão ganhasse popularidade junto do povo alemão. 
+
+Depois de conquistar o coração do povo e aumentar o exército e a tecnologia das armas de guerra, Hitler, reconhecia a necessidade de arranjar aliados para a concretização do seu projeto. Naquela época surgiram alguns focos de Países Fascistas pela Europa, tais como a Itália, que, após algum tempo se viria a aliar com a Alemanha.
+
+A Itália, mudou-se para o regime fascista, como forma de se defender do seu fraco liberalismo, e da crescente aproximação da ameaça comunista/socialista. Em 1923, após fortalecer a sua influência no país, Mussolini finalmente tomou posse de Itália e começou a aplicar as suas ideologias na forma de governar Itália, expandindo o seu poder. Após a tomada de poder de Hitler, Mussolini sentiu-se ameaçado, pois temia a invasão de Hitler, tanto á Hungria(Anchluss), como a uma das terras de Itália, que teoricamente eram disputadas entre Itália e Alemanha. Hitler, no entanto, querendo mostrar boa fé, recusou qualquer tentativa de invasão da Itália, buscando ao invés o seu apoio incondicional. A tensão entre a Alemanha e a Hungria tornou a aumentar e a Itália voltou-se para os Aliados. Apenas a ambição de Mussolini em invadir a Etiópia, a consequente recusa de ajuda por parte dos aliados e o apoio incondicional de Hitler á causa levou a que a aliança entre a Alemanha e a Itália reatasse.  
+
+O Japão, por sua vez, também procurou aliar-se com a Alemanha, enviando um dos seus diplomatas. Embora o Japão tivesse lutado contra a Alemanha na 1ª grande guerra, o facto do Japão ter sido forçado a sair das nações unidas, e  pressionado pelas forças aliadas a largar as ambições de conquistar e se expandir, levou a que este novo Japão abandonasse as suas alianças com a Inglaterra.
+
+Podemos então observar na figura 2.1 um Cartaz Japonês, que visava publicitar a imagem da aliança do eixo. 
+\begin{figure}[h]
+\centering
+\includegraphics[height=170pt]{cartaz.jpg}
+\caption{Cartaz Japonês}\cite{ImgJpn}
+\end{figure}
+
+
+
+\chapter{A Guerra}
+\label{chap.guerra}
+\section{A Invasão à Polónia}
+\cite{Wikipedia2}
+\cite{Wikipedia1}
+\cite{Infoescola}
+\paragraph{}No verão de 1939, a 1 de Agosto, a Europa encontrava-se à beira da guerra quando uma estação em Gleiwitz, Alta Silésia  na Alemanha foi atacada por um grupo de soldados da Polónia. No entanto esta operação foi executada por soldados alemães que possuíam uniformes polacos e que tinham como objetivo encenar um ataque da Polónia à Alemanha, dando assim um motivo à Alemanha para poder invadir a Polónia. Assim sendo, sob o pretexto de que estariam a agir em legítima defesa os alemães invadiram a Polónia a 1 de Setembro de 1939, o que foi considerado o primeiro ato oficial de guerra. Devido a este acontecimento, levou a que a 3 de Setembro de 1939 uma série de países (incluindo o Reino Unido e a França) na tentativa não só de defesa da Polónia, mas também para perceber qual seria a razão daquele ataque, declarasse guerra à Alemanha. Nesse mesmo dia o exército alemão atacou um navio britânico assassinando todos os tripulantes a bordo mesmo.
+
+Enquanto a Polónia tentava sobreviver à invasão dos alemães, ao longo do mês de Setembro, o número de países que declarava guerra à Alemanha aumentava significativamente, no entanto, apesar disto, devido a um pacto assinado com a Alemanha, a União Soviética que demonstrava interesse em dividir a Polónia com a Alemanha, contribuiu para a invasão da Polónia. A Polónia resistiu à invasão dos dois países apenas até 28 de Setembro, momento em que Varsóvia, a capital do mesmo país se rendeu aos alemães.
+
+Uma das táticas mais destrutivas, usadas pela Alemanha durante a invasão à Polónia chamava-se Blitzkrieg (ataque relâmpago) que consistia em usar a rapidez e a surpresa para descoordenar e destruir o inimigo mas usando também um elevado poder de fogo (ex.:Panzers ,Luftwaffe) 
+
+
+
+\section{A Guerra de Inverno}
+\cite{Wikipedia3}
+\cite{Wikipedia4}
+\paragraph{}Com o perigo que a Alemanha se estava a revelar ser, vários países começaram a tomar medidas.No entanto não era só a Alemanha que representava um perigo. A União Soviética também se estava a revelar como uma ameaça o que resultou num conflito intitulado a Guerra de Inverno.
+
+A 30 de Novembro de 1939 a \ac{ussr} invadiu a Finlândia, dando origem ao já anteriormente mencionado confronto que durou até Março de 1940. À primeira vista o que parecia ser uma vitória fácil para os soviéticos acabou por se revelar algo mais complicado. Com táticas fora do comum (guerrilhas) os finlandeses resistiram aos soviéticos durante meses o que levou a que, apesar da vitória, Joseph Stalin investisse mais nos seus exércitos, em modernizá-los, contratar profissionais mais competentes e armas mais avançadas. Apesar da derrota ter sido da Finlândia a prestação dos soviéticos foi vista como muito fraca devido ao facto de pensarem que os adversários iam ser facilmente derrotados o que levou a que sofressem grandes perdas quer a nível de armamento desperdiçado, quer a nível homens mortos neste confronto. Nesta batalha perderam a vida aproximadamente 20 mil finlandeses.
+
+Uma das armas que ficou mundialmente conhecida deste conflito intitula-se de Cocktail Molotov, criado pelos finlandeses, que consistia numa garrafa com uma mistura liquida inflamável (gasolina, álcool, entre outros) com um pano, que posteriormente na altura do arremesso era incendiado para que quando a garrafa com os referidos ingredientes explodisse.
+
+Ao longo de todos os acontecimentos os Estados Unidos, que tinham declarado neutralidade, mantiveram-na, mas não foram os únicos, países como a Itália também a mantiveram. 
+
+No dia 8 de Novembro Hitler sofreu a primeira tentativa de homicídio desde o início da guerra, em que uma bomba foi colocada numa cervejaria, em Munique, onde o mesmo iria discursar. No entanto como a guerra já estava a decorrer, Hitler mudou a hora do seu discurso e assim sendo a bomba explodiu oito minutos depois de Hitler ter abandonado  a referida cervejaria.
+
+
+
+\section{Invasões à Dinamarca e Noruega }
+\cite{Noruega}
+\cite{Dinamarca}
+
+\paragraph{}Enquanto decorriam os confrontos na Finlândia, o Reino Unido e a França preparavam-se para a guerra com a Alemanha, começando, a convocar voluntários não só para a guerra com a Alemanha, mas também para os enviar para a Guerra de Inverno e a racionar alimentos.
+Simultaneamente surgiu uma declaração surpreendente, o governo Japonês anunciou que investiu uma quantidade recorde em armamento e projetos militares. Foram ordenadas as construções dos primeiros campos de concentração em Auschwitz, Polónia, e foi dado inicio ao massacre de Katyn, que foi uma execução em massa de prisioneiros de guerra, oficias e cidadãos polacos.
+
+Hitler, durante a Guerra de Inverno, tinha intenção de invadir dois países neutros, a Noruega e a Dinamarca, planos que foram intitulados de Operação Weserübung e a Campanha da Noruega. Em Abril e Maio de 1940 ambas as operações foram postas em prática e Alemanha invadiu ambos os países, e rapidamente os conseguiu dominar, também devido ao facto de estar a decorrer o confronto entre a União Soviética e a Finlândia, logo os outros aliados estavam concentrados nesse conflito. Apesar de também terem soldados a combater noutros confrontos, o Reino-Unido e a França conseguiram enviar alguns soldados para a Noruega, que não chegaram a ir para a Dinamarca pois esta rapidamente se rendeu aos alemães, mas foram rapidamente evacuados devido à força destruidora da Alemanha.
+Em poucos meses os alemães dominaram ambos os países, no entanto o governo norueguês acabou por se exilar no Reino Unido.
+
+\section{Guerra de Mentira}
+\cite{Mentira}
+\paragraph{}O título deste subcapítulo é um termo que serve para caracterizar o período inicial da segunda guerra mundial, mais especificamente o período compreendido entre a declaração de guerra do Reino Unido e da França e o momento em que a Alemanha invadiu países como a Bélgica, os Países Baixos, Luxemburgo e a França.
+Quando a Polónia foi invadida, França e Inglaterra declaram guerra à Alemanha mas até este momento nenhuma operação militar tinha sido executada contra os alemães, a intenção dos dois países era que um conflito maior como o da primeira guerra mundial pudesse ser evitado logo estavam agir de forma cautelosa. 
+A declaração de guerra dos dois países em nada afetou a Alemanha que simplesmente continuava a tornar-se mais forte e a invadir mais países, e como os outros à sua volta pouco faziam para impedir, a mesma invadiu uma série de países em Maio de 1940.
+
+\subsection{Invasão à França}
+\cite{Franca}
+
+\paragraph{}A 10 de maio de 1940 a Alemanha invadiu a França, e deu-se assim a Batalha de França. Os alemães que provinham da floresta das Ardenas, flanquearam a Linha Maginot (localizava-se ao longo da fronteira com a Alemanha),que era constituída por um conjunto de trincheiras criadas pelos franceses que tinha como objetivos evitar um ataque surpresa, permitir que o exército se organizasse e poupar recursos, desde homens a armamentos.
+
+No entanto as linhas francesas foram rompidas, a França entrou em colapso e os seus soldados ou foram mortos ou capturados, não esquecendo armamento e cidades destruídas e civis aniquilados.
+
+Com o país numa situação debilitada, destruído e enfraquecido pela força alemã, Itália aproveitou a situação e declarou guerra à França. O objetivo de Benito Mussolini era conseguir obter regiões francesas para o seu poder. França foi invadida pelos italianos um mês após a invasão alemã (10 junho de 1940), ato que foi considerado como "um golpe nas costas". Apesar de as tropas francesas serem menos numerosas e de qualidade inferior, ofereceram bastante resistência aos italianos o que revelou a alta desorganização e incapacidade militar dos mesmos. 
+
+\subsection{Invasão à Bélgica}
+\cite{Belgica}
+\paragraph{} No mesmo dia em que ocorreu a Batalha de França, deu-se também a Campanha dos 18 dias, igualmente denominada por Batalha da Bélgica. Consistiu na invasão da Alemanha à Bélgica e durou 18 dias, sendo que ao fim dos mesmos, a Bélgica se rendeu ao exército alemão.
+
+Nesta invasão deu-se a primeira e maior batalha entre tanques alguma vez vista em Hannut. De referência, é também a Batalha da Fortaleza Eben-Emael em que as tropas alemãs tomaram a de assalto, de uma maneira inovadora, em que 500 paraquedistas em planadores foram lançados em direção à mesma fortaleza e rapidamente a atacaram e capturaram os militares belgas. Estas táticas inovadoras são uma prova de como a Blitzkrieg era incrivelmente devastadora e destrutiva, não só pela sua velocidade, mas também pelo fator surpresa em que apresenta. 
+
+\subsection{Invasões a Países Baixos e Luxemburgo}
+\cite{Baixox}
+\cite{Luxemburgo}
+\paragraph{} Todas estas invasões foram feitas no mesmo dia, a 10 de Maio, e estes dois últimos países, tal como a Noruega e a Dinamarca também o era, declaravam-se neutros.No entanto isso não impediu a Alemanha de os invadir a ambos.
+
+A invasão dos Países Baixos, tal como a da Bélgica, usou a técnica inovadora de lançar paraquedistas alemães nos "pontos chave" do país, incluindo os principais aeroportos e as cidades de Roterdão e Haia. Em aproximadamente 7 dias o país inteiro foi tomado, e Roterdão foi gravemente bombeado pela Luftwaffe (ramo aéreo do exército nazi).
+
+Tal como todos os outros países anteriormente referidos, o Luxemburgo, num curto espaço de tempo foi completamente ocupado pelos alemães. A invasão do Luxemburgo foi fundamentada pelo facto de que Hitler necessitava de suportar os seus exércitos num local perto da vizinha França. Por isso mesmo, foi permitido ao Luxemburgo manter o seu governo, mas continuavam a ser assolados com a presença militar alemã.
+
+\section{Blitz}
+\cite{Blitz}
+\paragraph{}Após as várias invasões realizadas pelos nazis, vários armistícios foram assinados, que representavam um cessar fogo, mas não um tratado de paz, sendo que o ficou mais conhecido foi o Segundo Armistício de Compiègne, entre a Alemanha e a França que não só estabeleceu um cessar fogo, mas também que terras francesas fossem cedidas aos alemães. Assim sendo a França ficou divida em dois, a parte ocupada e a parte livre (Figura 3.1).
+
+\begin{figure}[h]
+\centering
+\includegraphics[height=200pt]{fr.jpg}
+\caption{Divisão da França após a invasão alemã}\cite{ImgFr}
+\end{figure}
+
+
+
+ 
+ 
+ 
+Após as invasões anteriormente referidas, dia 7 de Setembro de 1940, começou a ocorrer um ataque como nunca antes visto na Inglaterra, intitulado com Blitz (relâmpago). Este ataque consistiu numa série de bombardeamentos realizados pela Luftwaffe em pontos estratégicos do Reino Unido. Tal como já mencionado a 7 de Setembro de 1940, começou esse ataque e o primeiro local a sofrer com o mesmo foi a cidade de Londres, sendo que este ataque se manteve durante aproximadamente 57 noites consecutivas. O objetivo dos alemães era destruir e enfraquecer a cidade, de modo a que atacaram centros militares e cidades industriais deixando o país numa situação debilitada. Das cidades que foram atacadas, apresentam-se os seguintes exemplos:
+\begin{itemize}
+    \item Birmingham;
+    \item Sheffield;
+    \item Southampton;
+    \item Liverpool;
+    \item Manchester;
+    \item Glasgow;
+    \item entre outras.
+\end{itemize}
+Todas estas cidades sofreram ataques intensos que tiraram a vida a milhares de inocentes.
+
+Numa primeira fase da Blitz, tanto de dia como noite, ocorriam bombardeamentos, principalmente em Londres. No primeiro dia, perto de 370 bombardeiros atacaram Londres durante o dia e mais 133 atacaram a mesma cidade de noite. Tiraram a vida a aproximadamente 436 londrinos e feriram  outros 1 666 inocentes.
+
+A novembro de 1940 começou a segunda fase em que as forças nazis lançaram ataques mais fortes às já anteriormente referidas cidades, atingindo principalmente centros industriais e áreas portuárias. A 29 de dezembro foi causado um dos maiores incêndios em Londres por um ataque alemão em que foram lançadas bombas incendiárias e explosivas sobre a cidade. 
+
+A terceira e ultimas fase destes ataques realizou-se em fevereiro de 1941 em que foram feitos mais uma série de ataques contra as mesmas cidades e pontos estratégicos, com o mesmo objetivo de enfraquecer os ingleses, para que fosse possível uma invasão ao território Britânico. No dia 10 de maio de 1941 deu-se o último grande ataque, executado por 515 bombardeiros, novamente em Londres.
+
+Estes ataques tiraram a vida a perto de 43 000 civis e feriram aproximadamente 139 000 inocentes, no entanto apesar disto os alemães fracassaram no seu objetivo que era danificar o país de modo a ser possível uma invasão, pois esses mesmos planos de invasão foram posteriormente adiados.
+
+\section{Estabilidade Europeia e Asiática}
+\cite{Wikipedia1}
+\paragraph{}Berlim, 27 de Setembro de 1940 é assinado o pacto Tripartite também conhecido como Pacto do Eixo, assinado pela Alemanha, Itália e Japão e formou a famosa aliança denominada por eixo. A intenção de Hitler era intimidar os Estados Unidos, para que os mesmos se mantivessem como um país neutro. Uns meses mais tarde, aderiram ao pacto países como a Hungria, Roménia e no ano seguinte (março de 1941) a Bulgária.  
+No entanto, apesar de se declararem como neutros, os Estados Unidos começavam a tomar medidas para eventuais confrontos, desde aumentar significativamente a sua marinha até compra e produção de armamento.
+Essa neutralidade dos americanos estaria prestes a mudar, tendo em conta que estes já estariam a fornecer para a China e para o Reino Unido bens materiais.
+
+O que essencialmente estaria a acontecer era uma espécie de preparação para um confronto ainda maior do que o que estava a ocorrer no momento. Daí a Itália ter invadido a Grécia (mas fracassado, tendo por isso ir invadir a Albânia), enquanto que o Reino Unido também ocupou outros países de modo a evitar a sua ocupação pelos alemães e a "França Livre" (metade do país que não estava sob o controlo dos nazis) conquistou também países como a Síria e o Líbano. Do outro lado do planeta decorria uma guerra entre China e Japão, sendo que até ao momento ainda não tinham ocorridos ataques militares diretos. Até ao momento o que se assistia pela primeira vez era uma espécie de estabilidade Europeia e Asiática. No entanto isso estaria prestes a mudar.
+
+\section{Operação Barbarossa}
+\cite{Operacao}
+\cite{Wikipedia1}
+\paragraph{}A 22 de junho de 1941, foi posta em prática a operação Barbarossa, que consistiu na invasão da \ac{ussr} pela Alemanha e seus aliados (Potências do Eixo). Até ao momento ambos os países tinham entre si vários pactos e acordos, que serviam como interesses territoriais e económicos, pois ambos "desconfiavam" um do outro. Desde a invasão da Finlândia, Hitler tinha ideia de que o Exército Vermelho (Exército russo) não iria oferecer muita resistência pela sua desorganização e competência. Por outro lado Joseph Stalin, após a Guerra de Inverno tinha aperfeiçoado as suas forças e devido à dimensão das mesmas e estado industrial e militar do seu país não pensava que Hitler iria entrar em confronto com o seu país. Ambos se enganaram.
+
+Em fevereiro de 1941, tropas alemãs começavam a ser reunidas nas fronteiras soviéticas, sendo que já teriam sido realizadas anteriormente, múltiplas operações de vigilância. Ao mesmo tempo, na eventualidade de realmente ocorrer um ataque por parte dos alemães, os russos já teriam planos para a mesma.
+
+Por volta da 03:45 de 22 de junho de 1941, começou um bombardeamento na parte da Polónia que pertencia aos soviéticos, foram atacadas as frentes que o exército vermelho teria preparadas para a invasão e foram feitos ataques aéreos em cidades e países que pertenciam à União Soviética, incluindo a Finlândia e a Ucrânia. Este ataque inicial conduzido pelos alemães desorganizou completamente os soviéticos e destruiu as suas respetivas linhas de defesa.
+
+Numa fase mais avançada do confronto, quando uma tempestade que causou um atraso aos alemães, os soviéticos reorganizaram-se e realizaram um contra-ataque contra as forças alemãs fortíssimo. Semana após semana, os alemães estavam a perceber que as forças soviéticas tinham sido subestimadas. No entanto os alemães continuaram a combater e progressivamente a ganhar território aos Russos.
+
+Na última batalha deste confronto, que se realizou em Moscovo, governavam a cidade condições severas de inverno. Durante vários dias, e várias tentativas, o exército alemão fez múltiplas investidas para tomar a capital em seu poder, mas a maioria delas foi em vão. Com condições adversas, a que os soviéticos estavam habituados, o exército alemão sofreu diversos contra-ataques que custaram a vida a mais de 830 mil homens.
+
+Pela primeira vez na guerra assistia-se a uma Alemanha debilitada e desorganizada o que foi um ponto de viragem.
+
+\begin{figure}[h]
+\center
+\includegraphics[height=150pt]{nazi.png}
+\caption{Ocupação da Europa alemã após a operação Barbarossa}\cite{mapa}
+\label{fig:ualogo.1}
+\end{figure}
+
+Esta operação foi a maior alguma vez vista, nunca tantos soldados, tanques, armas e outros meios foram usados numa única ofensiva. Até ao momento esta revelou-se também o confronto mais violento da guerra.
+
+\section{Japão e  as Alianças}
+\cite{Wikipedia1}
+\cite{Aliados}
+\paragraph{}Após todos estes acontecimentos na Europa, o Japão estava a revelar-se um perigo realmente ameaçador. No final de 1941, o Japão atacou territórios britânicos e americanos, sendo que o mais conhecido foi o ataque a Pearl Harbor, base militar localizada no Havai, que matou cerca de 2403 pessoas e feriu outras 1178.
+Assim sendo, os Estados Unidos que apesar da declarada neutralidade (no entanto já estavam a ajudar países como o Reino Unido), declarassem guerra ao Japão, tal como o Reino Unido, a China e a Austrália, o que consequentemente fez com que as Potências do Eixo declarassem guerra aos Estados Unidos o que causou um divisão ainda maior do planeta entre os Aliados e as Potências do Eixo tal como vemos na tabela 3.1. alguns dos principais exemplos.
+
+\begin{table}[h]
+\centering
+\caption{Principais membros dos Aliados, Potências do Eixo e países neutros}
+\begin{tabular}{r|r|r}
+ 
+Aliados &  Potências Do Eixo & Neutro\\ 
+\hline                               
+Reino Unido      & Alemanha  & Portugal\\
+França           & Itália    & Suíça\\
+Estados Unidos   & Japão     & Espanha\\
+Austrália        & Bulgária  & Suécia\\
+China            & Hungria   & Dinamarca\\
+Canadá           & Roménia   & Noruega
+ 
+\end{tabular}
+\end{table}
+
+\section{O Dia D}
+\cite{Desembarques}
+\cite{Wikipedia1}
+\paragraph{}6 de Junho de 1944, foi um dos dias mais marcantes nesta grande guerra. Após a tentativa falhada de invasão da União Soviética, os alemães encontravam-se pela primeira vez desde o inicio da guerra fragilizados e desorganizados, mas continuavam extremamente poderosos com grande parte da Europa sob o seu domínio. No entanto estes acontecimentos consistiam uma oportunidade de acabar com a hegemonia dos nazis, e assim o foi.
+
+Este plano começou a ser idealizado em 1943, altura em que a Alemanha se encontrava em confrontos com os Soviéticos. Foram criados diversas transmissões rádio falsas para levar os germânicos a pensar que os Aliados iriam para um certo lugar. Um pouco depois da meia noite nesse mesmo dia, ocorreu um assalto, em que os Aliados, bombardearam parte da costa francesa, incluindo a zona da Normandia.
+
+Umas horas mais tardes deu-se o maior desembarque alguma vez visto, por toda a costa Francesa, na zona da Normandia, em que aproximadamente 150 mil homens, transportados em 5.300 embarcações aterraram nas praias francesas. De destacar também os 1.200 tanques e as 12 mil aeronaves como apoio que se apresentavam neste momento marcante.
+
+Este foi um dos dias mais importantes de toda a guerra, pois após o mesmo, as forças do Eixo não conseguiram ripostar a um ataque de tamanha dimensão e apesar do número brutal de vítimas e de feridos, foi a partir deste dia que começou a libertação da Europa do domínio nazi.
+
+
+\begin{figure}[h]
+\center
+\includegraphics[height=200pt]{d.jpg}
+\caption{Desembarque dos Aliados na zona da Normandia (Dia D)}\cite{diad}
+\end{figure}
+
+Após os bem sucedidos desembarques, as unidades militares alemãs presentes em França, foram derrotadas com ajuda das tropas provenientes da metade livre francesa e assim após umas breves semanas a França foi libertada do domínio alemão a 25 de agosto de 1944. 
+
+Por toda a Europa, as cidades que tinham sido invadidas pelos alemães, começaram a ser atacadas pelos aliados, e aos poucos a os exércitos nazis começaram a recuar. Com grande parte da Europa a ser libertada do domínio alemão, finalmente faltava o objetivo final, ou seja atacar Berlim. Várias tentativas foram feitas, mas todas em vão até 25 de abril, em que as forças dos aliados penetraram na mesma cidade. 5 dias depois, a 30 de abril, o prédio do parlamento alemão (vulgarmente conhecido como Reichstag) foi capturado.
+
+\section{As Bombas Atómicas no Japão}
+\cite{Bombas}
+\paragraph{}A 8 de maio de 1945 foi assinada pela Alemanha uma rendição e a 26 de julho de 1946 os Estados Unidos da América fizeram também um pedido ao Japão sob ameaça de destruição total.
+Os japoneses não seguiram o exemplo dos alemães, logo, um dos mais mortíferos ataques em toda a guerra ocorreu. Duas bombas atómicas foram lançadas sobre duas cidades japonesas, Hiroshima e Nagasaki. Ficou registado como a primeira e única vez em que bombas atómicas foram usadas. Sobre a Hiroshima foi lançada uma bomba intitulada "Little Boy", e sobre Nagasaki "Fat Man".
+
+Este ataque tirou entre 90 mil e 166 mil vidas em Hiroshima e  60 mil e 80 mil em Nagasaki, sendo que aproximadamente metade destas foram logo no momento após os lançamentos das bombas. Os efeitos continuaram a ser sentidos nos dias que se seguiram devido ao poder tão devastador deste ataque, sendo que a maioria deles foram pela radiação libertada.
+
+Em agosto de 1945 o Japão rendeu-se, tendo assinado uma rendição a 2 de setembro de 1945 e  deu-se assim o final definitivo da Segunda Guerra Mundial.
+
+\chapter{Pós-Guerra}
+\label{chap.baixas}
+\cite{Wikipedia1}
+\paragraph{}A segunda guerra mundial ganhou esse mesmo nome, não só devido á participação de uma grande quantidade de países de todos os cantos do mundo, como também do número astronómico de baixas que se destacou de qualquer outra guerra. Estes números arrasadores devem-se à revolução na indústria militar (ao aparecimento de novas armas e tecnologias de combate). As baixas foram não só humanas e ao nível de infraestruturas, como também a nível moral. Embora muito vagamente (o número de mortes não é certo), podemos aproximar o número de mortes aos dados da seguinte tabela.
+
+
+\begin{tikzpicture}
+\begin{axis}[
+    xticklabels={Total, Ussr, Inglaterra, França, Japão, Alemanha, China},
+    x tick label style={rotate=90,anchor=east},
+	ylabel=Número de mortes,
+	enlargelimits=0.05,
+	ybar interval=0.7,
+]
+\addplot 
+	coordinates {(1, 15000000) (2,8800000) (3, 383600) (4, 217600) (5, 2120000) (6,5533000) (7, 3750000) (8, 3750000)};
+\addplot 
+	coordinates {(1,45000000) (2,18184000) (3, 67200) (4,350000) (5, 953000) (6, 3000000) (7, 13191000) (8, 1319455)};
+\legend{Militares, Civis}
+\end{axis}
+\end{tikzpicture}
+
+
+
+
+\chapter{Conclusões}
+\label{chap.conclusao}
+\paragraph{}Quando falamos de história, observamos que ao longo dos anos houve uma mudança nos números de mortes de uma guerra. Enquanto no passado uma grande guerra levava apenas uns milhares de vítimas, nesta última grande guerra, é estimado o número de mais de 70000000. Isto remete-nos a pensar na moralidade da guerra e do uso de novas tecnologias e de um consequente futuro apocalíptico causado pela evolução humana conjuntamente com o ódio e invejas.
+
+Assim sendo, no seguintes anos da grande guerra, houve uma grande preocupação por parte das nações (Organização das nações unidas, por exemplo) de todo mundo em acabar com a guerra, e, quando não conseguissem, pelo menos amenizar o uso abusivo de novas tecnologias com consequências catastróficas. 
+
+Assim, embora com alguns conflitos, dos anos seguintes à guerra até ao presente, embora com momentos de tensões, a paz manteve-se e a humanidade pode agora focar-se em diversas outras atividades.
+
+O principal objetivo deste relatório era a perceção dos erros cometidos no passado, e tentarmos evoluir no sentido de não voltarmos a cometê-los novamente. 
+
+\chapter*{Contribuições dos autores}
+O capítulo \autoref{chap.introducao} foi escrito por \ac{jg}. O capítulo \autoref{chap.antecedentes} foi escrito por \ac{jp}.
+O capítulo \autoref{chap.guerra} foi escrito por \ac{jg}.
+Os capítulos \autoref{chap.baixas} e \autoref{chap.conclusao} foram escritos por \ac{jp}. Considera-se que cada autor contribuiu igualmente para o trabalho, ou seja cada um fez cinquenta porcento do relatório.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{Acrónimos}
+\begin{acronym}
+\acro{ussr}[USSR]{Union of Soviet Socialist Republics}
+\acro{jg}[JG]{João Gameiro}
+\acro{jp}[JP]{Joaquim Pedro}
+
+
+\end{acronym}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\printbibliography
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
