@@ -1,0 +1,15 @@
+imgs:img0.png&&Número de membros tem o sapo?&&4&&2&&3&&1&&0
+imgs:img1.png&&Qual foi o primeiro Rei de Portugal?&&D. Afonso Henriques&&Napoleão&&Lady Gaga&&Eusébio&&0
+imgs:img1.png&&A Guerra dos Balões do DETI opõe?&&CT TSI vs ET&&ET vc CT&&CT ET vs TSI&&ET TSI vs CT&&0
+imgs:img1.png&&Qual era o primeiro nome de Picasso?&&Pablo&&Tito&&Eugénio&&Diego&&0
+imgs:img1.png&&Qual é o clube de futebol português com mais títulos oficiais da UEFA?&&FCP&&SLB&&SCB&&SCP&&0
+imgs:img0.png&&Qual foi o Cognome do sexto Rei de Portugal?&&O Lavrador&&O Desejado&&O Africano&&O Povoador&&1
+imgs:img1.png&&Qual o símbulo do Potássio?&&K&&Po&&P&&Pt&&1
+imgs:img1.png&&Qual é o elemento mais abundante no Universo?&&Hidrogénio&&Oxigénio&&Ferro&&Ouro&&1
+imgs:img1.png&&Qual destes materiáis é o mais precioso?&&Platina&&Ouro&&Prata&&Bronze&&1
+imgs:img1.png&&Como se chama a claque do Beira-Mar?&&Auri-Negros&&Milhafres&&Pac Mans&&Beira Beira&&1
+imgs:img0.png&&Qual a data da Batalha de Aljubarrota?&&1385&&1445&&1259&&1301&&2
+imgs:img1.png&&Tyrannosaurus Rex significa?&&lagarto tirano rei&&Dinossauro tirano rei&&Rei dos lagartos&&Tirano dos Répteis&&2
+imgs:img1.png&&Fernando Pessoa desdobrava-se em quantas entidades literárias?&&4&&3&&2&&1&&2
+imgs:img1.png&&Quem descobriu o raio-x?&&Wilhelm Conrad Röntgen&&Hermann von Helmholtz&&Fernando Sanford&&Nikola Tesla&&2
+imgs:img1.png&&Qual é o número atómico do laurêncio?&&103&&99&&40&&15&&2
