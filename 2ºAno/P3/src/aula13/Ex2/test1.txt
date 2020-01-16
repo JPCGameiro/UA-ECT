@@ -1,0 +1,2 @@
+Construa um programa que leia um ficheiro de texto e que conte todos os pares de
+palavras encontrados no ficheiro e o número de ocorrências de cada par.
