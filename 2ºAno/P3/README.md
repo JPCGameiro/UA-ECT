@@ -15,4 +15,4 @@
   * Introdução à linguagem C++.
   
   ## Guiões
-  Resoluções dos guiões fornecidos incompletas.
+  Resoluções incompletas dos guiões fornecidos.
