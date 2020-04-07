@@ -13,5 +13,5 @@
 Resoluções incompletas dos guiões fornecidos (não devem ser interpretadas como soluções).
 ## Projeto
 Aplicação que demonstra a utilização conjunta de:
- * Deteção de itens similares;
- * Deteção de pertença a um conjunto.
+ * Deteção de itens similares (MinHash);
+ * Deteção de pertença a um conjunto (BloomFilter).
