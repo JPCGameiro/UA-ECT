@@ -1,4 +1,5 @@
 # Introdução aos Sistemas Digitais
+
 ## Conteúdos
 * Representação e codificação de informação;
 * Álgebra de Boole;
