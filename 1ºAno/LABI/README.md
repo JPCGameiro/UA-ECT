@@ -11,4 +11,5 @@
 * Tecnologias de programação: Compilação vs. interpretação, Introdução à linguagem python, Compilação cruzada.
 ## Guiões e Projetos
 Enunciados dos guiões e projetos.
-Disponível também o código e os relatórios desenvolvidos para cada projeto.
+Disponível também o enunciado, código e relatórios desenvolvidos para cada projeto.
+
