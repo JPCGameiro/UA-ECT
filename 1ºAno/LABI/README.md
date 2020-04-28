@@ -12,5 +12,5 @@
 ## Guiões e Projetos
 Enunciados dos guiões e projetos.
 
-Disponível também o enunciado, código e relatórios desenvolvidos para cada projeto.
+Disponível código e relatórios desenvolvidos para cada projeto.
 
