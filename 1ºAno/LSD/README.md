@@ -15,3 +15,7 @@ Slides com os conteúdos previstos para esta U.C e
 resoluções (parcialmente corretas) dos guiões práticos fornecidos.
 ## Mini-Projeto e Projeto Final
 Diretórios com o código/relatório desenvolvido e respectivo enunciado dos dois projetos propostos no âmbito desta unidade curricular.
+* Mini Projeto
+  * Implementação em VHDL de um temporizador horário com contagem temporal decrescente.
+* Projeto
+  * Implementação em VHDL de uma calculadora.
