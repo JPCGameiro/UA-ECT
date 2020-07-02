@@ -1,0 +1,13 @@
+array kuest arrk -> choose from memory(ID="animais" OR "antlr");
+arrk.shuffle;
+
+for int i in [ 0, arrk.length [ {
+    int check -> display(arrk[i], mc, 60);
+    if(check  <= 40){
+        break;
+    }
+}
+
+saveFile("kuest.txt");
+
+

@@ -1,0 +1,42 @@
+#Declarations-----------------------------------
+
+int i;
+string s;
+boolean f;
+kuest k;
+int i;             #dá erro
+boolean s;         #dá erro
+
+#Assignments-----------------------------------
+int a -> 2;
+f -> true;
+s -> "Hello";
+int b -> true;      #dá erro
+string str -> 2;    #dá erro
+int i -> 3;         #dá erro
+
+a -> z;     #dá erro
+a -> b;     #dá erro
+str ->  s;
+f -> false;
+a -> sadsad;
+
+
+kuest ku -> /*antlr4-5["o pedro é fixe"]{
+    "Obvio que não" - 100;
+    "Não" - 100;
+    "Obvio que não" - 40;
+}
+*/;
+
+#k -> /*antlr4-5["o pedro é fixe"]{
+#    "Obvio que não" - 100;
+#    "Não" - 100;                                
+#    "Obvio que não" - 40;
+#}
+#antlr4-5["o pedro é fixe"]{                                 #Dá erro
+#    "Obvio que não" - 100;                                  #Pois tem duas questões associadas
+#    "Não" - 100;                                            # a uma
+#    "Obvio que não" - 40;
+#}
+#*/;

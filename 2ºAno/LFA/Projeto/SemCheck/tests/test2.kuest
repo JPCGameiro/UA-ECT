@@ -1,0 +1,60 @@
+int aux -> 2;
+kuest k -> /*antlr4-5["o pedro é fixe"]{
+    "Obvio que não" - 100;
+    "Não" - 100;
+    "Obvio que não" - 40;
+}
+*/;
+
+
+#Array declarations-----------
+
+array int ai;
+array string as;
+array kuest ak;
+array boolean ab;
+
+array int as;       #dá erro
+array boolean ab;   #dá erro
+
+
+#Array assignments--------------
+
+ai -> {1, 2, 3, aux};
+#ai -> {"String", 2, 3};     #dá erro
+#ai -> {"String", "hello"};  #dá erro
+
+#array string test -> as;    #dá erro
+#array int test1 -> aux;     #dá erro
+array int test2 -> ai;
+#ab -> ak;                   #dá erro  
+#bfsd -> ai;                 #dá erro
+
+ak -> {k, k, k};    
+
+#Array Operations---------------
+
+int number ->  ai.length;
+#number -> noexist.length;                  #dá erro
+number -> 5 + ai.length;
+#number -> (8*9) - 45 + (fss.length) / 789; #dá erro
+array int check -> {ai.length, ak.length};
+#array int check2 -> {as.length};           #dá erro
+
+
+ai.add(21, 22, 33, number);
+#ai.add("ERROR");                            #dá erro
+ai.remove(21, 7894, number, "hello");
+ai.remove("ERROR");                         #dá erro
+#nodefined.clear;                            #dá erro
+ai.clear;
+
+
+int i -> ai[1];
+i -> ak[1] + 1;                         #dá erro
+ai.add(check[i]);
+
+int arr;
+arr.add(1,2,3, adsdas);
+
+

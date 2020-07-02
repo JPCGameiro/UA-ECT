@@ -1,0 +1,5 @@
+Erros a serem resolvidos
+	->aquela coisa do choose array ser usado mais do que uma vez no mesmo array
+	->não responder a perguntas dá uma excepção
+	->alterar no compilador o visit do filter NumberOfAnswers e Dificulty
+	->Alterar tamanho da interface

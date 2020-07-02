@@ -1,0 +1,53 @@
+#Teste aos ciclos
+
+int i->2;
+string a -> "hello";
+
+while(i=i){
+    int i0 -> 4;
+    if(1 = 2){
+        if(5 = 4){
+            break;
+        }
+        else{
+            break;
+        }
+        break;
+    }
+    break;
+    int i1 -> 4;
+}
+int i0 -> 4;
+
+while(5=2){
+    int i1 -> 4;
+    i0 -> 4;
+    i0 -> 4;
+    i0 -> 4;
+
+    do{
+        i -> 5;
+        if(i=4){
+            break;
+        }
+        break;
+    }
+    while(true = false)
+    break;
+}
+
+do{
+    i -> 5;
+    while(5=1){
+        array string s;
+        int i111;
+        while("string" = "string"){
+            i -> 5;
+            break;
+        }
+        break;
+        i->4;
+    }
+    break;
+}while(i < 5)
+

@@ -1,0 +1,16 @@
+#Operações aritméticas em assignments
+
+boolean f -> true;
+int a -> 2 + 2;
+int b -> 2 - 2;
+int c -> 4 * 4;
+int d -> 4 / 4;
+int e -> 4 % 3;
+a -> ( 3 * 8 + 4);
+e -> -8 * (4*5);
+a -> b + c;
+a -> a + e;
+a -> f;                 #dá erro
+a -> e + s;             #dá erro
+a -> (f - 24) + a;      #dá erro
+

@@ -1,0 +1,32 @@
+
+#Método get para tipo kuest
+
+kuest k -> /*antlr4-5["o pedro é fixe"]{
+    "Obvio que não" - 100;
+    "Não" - 100;
+    "Obvio que não" - 40;
+}
+*/;
+int i11;
+string s -> k.get(ID);
+int i -> k.get(dificulty);
+int i0 -> k.get(numberOfanswers);
+string s1 -> k.get(theme);
+string s11 -> i11.get(ID);
+
+if(k.get(numberOfanswers) <= 1){
+    if(k.get(ID) = "Q1" and k.get(dificulty)=5){
+        int f -> 2;
+        if(1=2){
+            int f1->2;
+            if(f = 11){
+                f->2;
+            }
+        }
+    }
+    f->2;
+}
+string sa;
+sa++;
+
+i -> k.get(numberOfanswers)+1;

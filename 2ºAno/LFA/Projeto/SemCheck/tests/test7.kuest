@@ -1,0 +1,29 @@
+array int a -> {1, 2, 3};
+array string s -> {"hello"};
+array boolean b -> {true};
+array kuest k-> choose from memory();
+
+for int i in [1, 45]{
+    a.add(2);
+    int c -> a[i];
+    for kuest q in k{
+        i -> 4;
+        k.add(q);
+        if(q.get(ID) = "antlr"){
+            break;
+        }
+        i -> random(1,2);
+        k.shuffle;
+        i -> k.length;
+    }
+    break;
+}
+
+int number -> 4;
+
+for string str in s{
+    s.add("hello");
+    int i-> 4;
+    kuestover;
+}
+

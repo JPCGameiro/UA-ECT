@@ -1,0 +1,54 @@
+#declaração de variáveis
+string s;
+int n -> 1;
+boolean check -> true;
+
+
+if(check = true){
+    string a0;
+    a0 -> "hello";
+    if(check = true){
+        a0 -> "Pode-se aceder aqui";
+        string a1;
+        a1 -> "Pode-se aceder aqui";
+    }
+    
+}
+a0 -> "Aqui não, dá erro";
+
+if(1 = 1){
+    int a0;
+    a0 -> 2;
+}
+
+
+
+
+
+if(n < 98){
+    n -> 45;
+    string bf;
+    if(8 = 9){
+        n->44;
+        if 1!=5 or 1 <= 9{
+            string asd -> "asd";
+            bf -> "Pode-se aceder a bf aqui";
+        }
+        asd -> "não se pode aceder aqui a asd, ERRO";
+
+       if(true = false){
+            bf -> "pode se aceder a bf aqui";
+        }
+        else{
+            s -> "variaveis globais podem ser acedidas em qualquer lado";
+        }
+    }
+    elseif(n < 97){
+        asd -> "não se pode aceder a asd aqui, ERRO";
+    }
+    else{
+        bf -> "a bf sim";
+    }
+}
+
+

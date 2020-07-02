@@ -1,0 +1,57 @@
+#Choose
+
+int aads -> 2;
+string test -> "animais";
+array string s -> {"tema", "eeg"};
+#int a -> choose from memory();              #erro choose devolve sempre um array de kuest
+#array int b -> choose 43 from memory();     #erro
+array int b -> {1};
+
+array kuest ak -> choose from memory(numberOfanswers = 7, dificulty = 5);
+array kuest ak0 -> choose 0 from memory(theme = s OR "Animais", ID = s, numberOfanswers=87);
+array kuest k1 -> choose 34 from memory(dificulty = 1, ID = "demo", numberOfanswers=1 OR 5);
+
+kuest ku -> /*antlr4-5["o pedro é fixe"]{
+    "Obvio que não" - 100;
+    "Não" - 100;
+    "Obvio que não" - 40;
+}
+*/;
+
+#erro
+if( ak = choose from memory() ){
+    int i -> 2;
+}
+
+if(aads = 2){
+    int aux -> choose from memory();
+    int i -> 2;
+}
+int adas -> aux.length;     #ERRO
+
+
+display(ak[1], mc, 3600);
+display(1, txt, aads);
+display(ku, tf, test);
+int check -> display(ku, tf, 3600); #display devole -1 em caso de nresposta e cotação caso contrário
+
+display(b[aads]); #ERRO b é um array de string
+display(k1);      #ERRO não se pode imprimir um array de kuest
+display(k1[aads], mc);
+display(k1[aads], 3600);
+
+
+
+
+#saveFile("file.txt");
+#saveFile();            saveFile só pode aparecer uma vez no programa
+#saveFile(k1);           saveFile só aceita strings
+#saveFile(test);
+saveFile();
+
+
+
+
+
+
+
