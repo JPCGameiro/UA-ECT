@@ -1,0 +1,19 @@
+# ANTLR:
+antlr.P1("O ANTLR4 permite...") {
+  "construir um interpretador para uma linguagem":100;
+  "construir um compilador para uma linguagem":100;
+  "paralelizar um programa":0;
+  "processar ficheiros de especificação de linguagens concebidos para lex e yacc":0;
+  "a geração automática de código de processamento de
+   uma linguagem em qualquer outra linguagem":0;
+  "verificar se um programa está correcto":0;
+}
+
+# Outras áreas:
+outro.P1("Um gato é...") {
+  "um insecto":0;
+  "um mamífero":100;
+  "o melhor amigo do Homem":0;
+  "um animal da família dos felinos":100;
+  "um peixe":0;
+}

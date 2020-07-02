@@ -1,0 +1,7 @@
+// p5.txt
+
+print reduce 2/4;
+print reduce ((-2/4)^4);
+print reduce read "fraction to reduce";
+
+

@@ -1,0 +1,8 @@
+-- first command:
+{1,2,3}
+-- set var A:
+A = {3,4,5}
+A \ {5}
+B = A + {0}
+A & B
+-- that's all folks!
