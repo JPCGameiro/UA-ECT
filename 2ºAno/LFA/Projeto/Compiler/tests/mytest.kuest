@@ -1,0 +1,114 @@
+# declaration
+
+time->start;
+
+int a;
+string g;
+kuest k;
+boolean b;
+
+# assignment
+int z -> 4;
+string s -> "minha nossa!";
+boolean bb -> false;
+boolean bbbb -> true;
+
+# reassignment
+z-> 5;
+s-> "tua nossa!";
+bbbb -> bb;
+int zz -> 98;
+zz -> 5;
+
+# testar funções do expr
+int new_var -> 2+3*5;
+new_var -> 3 * new_var;
+int soma -> 4+(3-6)*46+(4/2)-(-5);
+
+
+k -> /*
+
+    antlr-p1-5["o pedro é fixe?"]{
+        "Obvio que não" - 100;
+        "Não" - 100;
+        "Obvio que XIM" - 40;
+    }
+*/;
+
+time->value;
+
+kuest quest ->
+/* 
+    sanitas-id1-2["Quantas fábricas produzem louça sanitária em Portugal?"]{
+        "2"- 100;
+        "3"- 0;
+    }
+*/;
+
+time->stop;
+
+
+# já faz isto tudo!!!!!!!!!!!!!!!!!!!!!!  :)
+
+array int ii;
+array boolean bbb;
+array kuest kk;
+array string ss;
+
+array int iii -> {2, 4, 5, 6, 7, 9};
+string pessoa -> "bruno de carvalho";
+ss -> {"pedro", "ana", "alex", "gameiro",   "bodas", pessoa};
+bbb -> {true, false, true,    false};
+ii -> {3, 4, 5 ,6, 7};
+
+z -> bbb.length;
+int newIntVar -> ii.length;
+ss.add("gabriel não ribeiro");
+bbb.add(true);
+ii.add(3, 5, 7);
+bbb.add(true, false);
+bbb.clear;
+
+
+int i3 -> ii[4];
+int i4 -> 9*ii.length+ii[3]+ii[i3]/3;
+
+
+# já faz isto tudo!!!!!!!!!!!!!!!!!!!!!!  :)
+
+kuest k2;
+array string asd -> {"String", "dhjsi"}; 
+int i -> 2;
+kuest k1 -> k;
+boolean scp -> true;
+int game ->2;
+
+if k1 != k{
+    game -> 4;
+    int gameiro -> 3;
+    k2 -> k1;
+}elseif i%2=0 and i+i=4{
+    asd.add("Sporting!");
+    int gameiro -> 4;
+}elseif scp != false or scp = false{
+    asd.add("Sporting gg!");
+}
+else {
+    asd.add("String ARRAY");
+}
+
+if i3 < 3{
+    k2 -> k;
+}
+
+
+
+
+
+
+
+
+
+
+
+

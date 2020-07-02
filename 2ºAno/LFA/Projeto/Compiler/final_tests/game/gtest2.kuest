@@ -1,0 +1,27 @@
+#Sempre que o utilizador falha uma pergunta desconta 10 segundos na
+#pergunta seguinte
+
+int value;
+int time -> 100;
+array kuest ak -> choose from memory(theme="logica" OR "desporto");
+ak.shuffle;
+
+
+
+for kuest k in ak{
+    if(k.get(numberOfanswers) < 4){
+        value -> display(k, tf, time);
+    }
+    else{
+        value -> display(k, mc, time);
+    }
+
+    if(value < 40){
+        time -> time - 10;
+    }
+    if(time <= 0){
+        break;
+    }
+}
+
+saveFile();

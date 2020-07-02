@@ -1,0 +1,8 @@
+
+array string temas -> {"antlr4", "animais"};
+
+array kuest k9 -> choose from memory(theme = temas OR "antlr");
+
+array string ids -> {"id1", "id2"};
+string id_que_eu_quero -> "id3";
+array kuest k10 -> choose from memory(ID = ids OR id_que_eu_quero);

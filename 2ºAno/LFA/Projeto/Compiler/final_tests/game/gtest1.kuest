@@ -1,0 +1,23 @@
+#Alterar o modo de apresentação de acordo com se o utilizador acerta ou falha
+
+array kuest arrk -> choose from memory(theme = "matematica");
+int NumberOfRights -> 0;
+int value -> -1;
+
+for int i in [0, arrk.length[ {
+    if(NumberOfRights <= 3){
+        value -> display(arrk[i], tf, 45);
+    }
+    elseif(NumberOfRights >= 4 and NumberOfRights<=8){
+        value -> display(arrk[i], mc, 55);
+    }
+    else{
+        value -> display(arrk[i], txt, 60);
+    }
+
+    if(value > 30){
+        NumberOfRights++;
+    }
+}
+
+saveFile();

@@ -1,0 +1,64 @@
+#Adicionar pergutas ao tema desporto
+#dependendo da dificuldade muda o modo de apresentação
+#quando o utilizador falha o programa acaba
+
+kuest k0 -> /*desporto-id1-1["Quem é o atleta mais medalhado dos Jogos Olimpicos?"]{
+    "Michael Phelps" - 100;
+    "Larisa Latynina" - 0;
+    "Mark Spitz" - 0;
+    "Usain Bolt" - 0;
+    "Neymar Junior" - 0;
+}
+*/;
+
+kuest k1 -> /*desporto-id2-4["Qual é o atual clube da judoca Telma Monteiro?"]{
+    "Sporting" - 0;
+    "Benfica" - 100;
+    "Porto" - 0;
+    "Clube Construções Norte-Sul" - 0;
+}
+*/; 
+
+kuest k2 -> /*desporto-id3-3["Qual foi o estilo em que Sarah Sjöström mais se destaca?"]{
+    "Livres" - 60;
+    "Costas" - 0;
+    "Bruços" - 0;
+    "Mariposa" - 100;
+    "Estilos" - 0;
+}
+*/;
+
+kuest k3 -> /*desporto-id3-5["Quem é o atual campeão mundial de xadrez?"]{
+    "Vladimir Kramnik" - 0;
+    "Viswanathan Anand" - 0;
+    "Magnus Carlsen" - 100;
+}
+*/;
+
+kuest k4 -> /*desporto-id4-4["Quantas medalhas de ouro conquistou Michael Phelps em Jogos Olímpicos?"]{
+    "15" - 0;
+    "17" - 0;
+    "28" - 0;
+    "23" - 100;
+}
+*/;
+
+array kuest ak -> choose from memory(theme = "desporto");
+ak.add(k0, k1, k2, k3, k4);
+ak.shuffle;
+
+int value -> 0;
+for kuest k in ak{
+   if(k.get(dificulty) = 4 or k.get(dificulty) = 5){
+        value -> display(k, tf, 50);
+    }
+    else {
+	value -> display(k, mc, 30);
+    }
+
+    if(value < 50) {
+	break;
+    }
+}
+
+saveFile("Score");

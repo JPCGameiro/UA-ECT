@@ -1,0 +1,3 @@
+array kuest kst -> choose 3 from memory(theme = "animais");
+kst -> choose 2 from memory(theme = "sanitas");
+kst -> choose from memory(ID = "id1");

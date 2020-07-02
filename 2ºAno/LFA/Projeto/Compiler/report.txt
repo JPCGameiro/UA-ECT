@@ -1,0 +1,58 @@
+Pergunta 1: 
+"Quantos mais meses de quarentena?"
+true	 Pontos: 100
+Tempo: 4
+
+Pergunta 2: 
+"1+1=?"
+false	 Pontos: 100
+Tempo: 2
+
+Pergunta 3: 
+"Quem foi o último rei de Portugal?"
+true	 Pontos: 100
+Tempo: 1
+
+Pergunta 4: 
+"Se seis pacotes de fraldas custam 72 euros, qual o preço de 9 pacotes?"
+"100"	 Pontos: 100
+Tempo: 1
+
+Pergunta 5: 
+"Qual a capital de Portugal?"
+true	 Pontos: 0
+Tempo: 1
+
+Pergunta 6: 
+"Aquando do surto de COVID-19 que obrigou a suspens�o dos campeonatos de futebol que clube liderava a Premier League?"
+true	 Pontos: 0
+Tempo: 1
+
+Pergunta 7: 
+"Que filme venceu o Oscar de melhor filme em 2019?"
+true	 Pontos: 80
+Tempo: 1
+
+Pergunta 8: 
+"De que cor é o tigre?"
+true	 Pontos: 0
+Tempo: 1
+
+Pergunta 9: 
+"Covid-19 vai nos massacrar?"
+true	 Pontos: 0
+Tempo: 2
+
+Pergunta 10: 
+"Qual o maior planeta do nosso sistema solar?"
+true	 Pontos: 0
+Tempo: 2
+
+Pergunta 11: 
+"De que cor é o tigre?"
+true	 Pontos: 0
+Tempo: 1
+
+Pontos totais= 480.0
+Média por pergunta= 43.63636363636363
+Tempo total= 17

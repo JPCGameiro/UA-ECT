@@ -1,0 +1,31 @@
+#Mudar de tema a meio do questionário
+
+int NumberKuest-> 0;
+
+for kuest k in choose from memory(theme="cinema", dificulty=1 OR 2 OR 3){
+    
+    display(k, mc);
+    if(NumberKuest > 3){
+        break;
+    }
+    NumberKuest++;
+}
+
+for kuest k in choose from memory(theme="desporto", dificulty=2 OR 3 OR 4){
+    
+    display(k, mc);
+    if(NumberKuest > 8){
+        break;
+    }
+    NumberKuest++;
+}
+
+
+for kuest k in choose from memory(theme="matematica", dificulty=3 OR 4 OR 5){
+    
+    display(k, mc);
+    if(NumberKuest > 10){
+        break;
+    }
+    NumberKuest++;
+}

@@ -1,0 +1,23 @@
+kuest k -> /*
+
+    antlr-p1-5["o pedro é fixe?"]{
+        "Obvio que não" - 100;
+        "Não" - 100;
+        "Obvio que XIM" - 40;
+    }
+*/;
+
+array string temas -> {"antlr4", "animais"};
+
+array kuest k9 -> choose from memory(theme = temas OR "antlr");
+
+int timeX -> 10;
+
+display(k9[0], mc, timeX);
+display(k9[1], tf, timeX);
+display(k9[2], txt, timeX);
+display(k9[3], mc, timeX);
+
+string filename -> "o_gabi_é_gay";
+
+saveFile("report");

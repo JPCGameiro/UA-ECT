@@ -1,0 +1,24 @@
+array kuest k -> choose from memory(theme = "animais" OR "antlr4");
+array kuest k1 -> choose from memory(ID != "id1" OR "id2");
+array kuest k2 -> choose from memory(theme = "animais", ID = "id1");
+array kuest k3 -> choose from memory(dificulty >= 2);
+array kuest k4 -> choose from memory(dificulty = 2 OR 4);
+array kuest k5 -> choose from memory(numberOfanswers > 3);
+array kuest k6 -> choose from memory(numberOfanswers != 3 OR 5);
+
+array kuest k7 -> choose 4 from memory(theme = "animais");
+array kuest k8 -> choose 3 from memory(theme = "antlr", ID = "id1", dificulty = 2, numberOfanswers >= 2);
+
+kuest singlekuest -> k7[3];
+
+string tema -> singlekuest.get(theme);
+string id -> singlekuest.get(ID);
+int i -> singlekuest.get(dificulty);
+int numresp -> singlekuest.get(numberOfanswers);
+
+array int ii -> {3, 4, 5 ,6, 7};
+ii.add(numresp);
+
+array string temas -> {"antlr4", "animais"};
+
+array kuest k9 -> choose from memory(theme = temas);

@@ -1,0 +1,33 @@
+int a -> 2;
+if(a < 100){
+    int b -> 22;
+}
+
+if(a < 30){
+    b -> 12;
+}
+
+if(a < 50){
+    a -> 19;
+    int b-> 10;
+    if( a = 20){
+        b-> 10;
+        if(b != 10){
+            int c -> 24;
+        }else{
+            int d -> 12;
+        }
+    }elseif( a = 19){
+        b -> 12;
+        if(b = 12){
+
+        }
+    } elseif (a = 18){
+        int zz -> 2;
+    }
+}
+
+string s1 -> ""
+
+
+array.add(s1);k

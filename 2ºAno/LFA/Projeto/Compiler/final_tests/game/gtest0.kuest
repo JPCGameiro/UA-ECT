@@ -1,0 +1,28 @@
+#Imprimir um questionário com ordem crescete de dificuldade
+
+array kuest arrk -> choose from memory(theme = "cinema", dificulty=5);
+arrk -> choose from memory(theme = "cinema", dificulty=4);
+arrk -> choose from memory(theme = "cinema", dificulty=3);
+arrk -> choose from memory(theme = "cinema", dificulty=2);
+arrk -> choose from memory(theme = "cinema", dificulty=1);
+
+
+for kuest k in arrk{
+    if(k.get(dificulty) = 1){
+        display(k, tf, 30);
+    }
+    elseif(k.get(dificulty) = 2){
+        display(k, tf, 40);
+    }
+    elseif(k.get(dificulty) = 3){
+        display(k, mc, 50);
+    }
+    elseif(k.get(dificulty) = 4){
+        display(k, mc, 60);
+    }
+    else{
+        display(k, txt, 70);
+    }
+}
+
+saveFile();

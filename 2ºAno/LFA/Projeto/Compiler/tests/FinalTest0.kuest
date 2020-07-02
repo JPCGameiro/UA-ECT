@@ -1,0 +1,13 @@
+#Exemplo de um teste simples que faça sentido tendo em conta tudo o que já foi defenido
+#Escolher 10 perguntas random sobre um tema e fazer um questionário
+
+
+
+int i->0;
+array kuest arrK -> choose 10 from memory(theme="animais", dificulty=1 OR 2 OR 3);
+
+
+while(i != arrK.length ){
+    display(arrK[i]);
+    i++;
+}

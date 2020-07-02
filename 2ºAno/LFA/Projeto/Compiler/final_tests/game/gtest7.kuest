@@ -1,0 +1,38 @@
+
+kuest k0 -> /*antlr-P1-1["É possivel separar o parser do lexer em ficheiros diferentes?"]{
+    "Não" - 0;
+    "Sim" - 100;
+}
+*/;
+
+kuest k1 -> /*antlr-P2-2["Qual a linguagem destino de antlr?"]{
+    "C" - 0;
+    "Java" - 100;
+    "Python" - 0;
+    "C++" - 0;
+}
+*/;
+
+kuest k2 -> /*antlr-P3-3["O que significa o operador * em antlr?"]{
+    "0 ou mais vezes" - 100;
+    "1 ou mais vezes" - 0;
+    "0 ou 1 vez" - 0;
+}
+*/;
+
+array kuest ak1 -> choose 3 from memory(theme = "matematica");
+ak1.add(k0, k1, k2);
+ak1.shuffle;
+int i -> ak1.length-1;
+
+while(i!=0){
+    kuest aux -> ak1[i];
+    if(aux.get(ID) = "P3"){
+        display(aux, mc, 50);
+    }
+    else{
+        display(aux, tf, 50);
+    }
+    i--;
+}
+

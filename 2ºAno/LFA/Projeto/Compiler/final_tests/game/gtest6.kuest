@@ -1,0 +1,28 @@
+#Criação de questões
+
+kuest k0 -> /*musica-P1-2["Quem é o vocalista da banda Nirvana?"]{
+    "Dave Grohl" - 0;
+    "Kurt Cobain" - 100;
+    "Chris Cornell" - 0;
+    "Krist Novoselic" - 0;
+}
+*/;
+
+kuest k1 -> /*musica-P2-5["Que banda foi banida do SNL(Saturday Night Live)?"]{
+    "Nirvana" - 0;
+    "Rage Against The Machine" - 100;
+    "Foo Fighters" - 0;
+    "Led Zeppelin" - 0;
+}
+*/;
+
+array kuest ak;
+ak.add(k0, k1);
+
+for kuest k in ak{
+    if(k.get(theme) = "musica"){
+        display(k);
+    }
+}
+
+saveFile();

@@ -1,0 +1,13 @@
+array string temas -> {"animais", "astronomia", "desporto"};
+
+array kuest kk -> choose 20 from memory();
+
+kk.shuffle;
+
+int cotacao -> 0;
+for kuest k in kk{
+    cotacao -> display(k, mc, 60);
+}
+
+saveFile("esmongo!");
+

@@ -1,0 +1,76 @@
+#Quem quer ser milionário mode
+#   ->Começar nas perguntas mais fáceis e a dificuldade aumenta por cada nivel
+#   ->6 niveis
+#   ->Tem 10 possibilidades + pergunta inicial
+#   ->se falhar desce 2 niveis
+
+
+
+array string themes -> {"animais", "astronomia", "animais", "cinema", "desporto",
+    "geografia", "logica", "historia", "matematica", "antlr4", "doencas"};
+
+
+int level -> 0;
+int chances -> 10;
+
+while(chances!=-1){
+
+    string aux -> themes[chances];
+    array kuest ak;
+    int value;
+
+
+    if(level <= 1){
+        ak -> choose from memory(theme = aux, dificulty = 1);
+        ak.shuffle;
+        value -> display(ak[0], tf, 50);
+    }
+    elseif(level = 2){
+        ak -> choose from memory(theme = aux, dificulty = 2);
+        ak.shuffle;
+        value -> display(ak[0], tf, 60);
+    }
+    elseif(level = 3){
+        ak -> choose from memory(theme = aux, dificulty = 3);
+        ak.shuffle;
+        value -> display(ak[0], mc, 60);
+    }
+    elseif(level = 4 or level = 5){
+        ak.shuffle;
+        ak -> choose from memory(theme = aux, dificulty = 4);
+        value -> display(ak[0], mc, 70);
+    }
+    else{
+        ak -> choose from memory(theme = aux, dificulty = 5);
+        ak.shuffle;
+        value -> display(ak[0], mc, 80);
+    }
+
+    ak.clear;
+
+    if(value > 60){
+        level++;
+    }
+    else{
+        level -> level - 2;
+        if(level < 0){
+            level -> 0;
+        }
+    }
+
+    if(level = 7){
+        break;
+    }
+    else{
+        chances--;
+    }
+}
+
+saveFile();
+
+
+
+
+#Nota se surgir uma excepção é porque o utilizador não possui na base de dados
+#nenhuma pergunta com as especificações do que foi programado
+#   ex não existe nenhum com dificuldade 1 do tema doenças

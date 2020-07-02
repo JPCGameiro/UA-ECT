@@ -1,0 +1,19 @@
+#Não passa à próxima pergunta enquanto não acertar
+
+array kuest ak -> choose 10 from memory();
+
+for int i in [0 , ak.length[ {
+    int value -> -1;
+
+    while(value  < 40){
+        if(i%2= 0){
+            value -> display(ak[i], mc, 100);
+        }
+        else{
+            value -> display(ak[i], tf, 100);
+        }
+    }
+
+}
+
+saveFile();

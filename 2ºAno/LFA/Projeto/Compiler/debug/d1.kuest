@@ -1,0 +1,10 @@
+kuest k -> /*
+
+    antlr-p1-5["o pedro é fixe?"]{
+        "Obvio que não" - 100;
+        "Não" - 100;
+        "Obvio que XIM" - 40;
+    }
+*/;
+
+int fb -> display(k);

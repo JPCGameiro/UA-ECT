@@ -1,0 +1,23 @@
+array int a -> {1, 2, 3};
+array string s -> {"hello", "helio", "copyright"};
+array boolean b -> {true};
+array kuest k-> choose from memory();
+
+s.shuffle;
+
+    for string sss in s{
+        int uu -> 3;
+    }
+
+    int i2 -> random(4, 8);
+
+for int i in ]1, 45]{
+    for kuest q in k{
+        int u -> 4;
+        string ss -> q.get(theme);
+    }
+    break;
+}
+
+
+

@@ -1,0 +1,20 @@
+array string tema -> {"antlr4", "animais", "sanitas", "doencas"};
+array string id ->{"id1", "id2", "id3"};
+
+array kuest kst -> choose 7 from memory(theme = tema);
+kuest v -> kst[0];
+
+string temA -> v.get(theme);
+string iD -> v.get(ID);
+int dif -> v.get(dificulty);
+int numberanswers -> v.get(numberOfanswers);
+
+int feedback -> 0;
+for kuest k in kst{
+    if(k.get(dificulty) = 4){
+        feedback -> display(k);
+    }
+}
+if feedback > 70{
+    saveFile();
+}

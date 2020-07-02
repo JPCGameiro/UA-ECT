@@ -1,0 +1,106 @@
+// templates:
+
+module(name,stat) ::= <<
+import java.util.*;
+import java.util.stream.Collectors;
+import types.Question;
+import java.io.*;
+
+public class <name> {
+   public static void main(String[] args) throws IOException {
+      // get Question objects from a given path to a directory and subdirectory
+      QuestionsReaderMain qrm = new QuestionsReaderMain();
+      HashMap\<String, ArrayList\<Question>\> mem = qrm.getKuestsFromDirectory(".");
+
+      // put them in a List of Question
+      List\<Question> memory = new ArrayList\<>();
+      for(String key : mem.keySet()){
+         ArrayList\<Question> aux = mem.get(key);
+         for(Question q : aux){
+            memory.add(q);
+         }
+      }
+
+      // object for kuest display
+      KuestInterface ki;
+      List\<Question> aux;
+
+      //
+
+      <stats(stat)>
+   }
+}
+
+>>
+
+stats(stat) ::= <<
+<if(stat)><stat; separator="\n"><endif>
+>>
+
+declaration(type, var) ::= "<type> <var>;"
+declaration_array(type, var) ::= "ArrayList\<<type>> <var> = new ArrayList\<>();"
+
+assignment(stat, var, value) ::= <<
+<if(stat)>
+<stats(stat)>
+<endif>
+<var> = <value>;
+>>
+
+assignment_array(stat, value) ::= <<
+<stats(stat)>
+<value>
+>>
+
+array_length(var) ::= "<var>.size()"
+
+conditional(cond_true, stat_true, elseif_struct, stat_false) ::= <<
+if (<cond_true>) {
+   <stat_true>
+}
+<if(elseif_struct)>
+<elseif_struct>
+<endif>
+<if(stat_false)>
+else {
+   <stat_false>
+}<endif>
+>>
+
+conditional_elseif(cond, stat) ::= <<
+else if(<cond>){
+   <stat>
+}
+>>
+
+while(cond, stat) ::= <<
+while(<cond>){
+   <stat>
+}
+>>
+
+do_while(cond, stat) ::= <<
+do{
+   <stat>
+}while(<cond>);
+>>
+
+for(header, statList) ::= <<
+for (<header>){
+   <statList>
+}
+>>
+
+display(question_object, display_type, display_time) ::= <<
+ki = new KuestInterface(<question_object>, <display_type> <if(display_time)> , <display_time> <endif>);
+while(!ki.respondeu())System.out.print("");
+>>
+
+savefile(stat, filename) ::= <<
+<stats(stat)>
+KuestInterface.saveFile(<if(filename)><filename><endif>);
+>>
+
+common_text(text) ::= "<text>"
+
+addToArray(array_var, to_add) ::= "<var>.add(<to_add>);"

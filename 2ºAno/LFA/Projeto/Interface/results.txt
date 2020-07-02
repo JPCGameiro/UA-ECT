@@ -1,0 +1,23 @@
+Pergunta 1: 
+question
+answer3	 pontos: 0
+Tempo: 3
+
+Pergunta 2: 
+question
+answer4	 pontos: 0
+Tempo: 1
+
+Pergunta 3: 
+question
+didnt answer	 pontos: 0
+Tempo: 0
+
+Pergunta 4: 
+question
+daa	 pontos: 0
+Tempo: 4
+
+Pontos totais= 0.0
+Media por pergunta= 0.0
+Tempo total= 8

@@ -1,0 +1,44 @@
+#Múltiplas configurações
+#   ->Falha desconta 20 segundos, acerta acrescenta 10 segundos
+#   ->Mudança de tema sempre que acerta 5 de um tema
+#   ->Alteração da representação (mc/tf) a meio dessas 5
+
+
+array string temas -> {"cinema", "matematica", "logica", "geografia"};
+int time -> 100;
+
+for int themeChooser in [0, temas.length[ {
+    string tema -> temas[themeChooser];
+    int right -> 0;
+
+    array kuest ak -> choose from memory(theme = tema);
+    for int i in [0 , ak.length[ {
+        int value;
+        if(i < 3){
+            value -> display(ak[i], tf, time);
+        }
+        else{
+            value -> display(ak[i], mc, time);
+        }
+
+        if(value < 10){
+            time -> time - 20;
+        }
+        else{
+            right++;
+            time -> time + 10;
+        }
+
+        if(right > 5){
+            break;
+        }
+        if(time=0){
+            kuestover;
+        }
+    }
+
+    ak.clear;
+}
+
+saveFile();
+
