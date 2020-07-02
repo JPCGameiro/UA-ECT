@@ -1,0 +1,7 @@
+// p4.txt
+
+print read "x";
+print (1/2)^3;
+print (1/2)^-3;
+
+
