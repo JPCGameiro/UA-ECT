@@ -14,6 +14,10 @@
     * Terminologia e conceitos fundamentais; 
     * Representação computacional; 
     * Travessias, determinação de caminhos mais curtos e problemas típicos
+  * Tópicos de teoria da computação: 
+    * Computabilidade; 
+    * Algoritmos deterministas e não deterministas; 
+    * As classes p e np, problemas np-completo
 
 ## Guiões
 Enunciados e resoluções (não ser interpretadas como soluções).
