@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Created-By: 1.8.0_252 (Private Build)
+
+Name: codecheck.log
+SHA-256-Digest: ynNJ+gSSlExw75pBg/VkXNNGskYqRMQMKFowOWuWFpo=
+
+Name: report.html
+SHA-256-Digest: LvS+b4j10WPFOFZxf6LC5JGnhdY6RHp5XL2q4zyVjHc=
+
+Name: Time.cpp
+SHA-256-Digest: HNlPXMt6F9vZlMWWHaJUu/H/fBliW/Fv/VShw2lf9M8=
+
+Name: TimeInterval.cpp
+SHA-256-Digest: yO9/vt/9VlKN37UmQEYkSl6MJTvIdxHhpcIrvV3v4EU=
+
+Name: DateTime.cpp
+SHA-256-Digest: /x+M0p0u8j64GsJNsP8Ck0ujKtwu0+1NWf8hPoe7xig=
+
+Name: Date.cpp
+SHA-256-Digest: t2mkeWeFb4OwL9wLx4y/P+MvvOonfxl+LEsYk/kQe4w=
+
+Name: codecheck.out
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: SchedulingSequence.cpp
+SHA-256-Digest: bbLeuBmwoHKML5ZzI6lPyCI+My49NHz62+I8pq2OUjw=
+

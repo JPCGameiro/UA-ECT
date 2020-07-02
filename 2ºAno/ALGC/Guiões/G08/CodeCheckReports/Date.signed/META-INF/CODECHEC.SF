@@ -1,0 +1,30 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: DNesQiR31sq0WTfpDhz2YySnsz+Ya
+ S5R0FXX7umW/1M=
+SHA-256-Digest-Manifest: DxGwx/XbhuEgUpchlO5WeHI/uhUHPW50DJIBSC8YU4c=
+Created-By: 1.8.0_252 (Private Build)
+
+Name: codecheck.log
+SHA-256-Digest: aOXrK9giSbBuWzm2ycYTHy4R+c6wEZ/v8LWoPoqfvZI=
+
+Name: report.html
+SHA-256-Digest: K3BodSkTOJmJ8ZuAUD8AiYkChQ9j7Cenxa/lQxRb66g=
+
+Name: Time.cpp
+SHA-256-Digest: sdnMzMi9HzKiRRYcyUxW0ZE+IIiXV90FM9m/Dg994L8=
+
+Name: TimeInterval.cpp
+SHA-256-Digest: XGX0hbZqlU3G/WA7t/3RFGeMB4rhWb6p93XBtWi+76I=
+
+Name: DateTime.cpp
+SHA-256-Digest: g7l6KS9Yb4oKaogRh1xjt/5M2BIW7VVF9d1hZHXx/nY=
+
+Name: Date.cpp
+SHA-256-Digest: dhfgZx2S1JJ2eMNECIjWYmdZD6rKkdXWBvpVnIpumCI=
+
+Name: codecheck.out
+SHA-256-Digest: b52xXFI58Bk2vYsOBFW4SeAtUihwAfI35pqcs+KFu0w=
+
+Name: SchedulingSequence.cpp
+SHA-256-Digest: eWMHTZjXNHtXO7k3hSe0ezd/olbIiqbPFSaO55J3Hz0=
+
