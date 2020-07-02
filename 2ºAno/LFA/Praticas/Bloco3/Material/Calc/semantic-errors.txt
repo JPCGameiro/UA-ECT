@@ -1,0 +1,4 @@
+[1] numeric operations require numeric operands.
+[2] integer operations require integer operands.
+[3] boolean operators require compatible operand's type
+[4] variable handling (declaration, assignment and use within expr).

@@ -1,0 +1,26 @@
+ii,jj,kk: integer;
+rr: real;
+bb: boolean;
+
+10 -> ii;
+1.5 -> rr;
+false -> bb;
+
+show ii;
+show -rr;
+show bb;
+
+show 2+3-4;
+
+show ii+(4)*rr-(ii/3);
+
+show ii = rr;
+
+show ii /= rr;
+
+show 2^2;
+show rr^(ii*1.5);
+
+if ii = 10 then show 2*ii; else show ii//2; end;
+
+show (-5);

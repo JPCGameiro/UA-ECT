@@ -1,0 +1,4 @@
+#!/bin/bash
+
+antlr4-clean
+rm -fv Output.* a.out

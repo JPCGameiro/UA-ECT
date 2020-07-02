@@ -1,0 +1,16 @@
+i: integer;
+r: real;
+b: boolean;
+
+1 -> i;
+2.0 -> i;
+true -> i;
+
+1 -> r;
+2.0 -> r;
+true -> r;
+
+1 -> b;
+2.0 -> b;
+true -> b;
+

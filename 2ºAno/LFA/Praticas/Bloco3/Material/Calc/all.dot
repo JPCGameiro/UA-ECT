@@ -1,0 +1,18 @@
+digraph foo {
+  rankdir = BT;
+  "CalcInterpreter" -> "CalcBaseVisitor" 
+  "CalcCompiler" -> "CalcBaseVisitor" 
+  "CalcSemanticCheck" -> "CalcBaseVisitor" 
+  "BooleanValue" -> "Value"
+  "CalcMain"
+   "Type"
+   "Value"
+  "RealType" -> "Type" 
+   "Symbol"
+  "RealValue" -> "Value"
+  "ErrorHandling"
+  "IntegerType" -> "Type" 
+  "IntegerValue" -> "Value"
+  "BooleanType" -> "Type" 
+  "VariableSymbol" -> "Symbol"
+}

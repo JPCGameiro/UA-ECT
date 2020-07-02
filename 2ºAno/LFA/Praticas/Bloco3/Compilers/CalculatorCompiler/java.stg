@@ -1,0 +1,25 @@
+module(name, stat) ::= << 
+public class <name> {
+    public static void main(String[] args){
+        <stats(stat)>
+    }
+}
+>>
+
+stats(stat) ::= <<
+<if(stat)><stat; separator="\n"><endif>
+>>
+
+print(stat, value) ::= <<
+<stats(stat)>
+System.out.prinltn(<value>);
+>>
+
+decl(type, var, value) ::=<<
+<type> <var><if(value)> = <value>;<endif>
+>>
+
+binaryOperation(stat, type, var, e1, op, e2) ::= <<
+<stats(stat)>
+<decl(type, var, [e1," ",op," ",e2])>
+>>

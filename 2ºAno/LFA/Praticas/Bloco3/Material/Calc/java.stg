@@ -1,0 +1,75 @@
+// dictionaries: allows simple translations
+
+booleanValue ::= [
+   "true":"true",
+   "false":"false",
+   default:"null"
+]
+
+typeValue ::= [
+   "integer":"int",
+   "real":"double",
+   "boolean":"boolean",
+   default:"null"
+]
+
+typeFormat ::= [
+   "integer":"",
+   "real":"",
+   "boolean":"",
+   default:"null"
+]
+
+
+// templates:
+
+module(name,stat) ::= <<
+public class <name> {
+   public static void main(String[] args) {
+      <stats(stat)>
+   }
+}
+
+>>
+
+stats(stat) ::= <<
+<if(stat)><stat; separator="\n"><endif>
+>>
+
+assign(stat,var,value) ::= <<
+<stats(stat)>
+<var> = <value>;
+>>
+
+init(value) ::= "<if(value)> = <value><endif>"
+decl(type,var,value) ::= "<typeValue.(type)> <var><init(value)>;"
+
+show(stat,type,expr) ::= <<
+<stats(stat)>
+System.out.println(<expr>);
+>>
+
+conditional(stat,var,stat_true,stat_false) ::= <<
+<stats(stat)>
+if (<var>) {
+   <stat_true>
+}<if(stat_false)>
+else {
+   <stat_false>
+}<endif>
+>>
+
+binaryExpression(stat,type,var,e1,op,e2) ::= <<
+<stats(stat)>
+<decl(type,var,[e1," ",op," ",e2])>
+>>
+
+powerTypeCast ::= [
+   "integer":"(int)",
+   "real":"",
+   default:"null"
+]
+
+powerExpression(type,var,e1,e2) ::= "<decl(type,var,[powerTypeCast.(type),\"Math.pow(\",e1,\",\",e2,\")\"])>"
+
+literalBoolean(value) ::= "<booleanValue.(value)>"

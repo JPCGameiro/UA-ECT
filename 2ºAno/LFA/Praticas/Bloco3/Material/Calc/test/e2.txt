@@ -1,0 +1,4 @@
+show -true;
+show true;
+show 5;
+show true+5;

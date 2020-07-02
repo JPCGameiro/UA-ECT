@@ -1,0 +1,80 @@
+// dictionaries: allows simple translations
+
+booleanValue ::= [
+   "true":"1",
+   "false":"0",
+   default:"null"
+]
+
+typeValue ::= [
+   "integer":"int",
+   "real":"double",
+   "boolean":"int",
+   default:"null"
+]
+
+typeFormat ::= [
+   "integer":"%d",
+   "real":"%lg",
+   "boolean":"%d",
+   default:"null"
+]
+
+
+// templates:
+
+module(name,stat) ::= <<
+#include \<stdio.h>
+#include \<math.h>
+
+int main()
+{
+   <stats(stat)>
+}
+
+>>
+
+stats(stat) ::= <<
+<if(stat)><stat; separator="\n"><endif>
+>>
+
+assign(stat,var,value) ::= <<
+<stats(stat)>
+<var> = <value>;
+>>
+
+init(value) ::= "<if(value)> = <value><endif>"
+decl(type,var,value) ::= "<typeValue.(type)> <var><init(value)>;"
+
+show(stat,type,expr) ::= <<
+<stats(stat)>
+printf("<typeFormat.(type)>\n", <expr>);
+>>
+
+conditional(stat,var,stat_true,stat_false) ::= <<
+<stats(stat)>
+if (!<var>) goto L<var>1;
+<stats(stat_true)>
+goto L<var>2;
+L<var>1:;
+<if(stat_false)>
+<stats(stat_false)>
+<endif>
+L<var>2:;
+>>
+
+binaryExpression(stat,type,var,e1,op,e2) ::= <<
+<stats(stat)>
+<decl(type,var,[e1," ",op," ",e2])>
+>>
+
+powerTypeCast ::= [
+   "integer":"(int)",
+   "real":"",
+   default:"null"
+]
+
+powerExpression(type,var,e1,e2) ::= "<decl(type,var,[powerTypeCast.(type),\"pow(\",e1,\",\",e2,\")\"])>"
+
+literalBoolean(value) ::= "<booleanValue.(value)>"
+

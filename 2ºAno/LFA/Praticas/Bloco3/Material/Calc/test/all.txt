@@ -1,0 +1,57 @@
+show 5;
+show 2+2;
+show 2---5;
+show 2*3-(5*6//2\\4)/3;
+i: integer;
+4 -> i;
+
+show i^i;
+show true;
+x,y:real;
+j: integer;
+b:boolean;
+3 -> j;
+false -> b;
+show j;
+
+k: integer;
+r: real;
+
+10*4//2 -> k;
+5-0.1*3/2/7*(k+6) -> r;
+
+show k;
+show r;
+l: integer;
+10 -> l;
+if l /= 10 then show 2*l; else show l//2; end;
+ii,jj,kk: integer;
+rr: real;
+bb: boolean;
+
+10 -> ii;
+1.5 -> rr;
+false -> bb;
+
+show ii;
+show -rr;
+show bb;
+
+show 2+3-4;
+
+show ii+(4)*rr-(ii/3);
+
+show ii = rr;
+
+show ii /= rr;
+
+show 2^2;
+show rr^(ii*1.5);
+
+if ii = 10 then show 2*ii; else show ii//2; end;
+
+show (-5);
+
+show (2*3);
+show 1+2*3/4;
+if true then show 1+2+3; end;
