@@ -1,0 +1,19 @@
+# Algoritmos e Complexidade
+## Conteúdos
+  * Análise da complexidade de algoritmos:
+    * Terminologia e conceitos fundamentais; 
+    * Análise de algoritmos iterativos e recursivos para diferentes tipos de problemas
+  * Árvores binárias de pesquisa: 
+    * Conceitos e operações fundamentais; 
+    * Travessias; 
+    * Árvores avl.
+  * Dicionários: 
+    * Tabelas de dispersão, 
+    * Funções de hashing e resolução de colisões;
+  * Grafos: 
+    * Terminologia e conceitos fundamentais; 
+    * Representação computacional; 
+    * Travessias, determinação de caminhos mais curtos e problemas típicos
+
+## Guiões
+Enunciados e resoluções (não ser interpretadas como soluções).
