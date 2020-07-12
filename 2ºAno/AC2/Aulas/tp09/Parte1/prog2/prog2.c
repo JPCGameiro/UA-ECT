@@ -64,7 +64,7 @@ char comDrv_getc(char *pchar)
     *pchar = rxb.data[rxb.head];            //copy character pointed by "head" to *pchar
     rxb.count--;                            //decrement count variable
     rxb.head = (rxb.head + 1) & INDEX_MASK; //increment "head" index (mod BUF_SIZE)
-    EnableUart1TxInterrupts();              //end of critical section
+    EnableUart1RxInterrupts();              //end of critical section
     return 1;
 }
 
