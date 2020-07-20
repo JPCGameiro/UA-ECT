@@ -16,7 +16,7 @@ int main(void)
     int cnt = 0;
     while(1){
         delay(250);             //frequência de 4Hz
-        LATE = cnt | 0xFFF0;    //escrever valor do contador registo LATE
+        LATE = (LATE & 0xFFF0) | cnt;    //escrever valor do contador registo LATE
         cnt++;
 
     }
