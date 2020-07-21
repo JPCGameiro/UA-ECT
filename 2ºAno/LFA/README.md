@@ -21,4 +21,4 @@ O projeto inclui
   * Ficheiros com exemplos que ilustram a utilização de ambas as linguagens;
   * Relatório que inclui a descrição das linguagens e modo de utilização das mesmas.
 
-Projeto desenvolvido com Alexandre Tomás, Ana Filipe, Gabriel Ribeiro e Pedro Abreu
+Projeto desenvolvido com Alexandre Tomás, Ana Filipe, Gabriel Ribeiro e Pedro Abreu.
