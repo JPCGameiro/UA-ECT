@@ -15,3 +15,5 @@ Resoluções incompletas dos guiões fornecidos (não devem ser interpretadas co
 Aplicação que demonstra a utilização conjunta de:
  * Deteção de itens similares (MinHash);
  * Deteção de pertença a um conjunto (BloomFilter).
+
+Projeto desenvolvido com Marco Ramos.
