@@ -12,4 +12,16 @@
 ## Guiões e Projetos
 Enunciados dos guiões e projetos.
 Disponível código e relatórios desenvolvidos para cada projeto.
+* AP1
+  * Desenvolvimento de um relatório em LATEX sobre a segunda guerra mundial.
+  * Realizado com Joaquim Andrade.
+* AP2
+  * Criação de um cliente para um conjunto de servidores que permitem avaliar a qualidade da ligação.
+  * Realizado com Pedro Pereira.
+* P1
+  * Desenvolvimento de um conjunto de páginas Web utilizando HTML, CSS e Javascript.
+  * Realizado com Joaquim Andrade.
+* P2
+  * Criação de uma aplicação web que permite visualizar uma pequena biblioteca de imagens.
+  * Realizado com Marco Ramos, Pedro Pereira e Tiago Pedrosa.
 
