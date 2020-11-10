@@ -8,7 +8,7 @@
   * Análise semântica;
   * Geração de código.
 ## Aulas Práticas
-Resouloções dos exercicios propostos (incompletas).
+Resoluções dos exercicios propostos (incompletas).
 
 ## Projeto
 Desenvolvimento de uma linguagem que permite a criação de programas que desenham questionários interativos
