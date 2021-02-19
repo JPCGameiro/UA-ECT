@@ -1,0 +1,59 @@
+
+##########################################
+#Ex. 1
+##########################################
+
+[Floor(b), Floor(d), On(c,d), Floor(a), Free(a), Free(c), On(e,b), HandFree(), Free(e)] [Floor(a), Floor(b), Floor(d), Free(a), Free(c), Free(e), HandFree(), On(c,d), On(e,b)]
+[Floor(b), Floor(d), On(c,d), Floor(a), Free(b), Free(a), On(e,c), HandFree(), Free(e)] [Floor(a), Floor(b), Floor(d), Free(a), Free(b), Free(e), HandFree(), On(c,d), On(e,c)]
+[Floor(b), Floor(d), On(c,d), Floor(a), Free(b), Free(c), On(e,a), HandFree(), Free(e)] [Floor(a), Floor(b), Floor(d), Free(b), Free(c), Free(e), HandFree(), On(c,d), On(e,a)]
+[Floor(b), Floor(d), On(c,d), Floor(a), Free(b), Free(a), Free(c), Floor(e), HandFree(), Free(e)] [Floor(a), Floor(b), Floor(d), Floor(e), Free(a), Free(b), Free(c), Free(e), HandFree(), On(c,d)]
+
+##########################################
+#Ex. 2
+##########################################
+
+Agueda
+Portalegre
+
+##########################################
+#Ex. 3
+##########################################
+
+*** Braga --> Faro ***
+    8 3020
+    11 30
+    13 29
+    12 190
+*** Guimaraes --> Evora ***
+    5 467
+    10 28
+    8 22
+    8 87
+*** Aveiro --> Castelo Branco ***
+    3 65
+    9 21
+    3 20
+    4 32
+*** Santarem --> Guarda ***
+    2 44
+    10 27
+    4 14
+    2 18
+*** Braga --> Portalegre ***
+    5 222
+    10 30
+    8 20
+    8 88
+
+##########################################
+#Ex. 4
+##########################################
+
+['Braga', 'Porto', 'Agueda', 'Coimbra', 'Leiria', 'Santarem', 'Lisboa', 'Beja', 'Faro']
+3 5
+568 751
+None
+
+
+['Braga', 'Porto', 'Agueda', 'Coimbra', 'Leiria', 'Santarem', 'Lisboa', 'Beja', 'Faro']
+1290 1730

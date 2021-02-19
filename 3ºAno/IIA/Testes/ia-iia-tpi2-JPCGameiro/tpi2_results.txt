@@ -1,0 +1,51 @@
+Individual probabilities:
+ {'a': 0.0029999999999999988, 'b_a': 0.0020000000000000026, 'c_s': 0.08119999999999997, 'd': 0.010000000000000004, 'm_f': 0.010000000000000007, 'b_v': 0.626838256, 's_m': 0.05000000000000004, 's_p': 0.29999999999999977, 'v_p': 0.11382846093000476, 'h': 0.6079227848000005, 's_s': 0.246530280995136, 's_t': 0.002779999999999998, 's_q': 0.22789214360201282, 'f_s': 0.09999999999999996, 'c_c': 0.13812964122472846, 'car_s': 0.030812271244308118} 
+
+translate_ontology():
+ ['Qx Cat(x) or Lion(x) or Tiger(x) => Feline(x)', 'Qx Feline(x) or Primate(x) => Mammal(x)', 'Qx Man(x) => Primate(x)', 'Qx Bird(x) or Mammal(x) => Vertebrate(x)'] 
+
+query_inherit(socrates,eats):
+ [decl(socrates,eats(man,apple)), decl(knowledgeengineer,eats(mammal,bird))] 
+
+query_inherit(bird,eatenBy):
+ [decl(knowledgeengineer,eats(mammal,bird)), decl(knowledgeengineer,eats(plato,bird))] 
+
+query_inherit(apple,eatenBy):
+ [] 
+
+query(socrates,likes):
+ ['sophroniscus', 'phaenarete', 'philosophy', 'meat', 'mathematics', 'milk']
+query(socrates,hasFather):
+ ['sophroniscus']
+query(socrates,member):
+ ['philosopher', 'man']
+query(man,subtype):
+ ['primate']
+query(plato,eats):
+ ['bird']
+query(philosopher,subtype):
+ []
+
+
+TWO+TWO=FOUR all solutions:
+[('F', 0), ('O', 2), ('R', 4), ('T', 1), ('U', 6), ('W', 3)]
+[('F', 0), ('O', 3), ('R', 6), ('T', 1), ('U', 4), ('W', 7)]
+[('F', 0), ('O', 3), ('R', 6), ('T', 1), ('U', 8), ('W', 9)]
+[('F', 0), ('O', 4), ('R', 8), ('T', 2), ('U', 6), ('W', 3)]
+[('F', 1), ('O', 4), ('R', 8), ('T', 7), ('U', 6), ('W', 3)]
+[('F', 1), ('O', 5), ('R', 0), ('T', 7), ('U', 3), ('W', 6)]
+[('F', 0), ('O', 6), ('R', 2), ('T', 3), ('U', 9), ('W', 4)]
+[('F', 1), ('O', 6), ('R', 2), ('T', 8), ('U', 7), ('W', 3)]
+[('F', 1), ('O', 6), ('R', 2), ('T', 8), ('U', 9), ('W', 4)]
+[('F', 0), ('O', 7), ('R', 4), ('T', 3), ('U', 1), ('W', 5)]
+[('F', 1), ('O', 7), ('R', 4), ('T', 8), ('U', 3), ('W', 6)]
+[('F', 0), ('O', 8), ('R', 6), ('T', 4), ('U', 3), ('W', 1)]
+[('F', 0), ('O', 8), ('R', 6), ('T', 4), ('U', 5), ('W', 2)]
+[('F', 0), ('O', 8), ('R', 6), ('T', 4), ('U', 7), ('W', 3)]
+[('F', 1), ('O', 8), ('R', 6), ('T', 9), ('U', 5), ('W', 2)]
+[('F', 1), ('O', 8), ('R', 6), ('T', 9), ('U', 7), ('W', 3)]
+[('F', 0), ('O', 9), ('R', 8), ('T', 4), ('U', 1), ('W', 5)]
+[('F', 0), ('O', 9), ('R', 8), ('T', 4), ('U', 3), ('W', 6)]
+[('F', 0), ('O', 9), ('R', 8), ('T', 4), ('U', 5), ('W', 7)]
+Time: 0.21614599999999973
+19  solutions
