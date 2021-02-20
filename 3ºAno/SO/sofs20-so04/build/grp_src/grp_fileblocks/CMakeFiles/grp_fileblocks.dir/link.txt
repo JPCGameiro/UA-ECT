@@ -1,0 +1,2 @@
+/usr/bin/ar qc /home/joao/Documents/Universidade/3ºAno/SO/sofs20-so04/lib/grp/libgrp_fileblocks.a  CMakeFiles/grp_fileblocks.dir/grp_alloc_fileblock.cpp.o CMakeFiles/grp_fileblocks.dir/grp_free_fileblocks.cpp.o CMakeFiles/grp_fileblocks.dir/grp_get_fileblock.cpp.o CMakeFiles/grp_fileblocks.dir/grp_read_fileblock.cpp.o CMakeFiles/grp_fileblocks.dir/grp_write_fileblock.cpp.o
+/usr/bin/ranlib /home/joao/Documents/Universidade/3ºAno/SO/sofs20-so04/lib/grp/libgrp_fileblocks.a

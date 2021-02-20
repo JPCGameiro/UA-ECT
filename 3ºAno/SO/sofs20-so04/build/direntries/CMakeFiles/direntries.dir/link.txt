@@ -1,0 +1,2 @@
+/usr/bin/ar qc /home/joao/Documents/Universidade/3ºAno/SO/sofs20-so04/lib/libdirentries.a  CMakeFiles/direntries.dir/check_dir_empty.cpp.o CMakeFiles/direntries.dir/get_direntry.cpp.o CMakeFiles/direntries.dir/delete_direntry.cpp.o CMakeFiles/direntries.dir/rename_direntry.cpp.o CMakeFiles/direntries.dir/add_direntry.cpp.o CMakeFiles/direntries.dir/traverse_path.cpp.o
+/usr/bin/ranlib /home/joao/Documents/Universidade/3ºAno/SO/sofs20-so04/lib/libdirentries.a

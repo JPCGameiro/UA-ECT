@@ -1,0 +1,2 @@
+/usr/bin/ar qc /home/joao/Documents/Universidade/3ºAno/SO/sofs20-so04/lib/libdevtools.a  CMakeFiles/devtools.dir/probing.cpp.o CMakeFiles/devtools.dir/binselection.cpp.o CMakeFiles/devtools.dir/blockviews.cpp.o
+/usr/bin/ranlib /home/joao/Documents/Universidade/3ºAno/SO/sofs20-so04/lib/libdevtools.a

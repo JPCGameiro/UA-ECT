@@ -1,0 +1,1 @@
+/usr/bin/c++   -Wall -D_FILE_OFFSET_BITS=64 -ggdb  -rdynamic CMakeFiles/sizes.dir/sizes.cpp.o  -o /home/joao/Documents/Universidade/3ºAno/SO/sofs20-so04/bin/sizes  /home/joao/Documents/Universidade/3ºAno/SO/sofs20-so04/lib/libcore.a 

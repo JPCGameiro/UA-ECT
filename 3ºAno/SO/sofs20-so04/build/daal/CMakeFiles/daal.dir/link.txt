@@ -1,0 +1,2 @@
+/usr/bin/ar qc /home/joao/Documents/Universidade/3ºAno/SO/sofs20-so04/lib/libdaal.a  CMakeFiles/daal.dir/daal_OC.cpp.o CMakeFiles/daal.dir/daal_SB.cpp.o CMakeFiles/daal.dir/daal_IT.cpp.o CMakeFiles/daal.dir/daal_RT.cpp.o CMakeFiles/daal.dir/daal_inode.cpp.o CMakeFiles/daal.dir/daal_DBP.cpp.o
+/usr/bin/ranlib /home/joao/Documents/Universidade/3ºAno/SO/sofs20-so04/lib/libdaal.a

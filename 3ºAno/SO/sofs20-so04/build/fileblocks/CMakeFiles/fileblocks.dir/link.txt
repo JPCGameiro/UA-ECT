@@ -1,0 +1,2 @@
+/usr/bin/ar qc /home/joao/Documents/Universidade/3ºAno/SO/sofs20-so04/lib/libfileblocks.a  CMakeFiles/fileblocks.dir/alloc_fileblock.cpp.o CMakeFiles/fileblocks.dir/free_fileblocks.cpp.o CMakeFiles/fileblocks.dir/get_fileblock.cpp.o CMakeFiles/fileblocks.dir/read_fileblock.cpp.o CMakeFiles/fileblocks.dir/write_fileblock.cpp.o
+/usr/bin/ranlib /home/joao/Documents/Universidade/3ºAno/SO/sofs20-so04/lib/libfileblocks.a

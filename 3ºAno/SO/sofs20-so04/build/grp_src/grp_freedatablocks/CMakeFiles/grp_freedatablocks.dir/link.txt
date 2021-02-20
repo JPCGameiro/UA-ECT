@@ -1,0 +1,2 @@
+/usr/bin/ar qc /home/joao/Documents/Universidade/3ºAno/SO/sofs20-so04/lib/grp/libgrp_freedatablocks.a  CMakeFiles/grp_freedatablocks.dir/grp_alloc_data_block.cpp.o CMakeFiles/grp_freedatablocks.dir/grp_free_data_block.cpp.o CMakeFiles/grp_freedatablocks.dir/grp_replenish_retrieval_cache.cpp.o CMakeFiles/grp_freedatablocks.dir/grp_deplete_insertion_cache.cpp.o
+/usr/bin/ranlib /home/joao/Documents/Universidade/3ºAno/SO/sofs20-so04/lib/grp/libgrp_freedatablocks.a

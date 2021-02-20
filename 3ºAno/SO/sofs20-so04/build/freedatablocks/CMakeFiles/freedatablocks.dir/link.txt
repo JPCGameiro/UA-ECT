@@ -1,0 +1,2 @@
+/usr/bin/ar qc /home/joao/Documents/Universidade/3ºAno/SO/sofs20-so04/lib/libfreedatablocks.a  CMakeFiles/freedatablocks.dir/alloc_data_block.cpp.o CMakeFiles/freedatablocks.dir/free_data_block.cpp.o CMakeFiles/freedatablocks.dir/replenish_retrieval_cache.cpp.o CMakeFiles/freedatablocks.dir/deplete_insertion_cache.cpp.o
+/usr/bin/ranlib /home/joao/Documents/Universidade/3ºAno/SO/sofs20-so04/lib/libfreedatablocks.a

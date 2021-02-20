@@ -1,0 +1,2 @@
+/usr/bin/ar qc /home/joao/Documents/Universidade/3ºAno/SO/sofs20-so04/lib/grp/libgrp_freeinodes.a  CMakeFiles/grp_freeinodes.dir/grp_alloc_inode.cpp.o CMakeFiles/grp_freeinodes.dir/grp_free_inode.cpp.o
+/usr/bin/ranlib /home/joao/Documents/Universidade/3ºAno/SO/sofs20-so04/lib/grp/libgrp_freeinodes.a

@@ -1,0 +1,2 @@
+/usr/bin/ar qc /home/joao/Documents/Universidade/3ºAno/SO/sofs20-so04/lib/libfreeinodes.a  CMakeFiles/freeinodes.dir/alloc_inode.cpp.o CMakeFiles/freeinodes.dir/free_inode.cpp.o
+/usr/bin/ranlib /home/joao/Documents/Universidade/3ºAno/SO/sofs20-so04/lib/libfreeinodes.a

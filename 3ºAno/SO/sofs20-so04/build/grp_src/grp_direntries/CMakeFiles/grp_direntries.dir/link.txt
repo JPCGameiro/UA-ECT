@@ -1,0 +1,2 @@
+/usr/bin/ar qc /home/joao/Documents/Universidade/3ºAno/SO/sofs20-so04/lib/grp/libgrp_direntries.a  CMakeFiles/grp_direntries.dir/grp_check_dir_empty.cpp.o CMakeFiles/grp_direntries.dir/grp_get_direntry.cpp.o CMakeFiles/grp_direntries.dir/grp_delete_direntry.cpp.o CMakeFiles/grp_direntries.dir/grp_rename_direntry.cpp.o CMakeFiles/grp_direntries.dir/grp_add_direntry.cpp.o CMakeFiles/grp_direntries.dir/grp_traverse_path.cpp.o
+/usr/bin/ranlib /home/joao/Documents/Universidade/3ºAno/SO/sofs20-so04/lib/grp/libgrp_direntries.a
