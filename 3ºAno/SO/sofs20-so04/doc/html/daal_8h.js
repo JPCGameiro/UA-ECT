@@ -1,0 +1,26 @@
+var daal_8h =
+[
+    [ "soOpenDisk", "daal_8h.html#gac21da9cb8cf838d6afaa854439b0410d", null ],
+    [ "soCloseDisk", "daal_8h.html#ga04ba508faa9285e07e51b84341fe45e2", null ],
+    [ "soOpenSuperblock", "daal_8h.html#ga8899e84243390d65bf4b65b006aeef74", null ],
+    [ "soCloseSuperblock", "daal_8h.html#ga582c785bb1410dee640a2f0f95ea9c5b", null ],
+    [ "soSaveSuperblock", "daal_8h.html#gadc052de9f195d71d4c0fd94aa3ebb96b", null ],
+    [ "soGetSuperblockPointer", "daal_8h.html#ga1044d1a5fb196e8424c0d5f76d27cd9b", null ],
+    [ "soOpenInodeTable", "daal_8h.html#ga6b45f3ab3566efc2605fe803232e4796", null ],
+    [ "soCloseInodeTable", "daal_8h.html#ga79efd79758546274a1bd68b5392cca30", null ],
+    [ "soOpenInode", "daal_8h.html#ga702079dabf8ceb8b74bc6167bb1e65b6", null ],
+    [ "soCheckInodeHandler", "daal_8h.html#ga2e7e64b5d03f6a3cc89238d15f279b73", null ],
+    [ "soGetInodePointer", "daal_8h.html#ga4cf1c5dddf7a0c6fb419b5dddbc779b6", null ],
+    [ "soSaveInode", "daal_8h.html#gae5119d01e88727cddeecb4ed7c73ec44", null ],
+    [ "soCloseInode", "daal_8h.html#ga53a313026fb7b06bb267ffc720f9ce7d", null ],
+    [ "soGetInodeNumber", "daal_8h.html#gafcfce40325f70987ba384536d787710f", null ],
+    [ "soCheckInodeAccess", "daal_8h.html#gac4dcc29adbb8a266df054e058cf82705", null ],
+    [ "soOpenDataBlockPool", "daal_8h.html#ga99a797e6480fb0140a918a34dfe77dcc", null ],
+    [ "soCloseDataBlockPool", "daal_8h.html#ga57f8a7031b1c4ab20c9ab2fa8d1a897f", null ],
+    [ "soReadDataBlock", "daal_8h.html#ga20b29d8d9df00cef415820fb884cfe87", null ],
+    [ "soWriteDataBlock", "daal_8h.html#gafc5f43162758e2252c62abe1b5c3c802", null ],
+    [ "soOpenReferenceTable", "daal_8h.html#ga176dc0622263ccdfffefb70c682c1c04", null ],
+    [ "soCloseReferenceTable", "daal_8h.html#ga25c0c46c319ceb696716287c16dbe1e2", null ],
+    [ "soGetReferenceBlockPointer", "daal_8h.html#ga5181796259f5851d2e2b0dce700bbd9a", null ],
+    [ "soSaveReferenceBlock", "daal_8h.html#gae411758b587b78ee22e4870705355892", null ]
+];
