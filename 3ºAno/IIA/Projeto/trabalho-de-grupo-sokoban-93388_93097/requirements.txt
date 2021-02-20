@@ -1,0 +1,6 @@
+requests
+pygame==2.0.0.dev10
+aiohttp
+async-timeout
+websockets
+yarl

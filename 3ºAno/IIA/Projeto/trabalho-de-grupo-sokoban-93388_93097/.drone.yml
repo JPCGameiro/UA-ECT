@@ -1,0 +1,12 @@
+---
+kind: pipeline
+name: python-3-6
+
+steps:
+- name: execute 
+  image: python:3.6
+  commands:
+  - pip install requests aiohttp async-timeout websockets yarl
+  - NAME=gameiro SERVER=192.168.85.196 PORT=8000 python student.py 
+
+
