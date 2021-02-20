@@ -1,0 +1,11 @@
+# all files and folders are to be ignored...
+/*
+
+# except those following
+!.gitignore
+!grp_add_direntry.cpp
+!grp_check_dir_empty.cpp
+!grp_delete_direntry.cpp
+!grp_get_direntry.cpp
+!grp_rename_direntry.cpp
+!grp_traverse_path.cpp

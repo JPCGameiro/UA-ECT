@@ -1,0 +1,9 @@
+# all files and folders are to be ignored...
+/*
+
+# except those following
+!.gitignore
+!grp_alloc_data_block.cpp
+!grp_deplete_insertion_cache.cpp
+!grp_free_data_block.cpp
+!grp_replenish_retrieval_cache.cpp

@@ -1,0 +1,7 @@
+# all files and folders are to be ignored...
+/*
+
+# except those following
+!.gitignore
+!grp_alloc_inode.cpp
+!grp_free_inode.cpp

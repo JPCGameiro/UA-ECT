@@ -1,0 +1,5 @@
+# all files and folders are to be ignored...
+/*
+
+# except those following
+!.gitignore

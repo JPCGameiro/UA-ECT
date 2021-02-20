@@ -1,0 +1,11 @@
+# all files and folders are to be ignored...
+/*
+
+# except those following
+!.gitignore
+!libbin_daal.a
+!libbin_direntries.a
+!libbin_fileblocks.a
+!libbin_freelists.a
+!libbin_mksofs.a
+!libbin_syscalls.a
