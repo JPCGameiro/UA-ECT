@@ -18,3 +18,10 @@
 Slides das teóricas e resoluções dos guiões fornecidos nas aulas práticas (não devem ser interpretadas como soluções)
 ## Projeto
 Desenvolvimento de um agente capaz de jogar de forma inteligente o jogo Sokoban.
+Constituido por:
+* treeSearch - Pesquisa A* para encontrar o melhor caminho entre duas posições;
+* treeSolver - Módulo para encontrar a solução do nivel;
+* student - Resolução do mapa e envio da mesma para um servidor;
+* studentFunctions - Funções auxiliares;
+
+Código do jogo desenvolvido pelo docente.
