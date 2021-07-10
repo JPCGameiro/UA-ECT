@@ -1,0 +1,45 @@
+<mat-card id="messenger-card" onscroll="myfunc(e)">
+    <div id="men-header">
+        <img class="mensagix-icon" src="../../assets/chat_icon-icons.com_67748.svg" alt="mensagix">
+        <h4 class="mensagix-header">Mensagix</h4>
+    </div>
+    <hr class="hrrr" noshade="true">
+    <div class="men-contacts">
+        <div *ngIf="toogleMX; else indivMX">
+            <app-messengercontact (click)="toogleMXshow()"></app-messengercontact>
+            <!--<app-messengercontact (click)="toogleMXshow()"></app-messengercontact>
+            <app-messengercontact (click)="toogleMXshow()"></app-messengercontact>
+            <app-messengercontact (click)="toogleMXshow()"></app-messengercontact>
+            <app-messengercontact (click)="toogleMXshow()"></app-messengercontact>
+            <app-messengercontact (click)="toogleMXshow()"></app-messengercontact>
+            <app-messengercontact (click)="toogleMXshow()"></app-messengercontact>-->
+        </div>
+        <ng-template #indivMX>
+            <div class="indiv">
+                <div class="indiv-header">
+                    <mat-icon (click)="toogleMXshow()" class="backwards-icon">keyboard_arrow_left</mat-icon>
+                    <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+                        <mat-card-title *ngIf="router.url === '/'" class="myUser">Foo fighters</mat-card-title>
+                        <mat-card-title *ngIf="router.url === '/musicianprofile'" class="myUser" >Juan Lessa</mat-card-title>
+                    </mat-card-header>
+                </div>
+                <div class="indiv-bottom">
+                    <span class="btn-style">
+                        <img src="https://img.icons8.com/material-sharp/24/000000/happy--v1.png"/>
+                    </span>
+                    <form class="example-form">
+                        <mat-form-field class="example-full-width">
+                          <mat-label>Message</mat-label>
+                          <input class="myinput" matInput #message maxlength="256" placeholder="">
+                          <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+                        </mat-form-field>
+                    </form>
+                    <span class="btn-style">
+                        <img src="https://img.icons8.com/material-sharp/24/000000/filled-sent.png"/>
+                    </span>
+                </div>
+            </div>
+        </ng-template>
+    </div>
+</mat-card>

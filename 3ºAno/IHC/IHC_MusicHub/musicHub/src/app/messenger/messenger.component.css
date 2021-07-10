@@ -1,0 +1,124 @@
+
+
+#men-header{
+    display: flex;
+    flex-direction: row;
+}
+
+.mensagix-icon{
+    height: 35px;
+}
+
+.mensagix-header{
+    margin-top: 5px;
+    margin-left: 10px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.hrrr{
+    height: 2px;
+    position: relative;
+    margin: 0 -16px;
+    margin-top: 10px;
+}
+
+.matdiv{
+    position: relative;
+}
+
+.men-contacts{
+    min-height: 37em;
+}
+
+.backwards-icon{
+    transform: scale(1.6);
+    cursor: pointer;
+    margin-top: 7px;
+    
+}
+
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+    margin-left: 10px;
+  }
+
+.indiv{
+    display: flex;
+    flex-direction: column;
+    height: 37em;
+    justify-content: space-between;
+}
+
+.indiv-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 5px;
+    box-shadow: rgba(33, 35, 38, 0.10) 0px 10px 10px -10px;
+}
+
+.indiv-bottom{
+    justify-content: flex-end;
+    margin: 5px;
+    padding-top: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: rgba(33, 35, 38, 0.10) 0px -10px 10px -10px;
+}
+
+.btn-style1{
+    height: 40px;
+}
+
+.myUser{
+    margin-top:5px;
+}
+
+mat-card-header{
+    margin-left: 20px;
+}
+
+.hr{
+    margin: 0;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+.example-full-width {
+    width: 100%;
+  }
+
+.btn-style:not([disabled]):hover {
+    transform: scale(1.2);
+    transition: ease;
+    cursor: pointer;
+  }
+
+
+.myinput{
+      font-size: 18px;
+  }
+
+::ng-deep .mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color: grey !important;
+   }
+  
+::ng-deep.mat-form-field-underline {
+    /*change color of underline*/
+    background-color: grey !important;
+  } 
+  
+::ng-deep.mat-form-field-ripple {
+   /*change color of underline when focused*/
+   background-color: green !important;;
+  }

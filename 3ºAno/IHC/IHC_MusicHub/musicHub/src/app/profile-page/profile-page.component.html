@@ -1,0 +1,242 @@
+<app-navbar></app-navbar>
+
+<app-scroll-to-top></app-scroll-to-top>
+
+<div class="main">
+  <div>
+    <div id="image-name">
+      <img
+        src="../../assets/userAvatar.jpeg"
+        alt="user avatar"
+        *ngIf="router.url === '/musicianprofile' || router.url === '/profile'"
+      />
+      <img
+        src="https://media.istockphoto.com/photos/bartender-wearing-apron-and-smiling-picture-id1194844600?k=6&m=1194844600&s=612x612"
+        alt="user avatar"
+        *ngIf="router.url === '/establishmentprofile'"
+      />
+      <h1
+        *ngIf="router.url === '/musicianprofile' || router.url === '/profile'"
+      >
+        Juan Lessa
+      </h1>
+      <h1 *ngIf="router.url === '/establishmentprofile'">
+        João Batista's Place
+      </h1>
+    </div>
+    <div *ngIf="router.url === '/musicianprofile' || router.url === '/profile'">
+      <p>
+        Olá a todos, eu sou o Juan Lessa tenho 21, sou um aspirante artista a
+        ser a próxima estrela revelação do Mundo do Pop
+      </p>
+      <p>Checkem as minhas músicas e os próximos eventos onde vou atuar</p>
+      <p>Peace out!</p>
+    </div>
+    <div *ngIf="router.url === '/establishmentprofile'">
+      <p>
+        Olá, Querem passar uma noite bem passada na companhia dos vossos
+        amigos!?
+      </p>
+      <p>
+        Venham visitar o meu estabelecimento, temos espatáculos de música
+        semanais.
+      </p>
+    </div>
+  </div>
+
+  <div
+    *ngIf="
+      router.url === '/musicianprofile' ||
+      router.url === '/profile' ||
+      router.url === '/establishmentprofile'
+    "
+  >
+    <mat-tab-group mat-align-tabs="center">
+      <mat-tab label="Posts">
+        <button *ngIf="router.url === '/profile'" (click)="newPost()">
+          new post
+        </button>
+        <br /><br />
+        <div class="col-md-6 col-md-offset-1 d-flex justify-content-center">
+          <div
+            *ngIf="
+              router.url === '/musicianprofile' || router.url === '/profile'
+            "
+          >
+            <mat-card class="example-card">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image2"></div>
+                <mat-card-title>Juan Lessa</mat-card-title>
+                <mat-card-subtitle>Juan Lessa new album!</mat-card-subtitle>
+              </mat-card-header>
+              <img
+                class="mat-card-image"
+                style="margin-bottom: 8px"
+                src="assets/post5.jpg"
+                alt="Photo of a Shiba Inu"
+              />
+              <mat-card-content>
+                <div class="icons-row">
+                  <span
+                    aria-label="favourite"
+                    class="btn-style icon"
+                    (click)="elementdisable = !elementdisable"
+                  >
+                    <mat-icon color="{{ elementdisable ? '' : 'warn' }}"
+                      >{{ elementdisable ? "favorite_border" : "favorite" }}
+                    </mat-icon>
+                  </span>
+                  <span aria-label="favourite" class="btn-style icon">
+                    <mat-icon>share</mat-icon>
+                  </span>
+                  <span
+                    a
+                    ria-label="favourite"
+                    class="btn-style icon push-right"
+                  >
+                    <mat-icon>send</mat-icon>
+                  </span>
+                </div>
+                <p>Checkout my new album. Is awesome!!</p>
+              </mat-card-content>
+            </mat-card>
+            <br /><br />
+            <mat-card class="example-card">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image2"></div>
+                <mat-card-title>Juan Lessa</mat-card-title>
+                <mat-card-subtitle>Amazing performance!</mat-card-subtitle>
+              </mat-card-header>
+              <img
+                class="mat-card-image"
+                style="margin-bottom: 8px"
+                src="assets/post4.jpg"
+                alt="Photo of a Shiba Inu"
+              />
+              <mat-card-content>
+                <div class="icons-row">
+                  <span
+                    aria-label="favourite"
+                    class="btn-style icon"
+                    (click)="elementdisable = !elementdisable"
+                  >
+                    <mat-icon color="{{ elementdisable ? '' : 'warn' }}"
+                      >{{ elementdisable ? "favorite_border" : "favorite" }}
+                    </mat-icon>
+                  </span>
+                  <span aria-label="favourite" class="btn-style icon">
+                    <mat-icon>share</mat-icon>
+                  </span>
+                  <span
+                    a
+                    ria-label="favourite"
+                    class="btn-style icon push-right"
+                  >
+                    <mat-icon>send</mat-icon>
+                  </span>
+                </div>
+                <p>Metallica played like godddds!!!!</p>
+              </mat-card-content>
+            </mat-card>
+            <br /><br />
+          </div>
+
+          <div *ngIf="router.url === '/establishmentprofile'">
+            <mat-card class="example-card">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image1"></div>
+                <mat-card-title>João Batista</mat-card-title>
+                <mat-card-subtitle
+                  >Que espetáculo que os XUTOS deram ontem!</mat-card-subtitle
+                >
+              </mat-card-header>
+              <img
+                class="mat-card-image"
+                style="margin-bottom: 8px"
+                src="assets/xutos.jpeg"
+                alt="Photo of a Shiba Inu"
+              />
+              <mat-card-content>
+                <div class="icons-row">
+                  <span
+                    aria-label="favourite"
+                    class="btn-style icon"
+                    (click)="elementdisable = !elementdisable"
+                  >
+                    <mat-icon color="{{ elementdisable ? '' : 'warn' }}"
+                      >{{ elementdisable ? "favorite_border" : "favorite" }}
+                    </mat-icon>
+                  </span>
+                  <span aria-label="favourite" class="btn-style icon">
+                    <mat-icon>share</mat-icon>
+                  </span>
+                  <span
+                    a
+                    ria-label="favourite"
+                    class="btn-style icon push-right"
+                  >
+                    <mat-icon>send</mat-icon>
+                  </span>
+                </div>
+                <p>Xutos&Pontapés played like godddds!!!!</p>
+              </mat-card-content>
+            </mat-card>
+            <br /><br />
+          </div>
+        </div>
+        <mat-tab
+          label="Musics"
+          *ngIf="router.url === '/musicianprofile' || router.url === '/profile'"
+        >
+          <div id="posts">
+            <button *ngIf="router.url === '/profile'" (click)="newPost()">
+              new song
+            </button>
+            <div class="col-md-7 col-md-offset-1 d-flex justify-content-center">
+              <app-music-card></app-music-card>
+            </div>
+          </div>
+        </mat-tab>
+        <div
+          class="container mycontainer"
+          *ngIf="
+            router.url === '/musicianprofile' ||
+            router.url === '/establishmentprofile'
+          "
+        >
+          <div id="mensagix" class="col-md-4" *ngIf="bigMx">
+            <app-messenger></app-messenger>
+          </div>
+        </div>
+      </mat-tab>
+
+      <mat-tab label="Events">
+        <button *ngIf="router.url === '/profile'" (click)="newPost()">
+          new event
+        </button>
+        <app-event-card></app-event-card>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+
+  <!-- The Modal -->
+  <div id="newPostModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" (click)="closeNewPost()">&times;</span>
+      <form>
+        <label for="description">Description</label>
+        <textarea name="description" id="" cols="30" rows="4"></textarea>
+        <div>
+          <label for="media">
+            <p>drag here your media content</p>
+          </label>
+          <div name="media" id="box">
+            <p>+</p>
+          </div>
+        </div>
+        <button mat-stroked-button (click)="post()">post!</button>
+      </form>
+    </div>
+  </div>
+</div>

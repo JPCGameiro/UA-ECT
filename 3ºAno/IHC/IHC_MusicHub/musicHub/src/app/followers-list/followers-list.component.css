@@ -1,0 +1,51 @@
+
+/*==================================================
+  Nearby People CSS
+  ==================================================*/
+
+.people-nearby .google-maps{
+  background: #f8f8f8;
+  border-radius: 4px;
+  border: 1px solid #f1f2f2;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.people-nearby .nearby-user{
+  padding: 20px 50px;
+  border-top: 2px solid #f1f2f2;
+  border-bottom: 2px solid #f1f2f2;
+  margin-bottom: 20px;
+}
+
+img.profile-photo-lg{
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}
+
+
+.followbutton {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: dodgerblue; 
+  color: white; 
+  border: 2px solid dodgerblue;
+}
+
+.button1:hover {
+  background-color: white;
+  color: dodgerblue;
+}

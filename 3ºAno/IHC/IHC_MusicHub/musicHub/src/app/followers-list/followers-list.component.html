@@ -1,0 +1,58 @@
+<div class="container" *ngIf="router.url === '/musicians' || router.url.startsWith('/searchmusicians?')">
+    <h1  *ngIf="router.url === '/musicians'">Followed Artists</h1>
+    <h1  *ngIf="router.url.startsWith('/searchmusicians?')">Results</h1>
+    <div class="row">
+        <div>
+            <div class="people-nearby"style="height: 510px; overflow: hidden; overflow-y: scroll;">
+              
+              <div class="nearby-user" *ngFor="let m of artists">
+                <div class="row">
+                  <div class="col-md-2 col-sm-2">
+                    <img src="https://camisetaclandestina.com.br/storage/2021/03/Foo-Fighter-Logo.jpg" alt="user" class="profile-photo-lg">
+                  </div>
+                  <div class="col-md-7 col-sm-7">
+                    <h5><a href="/musicianprofile" class="profile-link">{{m.name}}</a></h5>
+                    <p>{{m.genre}}</p>
+                    <p class="text-muted">{{m.location}} - 500m away</p>
+                  </div>
+                  <div class="col-md-3 col-sm-3" style="text-align: right;">
+                    <button class="followbutton button1">Following</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+    	</div>
+	  </div>
+</div>
+
+
+
+
+
+<div class="container" *ngIf="router.url === '/establishments' || router.url.startsWith('/searchestablishments?')">
+  <h1 *ngIf="router.url === '/establishments'">Followed Establishments</h1>
+  <h1 *ngIf="router.url.startsWith('/searchestablishments?')">Results</h1>
+  <div class="row">
+    <div>
+        <div class="people-nearby"style="height: 510px; overflow: hidden; overflow-y: scroll;">
+          
+          <div class="nearby-user" *ngFor="let m of places">
+            <div class="row">
+              <div class="col-md-2 col-sm-2">
+                <img src="https://image.freepik.com/free-vector/jazz-cafe-logo-neon-signs-style-text_118419-3148.jpg" alt="user" class="profile-photo-lg">
+              </div>
+              <div class="col-md-7 col-sm-7">
+                <h5><a href="/establishmentprofile" class="profile-link">{{m.name}}</a></h5>
+                <p>{{m.genre}}</p>
+                <p class="text-muted">{{m.location}} - 500m away</p>
+              </div>
+              <div class="col-md-3 col-sm-3" style="text-align: right;">
+                <button class="followbutton button1">Following</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+<br><br>

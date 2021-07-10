@@ -1,0 +1,27 @@
+.navOption{
+    align-items: center;
+    padding: 25px;
+}
+
+.main{
+    height: 460px;
+    background-image: url("../guitar.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.mycontainer{
+    padding-top: 4em;
+}
+
+.mensagix-icon1{
+    height: 50px;
+    position: fixed;
+    bottom: 40px;
+    right: 150px;
+}
+
+.icon-div{
+    padding: 5px;
+    cursor: pointer;
+}

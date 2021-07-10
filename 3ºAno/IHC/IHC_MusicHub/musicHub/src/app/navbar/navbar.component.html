@@ -1,0 +1,379 @@
+<div
+  id="navbar"
+  *ngIf="router.url === '/musicians' || router.url.startsWith('/searchmusicians?') || router.url === '/musicianprofile'"
+>
+  <a href="/" id="logo">MusicHUB</a>
+  <a href="/">Home</a>
+  <a href="/musicians" class="active">Musicians</a>
+  <a href="/establishments">Establishments</a>
+  <div id="navbar-right">
+    <a matTooltip="messengix" href="/messenger"><i class="fab fa-facebook-messenger"></i></a>
+
+    <a matTooltip="notificacoes" class="nav-link text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="fa fa-bell"></i>
+    </a>
+    <ul class="dropdown-menu">
+      <li class="head text-light bg-dark">
+        <div class="row">
+          <div class="col-lg-12 col-sm-12 col-12">
+            <span>Notifications (3)</span>
+            <a href="" class="float-right text-light">Mark all as read</a>
+          </div>
+        </div>
+      </li>
+      <a href="\musicianprofile">
+      <li class="notification-box">
+        <div class="row">
+          <div class="col-lg-3 col-sm-4 col-3 text-center">
+            <img src="https://cdn.freelogovectors.net/wp-content/uploads/2020/08/foo-fighters-logo.png" style="width: 100%;" class="w-50 rounded-circle">
+          </div>    
+          <div class="col-lg-8 col-sm-8 col-8">
+            <strong class="text-info">Foo Fighters</strong>
+            <div>
+              Released a new song!!!
+            </div>
+            <small class="text-warning">27.11.2015, 15:00</small>
+          </div>    
+        </div>
+      </li>
+      </a>
+      <a href="\musicianprofile">
+      <li class="notification-box">
+        <div class="row">
+          <div class="col-lg-3 col-sm-3 col-3 text-center">
+            <img src="../../assets/userAvatar.jpeg" style="width: 120%; border-radius: 80%;" class="w-50 rounded-circle">
+          </div>    
+          <div class="col-lg-8 col-sm-8 col-8">
+            <strong class="text-info">Juan Lessa</strong>
+            <div>
+              Just published a new post
+            </div>
+            <small class="text-warning">27.11.2015, 15:00</small>
+          </div>    
+          </div>
+      </li>
+      </a>
+      <a href="/establishmentprofile">
+      <li class="notification-box">
+        <div class="row">
+          <div class="col-lg-3 col-sm-3 col-3 text-center">
+            <img src="https://i.pinimg.com/originals/3a/5a/c6/3a5ac6a1f1b6786fb2314e8da03a4db1.jpg" style="width: 120%;" class="w-50 rounded-circle">
+          </div>    
+          <div class="col-lg-8 col-sm-8 col-8">
+            <strong class="text-info">João Batista</strong>
+            <div>
+              Just added a new event
+            </div>
+            <small class="text-warning">27.11.2015, 15:00</small>
+          </div>    
+        </div>
+      </li>
+      </a>
+    </ul>
+    <a matTooltip="profile" href="/profile"><span class="glyphicon glyphicon-user"></span></a>
+    <a matTooltip="log out" href="/login"><span class="glyphicon glyphicon-log-out" ></span></a>
+  </div>
+</div>
+
+<div id="navbar" *ngIf="router.url === '/'">
+  <a href="/" id="logo">MusicHUB</a>
+  <a href="/" class="active">Home</a>
+  <a href="/musicians">Musicians</a>
+  <a href="/establishments">Establishments</a>
+
+  <div id="navbar-right">
+    <a matTooltip="messengix" href="/messenger"><i class="fab fa-facebook-messenger"></i></a>
+
+      <a matTooltip="notificacoes" class="nav-link text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fa fa-bell"></i>
+      </a>
+      <ul class="dropdown-menu">
+        <li class="head text-light bg-dark">
+          <div class="row">
+            <div class="col-lg-12 col-sm-12 col-12">
+              <span>Notifications (3)</span>
+              <a href="" class="float-right text-light">Mark all as read</a>
+            </div>
+          </div>
+        </li>
+        <a href="\musicianprofile">
+        <li class="notification-box">
+          <div class="row">
+            <div class="col-lg-3 col-sm-4 col-3 text-center">
+              <img src="https://cdn.freelogovectors.net/wp-content/uploads/2020/08/foo-fighters-logo.png" style="width: 100%;" class="w-50 rounded-circle">
+            </div>    
+            <div class="col-lg-8 col-sm-8 col-8">
+              <strong class="text-info">Foo Fighters</strong>
+              <div>
+                Released a new song!!!
+              </div>
+              <small class="text-warning">27.11.2015, 15:00</small>
+            </div>    
+          </div>
+        </li>
+        </a>
+        <a href="\musicianprofile">
+        <li class="notification-box">
+          <div class="row">
+            <div class="col-lg-3 col-sm-3 col-3 text-center">
+              <img src="../../assets/userAvatar.jpeg" style="width: 120%; border-radius: 80%;" class="w-50 rounded-circle">
+            </div>    
+            <div class="col-lg-8 col-sm-8 col-8">
+              <strong class="text-info">Juan Lessa</strong>
+              <div>
+                Just published a new post
+              </div>
+              <small class="text-warning">27.11.2015, 15:00</small>
+            </div>    
+            </div>
+        </li>
+        </a>
+        <a href="/establishmentprofile">
+        <li class="notification-box">
+          <div class="row">
+            <div class="col-lg-3 col-sm-3 col-3 text-center">
+              <img src="https://i.pinimg.com/originals/3a/5a/c6/3a5ac6a1f1b6786fb2314e8da03a4db1.jpg" style="width: 120%;" class="w-50 rounded-circle">
+            </div>    
+            <div class="col-lg-8 col-sm-8 col-8">
+              <strong class="text-info">João Batista</strong>
+              <div>
+                Just added a new event
+              </div>
+              <small class="text-warning">27.11.2015, 15:00</small>
+            </div>    
+          </div>
+        </li>
+        </a>
+      </ul>
+    <a matTooltip="profile" href="/profile"><span class="glyphicon glyphicon-user"></span></a>
+    <a matTooltip="log out" href="/login"><span class="glyphicon glyphicon-log-out"></span></a>
+  </div>
+</div>
+
+<div id="navbar" *ngIf="router.url === '/profile'">
+  <a href="/" id="logo">MusicHUB</a>
+  <a href="/">Home</a>
+  <a href="/musicians">Musicians</a>
+  <a href="/establishments">Establishments</a>
+  <div id="navbar-right">
+    <a matTooltip="messengix" href="/messenger"><i class="fab fa-facebook-messenger"></i></a>
+    
+    <a matTooltip="notificacoes" class="nav-link text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="fa fa-bell"></i>
+    </a>
+    <ul class="dropdown-menu">
+      <li class="head text-light bg-dark">
+        <div class="row">
+          <div class="col-lg-12 col-sm-12 col-12">
+            <span>Notifications (3)</span>
+            <a href="" class="float-right text-light">Mark all as read</a>
+          </div>
+        </div>
+      </li>
+      <a href="\musicianprofile">
+      <li class="notification-box">
+        <div class="row">
+          <div class="col-lg-3 col-sm-4 col-3 text-center">
+            <img src="https://cdn.freelogovectors.net/wp-content/uploads/2020/08/foo-fighters-logo.png" style="width: 100%;" class="w-50 rounded-circle">
+          </div>    
+          <div class="col-lg-8 col-sm-8 col-8">
+            <strong class="text-info">Foo Fighters</strong>
+            <div>
+              Released a new song!!!
+            </div>
+            <small class="text-warning">27.11.2015, 15:00</small>
+          </div>    
+        </div>
+      </li>
+      </a>
+      <a href="\musicianprofile">
+      <li class="notification-box">
+        <div class="row">
+          <div class="col-lg-3 col-sm-3 col-3 text-center">
+            <img src="../../assets/userAvatar.jpeg" style="width: 120%; border-radius: 80%;" class="w-50 rounded-circle">
+          </div>    
+          <div class="col-lg-8 col-sm-8 col-8">
+            <strong class="text-info">Juan Lessa</strong>
+            <div>
+              Just published a new post
+            </div>
+            <small class="text-warning">27.11.2015, 15:00</small>
+          </div>    
+          </div>
+      </li>
+      </a>
+      <a href="/establishmentprofile">
+      <li class="notification-box">
+        <div class="row">
+          <div class="col-lg-3 col-sm-3 col-3 text-center">
+            <img src="https://i.pinimg.com/originals/3a/5a/c6/3a5ac6a1f1b6786fb2314e8da03a4db1.jpg" style="width: 120%;" class="w-50 rounded-circle">
+          </div>    
+          <div class="col-lg-8 col-sm-8 col-8">
+            <strong class="text-info">João Batista</strong>
+            <div>
+              Just added a new event
+            </div>
+            <small class="text-warning">27.11.2015, 15:00</small>
+          </div>    
+        </div>
+      </li>
+      </a>
+    </ul>
+    <a matTooltip="profile" href="/profile" class="active"><span class="glyphicon glyphicon-user"></span></a>
+    <a matTooltip="log out" href="/login"><span class="glyphicon glyphicon-log-out"></span></a>
+  </div>
+</div>
+
+
+
+
+<div id="navbar" *ngIf="router.url === '/establishments' || router.url.startsWith('/searchestablishments?') || router.url === '/establishmentprofile'">
+  <a href="/" id="logo">MusicHUB</a>
+  <a href="/">Home</a>
+  <a href="/musicians">Musicians</a>
+  <a href="/establishments" class="active">Establishments</a>
+  <div id="navbar-right">
+    <a matTooltip="messengix" href="/messenger"><i class="fab fa-facebook-messenger"></i></a>
+
+
+    <a matTooltip="notificacoes" class="nav-link text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="fa fa-bell"></i>
+    </a>
+    <ul class="dropdown-menu">
+      <li class="head text-light bg-dark">
+        <div class="row">
+          <div class="col-lg-12 col-sm-12 col-12">
+            <span>Notifications (3)</span>
+            <a href="" class="float-right text-light">Mark all as read</a>
+          </div>
+        </div>
+      </li>
+      <a href="\musicianprofile">
+      <li class="notification-box">
+        <div class="row">
+          <div class="col-lg-3 col-sm-4 col-3 text-center">
+            <img src="https://cdn.freelogovectors.net/wp-content/uploads/2020/08/foo-fighters-logo.png" style="width: 100%;" class="w-50 rounded-circle">
+          </div>    
+          <div class="col-lg-8 col-sm-8 col-8">
+            <strong class="text-info">Foo Fighters</strong>
+            <div>
+              Released a new song!!!
+            </div>
+            <small class="text-warning">27.11.2015, 15:00</small>
+          </div>    
+        </div>
+      </li>
+      </a>
+      <a href="\musicianprofile">
+      <li class="notification-box">
+        <div class="row">
+          <div class="col-lg-3 col-sm-3 col-3 text-center">
+            <img src="../../assets/userAvatar.jpeg" style="width: 120%; border-radius: 80%;" class="w-50 rounded-circle">
+          </div>    
+          <div class="col-lg-8 col-sm-8 col-8">
+            <strong class="text-info">Juan Lessa</strong>
+            <div>
+              Just published a new post
+            </div>
+            <small class="text-warning">27.11.2015, 15:00</small>
+          </div>    
+          </div>
+      </li>
+      </a>
+      <a href="/establishmentprofile">
+      <li class="notification-box">
+        <div class="row">
+          <div class="col-lg-3 col-sm-3 col-3 text-center">
+            <img src="https://i.pinimg.com/originals/3a/5a/c6/3a5ac6a1f1b6786fb2314e8da03a4db1.jpg" style="width: 120%;" class="w-50 rounded-circle">
+          </div>    
+          <div class="col-lg-8 col-sm-8 col-8">
+            <strong class="text-info">João Batista</strong>
+            <div>
+              Just added a new event
+            </div>
+            <small class="text-warning">27.11.2015, 15:00</small>
+          </div>    
+        </div>
+      </li>
+      </a>
+    </ul>
+
+    <a matTooltip="profile" href="/profile"><span class="glyphicon glyphicon-user"></span></a>
+    <a matTooltip="log out" href="/login"><span class="glyphicon glyphicon-log-out"></span></a>
+  </div>
+</div>
+
+
+<div id="navbar" *ngIf="router.url === '/messenger'">
+  <a href="/" id="logo">MusicHUB</a>
+  <a href="/">Home</a>
+  <a href="/musicians">Musicians</a>
+  <a href="/establishments">Establishments</a>
+  <div id="navbar-right">
+    <a matTooltip="messengix" href="/messenger" class="active"><i class="fab fa-facebook-messenger"></i></a>
+    
+    <a matTooltip="notificacoes" class="nav-link text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="fa fa-bell"></i>
+    </a>
+    <ul class="dropdown-menu">
+      <li class="head text-light bg-dark">
+        <div class="row">
+          <div class="col-lg-12 col-sm-12 col-12">
+            <span>Notifications (3)</span>
+            <a href="" class="float-right text-light">Mark all as read</a>
+          </div>
+        </div>
+      </li>
+      <a href="\musicianprofile">
+      <li class="notification-box">
+        <div class="row">
+          <div class="col-lg-3 col-sm-4 col-3 text-center">
+            <img src="https://cdn.freelogovectors.net/wp-content/uploads/2020/08/foo-fighters-logo.png" style="width: 100%;" class="w-50 rounded-circle">
+          </div>    
+          <div class="col-lg-8 col-sm-8 col-8">
+            <strong class="text-info">Foo Fighters</strong>
+            <div>
+              Released a new song!!!
+            </div>
+            <small class="text-warning">27.11.2015, 15:00</small>
+          </div>    
+        </div>
+      </li>
+      </a>
+      <a href="\musicianprofile">
+      <li class="notification-box">
+        <div class="row">
+          <div class="col-lg-3 col-sm-3 col-3 text-center">
+            <img src="../../assets/userAvatar.jpeg" style="width: 120%; border-radius: 80%;" class="w-50 rounded-circle">
+          </div>    
+          <div class="col-lg-8 col-sm-8 col-8">
+            <strong class="text-info">Juan Lessa</strong>
+            <div>
+              Just published a new post
+            </div>
+            <small class="text-warning">27.11.2015, 15:00</small>
+          </div>    
+          </div>
+      </li>
+      </a>
+      <a href="/establishmentprofile">
+      <li class="notification-box">
+        <div class="row">
+          <div class="col-lg-3 col-sm-3 col-3 text-center">
+            <img src="https://i.pinimg.com/originals/3a/5a/c6/3a5ac6a1f1b6786fb2314e8da03a4db1.jpg" style="width: 120%;" class="w-50 rounded-circle">
+          </div>    
+          <div class="col-lg-8 col-sm-8 col-8">
+            <strong class="text-info">João Batista</strong>
+            <div>
+              Just added a new event
+            </div>
+            <small class="text-warning">27.11.2015, 15:00</small>
+          </div>    
+        </div>
+      </li>
+      </a>
+    </ul>
+    <a matTooltip="profile" href="/profile"><span class="glyphicon glyphicon-user"></span></a>
+    <a matTooltip="log out" href="/login"><span class="glyphicon glyphicon-log-out"></span></a>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+.navOption{
+    align-items: center;
+    padding: 25px;
+}
+
+.main{
+    height: 500px;
+    background-image: url("./mic.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.mycontainer{
+    padding-top: 4em;
+}

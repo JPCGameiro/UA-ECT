@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+
+<app-scroll-to-top></app-scroll-to-top>
+
+<section class="main">
+    <div class="container mycontainer">
+        <div class="col-md-7 col-md-offset-1 d-flex justify-content-center">
+            <app-card></app-card>
+        </div>
+        <div id="mensagix"class="col-md-4" *ngIf=bigMx>
+            <app-messenger></app-messenger>
+        </div>
+        <!--<div class="mydiv" *ngIf=!bigMx>
+            <div class="icon-div">
+                <img (click)="scrollToTop()" class="mensagix-icon1" src="../../assets/chat_icon-icons.com_67748.svg" alt="mensagix">
+            </div>
+        </div>-->
+    </div>
+</section>
