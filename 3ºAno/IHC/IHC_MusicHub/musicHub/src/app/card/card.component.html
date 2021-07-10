@@ -1,0 +1,74 @@
+
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title><a href="/musicianprofile" style="color:inherit; text-decoration: none;">Juan Lessa</a></mat-card-title>
+      <mat-card-subtitle>{{examplePost.smldescription}}</mat-card-subtitle>
+    </mat-card-header>
+    <img class="mat-card-image" style="margin-bottom: 8px;" src="assets/post1.jpg" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <div class="icons-row">
+        <button aria-label="favourite" class="btn-style icon" (click)="elementdisable = !elementdisable"><mat-icon color="{{elementdisable ? '' : 'warn'}}">{{elementdisable ? 'favorite_border' : 'favorite'}}</mat-icon></button>
+        <span>
+        <button aria-label="share" class="btn-style"><mat-icon>share</mat-icon></button>
+        </span>
+        <span class="push-right">
+          <button aria-label="sended" class="btn-style"><mat-icon>send</mat-icon></button>
+        </span>
+      </div>
+      <p>
+        {{examplePost.description}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+  <br><br>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar>
+        <img src="assets/greenday.png" class="imagesize" alt="">
+      </div>
+      <mat-card-title><a href="/establishmentprofile" style="color:inherit; text-decoration: none;">{{examplePost1.username}}</a></mat-card-title>
+      <mat-card-subtitle>{{examplePost1.smldescription}}</mat-card-subtitle>
+    </mat-card-header>
+    <img class="mat-card-image" style="margin-bottom: 8px;" src="assets/post2.jpg" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <div class="icons-row">
+        <button aria-label="favourite" class="btn-style icon" (click)="elementdisable = !elementdisable"><mat-icon color="{{elementdisable ? '' : 'warn'}}">{{elementdisable ? 'favorite_border' : 'favorite'}}</mat-icon></button>
+        <span>
+        <button aria-label="share" class="btn-style"><mat-icon>share</mat-icon></button>
+        </span>
+        <span class="push-right">
+          <button aria-label="sended" class="btn-style"><mat-icon>send</mat-icon></button>
+        </span>
+      </div>
+      <p>
+        {{examplePost1.description}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+  <br><br>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar>
+        <img src="assets/anasimoes.jpeg"  class="imgsizeana" alt="">
+      </div>
+      <mat-card-title><a href="/establishmentprofile" style="color:inherit; text-decoration: none;">João Batista Place</a></mat-card-title>
+      <mat-card-subtitle>{{examplePost2.smldescription}}</mat-card-subtitle>
+    </mat-card-header>
+    <img class="mat-card-image" style="margin-bottom: 8px;" src="assets/post3.jpg" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <div class="icons-row">
+        <button aria-label="favourite" class="btn-style icon" (click)="elementdisable = !elementdisable"><mat-icon color="{{elementdisable ? '' : 'warn'}}">{{elementdisable ? 'favorite_border' : 'favorite'}}</mat-icon></button>
+        <span>
+        <button aria-label="share" class="btn-style"><mat-icon>share</mat-icon></button>
+        </span>
+        <span class="push-right">
+          <button aria-label="sended" class="btn-style"><mat-icon>send</mat-icon></button>
+        </span>
+      </div>
+      <p>
+        {{examplePost2.description}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+  <br><br>

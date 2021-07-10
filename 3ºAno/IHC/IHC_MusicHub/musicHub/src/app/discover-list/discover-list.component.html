@@ -1,0 +1,142 @@
+<div class="container" *ngIf="router.url === '/musicians'"><br><br>
+    <h1>Discover</h1>
+    <div class="row" style="position: relative;">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="our-team">
+          <div class="picture">
+            <img class="img-fluid" src="https://picsum.photos/130/130?image=1027">
+          </div>
+          <div class="team-content">
+            <h3 class="name">Ana's Band</h3>
+            <h4 class="title">Leiria, Pombal</h4>
+            <h5>Jazz</h5>
+          </div>
+          <ul class="social">
+            <li><a (click)="setSaving($event.target, 'Follow', 'Following')">Follow</a></li>
+          </ul>
+        </div>
+      </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="our-team">
+          <div class="picture">
+            <img class="img-fluid" src="https://picsum.photos/130/130?image=839">
+          </div>
+          <div class="team-content">
+            <h3 class="name">Marco's Band</h3>
+            <h4 class="title">California</h4>
+            <h5>Punk Rock</h5>
+          </div>
+          <ul class="social">
+            <li><a (click)="setSaving($event.target, 'Follow', 'Following')">Follow</a></li>
+          </ul>
+        </div>
+      </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="our-team">
+          <div class="picture">
+            <img class="img-fluid" src="https://picsum.photos/130/130?image=856">
+          </div>
+          <div class="team-content">
+            <h3 class="name">Conjunto Corona</h3>
+            <h4 class="title">Indie Rock</h4>
+            <h5>Aveiro</h5>
+          </div>
+          <ul class="social">
+            <li><a (click)="setSaving($event.target, 'Follow', 'Following')">Follow</a></li>
+          </ul>
+        </div>
+      </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="our-team">
+          <div class="picture">
+            <img class="img-fluid" src="https://picsum.photos/130/130?image=836">
+          </div>
+          <div class="team-content">
+            <h3 class="name">Artista Exemplo</h3>
+            <h4 class="title">Itália</h4>
+            <h5>Rap</h5>
+          </div>
+          <ul class="social">
+            <li><a (click)="setSaving($event.target, 'Follow', 'Following')">Follow</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="container" *ngIf="router.url === '/establishments'"><br><br>
+    <h1>Discover</h1>
+    <div class="row">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="our-team">
+          <div class="picture">
+            <img class="img-fluid" src="https://cdn3.vectorstock.com/i/1000x1000/05/57/jazz-cafe-logo-in-neon-style-neon-sign-symbol-vector-20060557.jpg">
+          </div>
+          <div class="team-content">
+            <h3 class="name">Joao Batistas Place</h3>
+            <h4 class="title">Aveiro, Avenida Peixinho</h4>
+            <h5>Jazz Caffe</h5>
+          </div>
+          <ul class="social">
+            <li><a (click)="setSaving($event.target, 'Follow', 'Following')">Follow</a></li>
+          </ul>
+        </div>
+      </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="our-team">
+          <div class="picture">
+            <img class="img-fluid" src="https://media-cdn.tripadvisor.com/media/photo-s/07/73/53/b3/palace-kiay.jpg">
+          </div>
+          <div class="team-content">
+            <h3 class="name">KIAY</h3>
+            <h4 class="title">Leiria, Pombal</h4>
+            <h5>Discoteca</h5>
+          </div>
+          <ul class="social">
+            <li><a (click)="setSaving($event.target, 'Follow', 'Following')">Follow</a></li>
+          </ul>
+        </div>
+      </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="our-team">
+          <div class="picture">
+            <img class="img-fluid" src="data:image/png;base64,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">
+          </div>
+          <div class="team-content">
+            <h3 class="name">Hard Rock Cafe</h3>
+            <h4 class="title">Porto</h4>
+            <h5>Rock Caffe</h5>
+          </div>
+          <ul class="social">
+            <li><a (click)="setSaving($event.target, 'Follow', 'Following')">Follow</a></li>
+          </ul>
+        </div>
+      </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="our-team">
+          <div class="picture">
+            <img class="img-fluid" src="https://i.pinimg.com/originals/58/c2/a3/58c2a3acdd220413a98da3034cf9d59d.png">
+          </div>
+          <div class="team-content">
+            <h3 class="name">Galeria Cabaret</h3>
+            <h4 class="title">Pombal, Leiria</h4>
+            <h5>Rock Music</h5>
+          </div>
+          <ul class="social">
+            <li><a (click)="setSaving($event.target, 'Follow', 'Following')">Follow</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>

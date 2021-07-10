@@ -1,0 +1,52 @@
+.center {
+  margin: auto;
+  width: 50%;
+  padding: center;
+}
+
+.example-card {
+    max-width: 500px;
+    align-self: center;
+  }
+  
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.imagesize{
+  background-size: cover;
+  height: 31px;
+}
+
+.imgsizeana{
+  background-size: cover;
+  height: 36px;
+}
+
+.icons-row{
+display: flex;
+flex-direction: row;
+font-family: 'Material Icons';
+}
+
+.push-right {
+  margin-left: auto;
+}
+
+.icon{
+  margin-right: 10px;
+}
+
+.btn-style{
+  border-style: none;
+  background-color: transparent;
+  padding: 0px;
+  margin: 0 px;
+  cursor: pointer;
+}
+
+.btn-style:not([disabled]):hover {
+  transform: scale(1.2);
+  transition: ease;
+}
