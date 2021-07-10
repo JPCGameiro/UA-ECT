@@ -1,0 +1,5 @@
+para instalar dependências:
+npm install
+
+para correr:
+ng serve
