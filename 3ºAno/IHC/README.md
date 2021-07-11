@@ -27,7 +27,8 @@
 
 * Modelos a utilizar no projecto e implementação de sistemas interativos: 
   * Modelos do utilizador, análise de tarefas, notação do diálogo e principais paradigmas de software para sistemas interativos.
-
+## Aulas
+Slides das aulas teóricas e das aulas práticas.
 ## Trabalhos
 ### Assignment1
 Análise analítica ao website HLTV.org, usando avaliação heurística e cognitive walkthrough.
