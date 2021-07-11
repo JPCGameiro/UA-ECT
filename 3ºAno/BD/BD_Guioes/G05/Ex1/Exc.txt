@@ -1,0 +1,1 @@
+γ Pname; sum(Hours)->total_hours (project ⨝ Pnumber = Pno works_on)

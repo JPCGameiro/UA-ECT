@@ -1,0 +1,15 @@
+/*    para a farmacêutica com registo número 906, lista dos seus fármacos nunca
+prescritos
+
+ todos da farmaceutica 906 - lista de prescritos
+*/
+-- farmacos fabricados na farmaceutica 906
+π farmaceutica.numReg, farmaco.nome
+σ farmaceutica.numReg = 906
+(farmaceutica ⨝ numReg = numRegFarm farmaco) -
+
+-- preescritos apartir da 906
+π farmaceutica.numReg, presc_farmaco.nomeFarmaco
+σ farmaceutica.numReg = 906
+(farmaceutica ⨝ numRegFarm = numReg presc_farmaco)
+

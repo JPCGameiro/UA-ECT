@@ -1,0 +1,3 @@
+γ Dname; avg(employee.Salary) -> average_female_salary
+ 	(σ employee.Sex = 'F' 
+ 		(department ⨝ Dnumber = Dno employee))

@@ -1,0 +1,12 @@
+C:\Users\João Gameiro\Documents\Universidade\BD\G01\WindowsForm1\WindowsForm1\bin\Debug\WindowsForm1.exe.config
+C:\Users\João Gameiro\Documents\Universidade\BD\G01\WindowsForm1\WindowsForm1\bin\Debug\WindowsForm1.exe
+C:\Users\João Gameiro\Documents\Universidade\BD\G01\WindowsForm1\WindowsForm1\bin\Debug\WindowsForm1.pdb
+C:\Users\João Gameiro\Documents\Universidade\BD\G01\WindowsForm1\WindowsForm1\bin\Debug\WindowsForm1.xml
+C:\Users\João Gameiro\Documents\Universidade\BD\G01\WindowsForm1\WindowsForm1\obj\Debug\WindowsForm1.vbprojAssemblyReference.cache
+C:\Users\João Gameiro\Documents\Universidade\BD\G01\WindowsForm1\WindowsForm1\obj\Debug\WindowsForm1.Form1.resources
+C:\Users\João Gameiro\Documents\Universidade\BD\G01\WindowsForm1\WindowsForm1\obj\Debug\WindowsForm1.Resources.resources
+C:\Users\João Gameiro\Documents\Universidade\BD\G01\WindowsForm1\WindowsForm1\obj\Debug\WindowsForm1.vbproj.GenerateResource.cache
+C:\Users\João Gameiro\Documents\Universidade\BD\G01\WindowsForm1\WindowsForm1\obj\Debug\WindowsForm1.vbproj.CoreCompileInputs.cache
+C:\Users\João Gameiro\Documents\Universidade\BD\G01\WindowsForm1\WindowsForm1\obj\Debug\WindowsForm1.exe
+C:\Users\João Gameiro\Documents\Universidade\BD\G01\WindowsForm1\WindowsForm1\obj\Debug\WindowsForm1.xml
+C:\Users\João Gameiro\Documents\Universidade\BD\G01\WindowsForm1\WindowsForm1\obj\Debug\WindowsForm1.pdb

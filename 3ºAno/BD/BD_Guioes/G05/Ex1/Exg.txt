@@ -1,0 +1,3 @@
+σ num_Dependents > 2
+	(γ Fname, Minit, Lname; count(Essn)-> num_Dependents
+		(employee ⨝ Ssn = Essn dependent))

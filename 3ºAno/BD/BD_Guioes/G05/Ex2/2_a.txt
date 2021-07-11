@@ -1,0 +1,3 @@
+π nif (fornecedor) -
+π encomenda.fornecedor
+(encomenda ⨝ (nif = fornecedor) fornecedor)

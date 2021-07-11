@@ -1,0 +1,10 @@
+π Fname, Minit, Lname, Address
+	-- Pessoas que trabalham em pelo menos um proj em Aveiro
+	((employee ⨝ Ssn = Essn
+		(π Pname, Pnumber, Plocation, Essn (σ project.Plocation	= 'Aveiro' project ⨝ works_on)))
+		 
+		 ⨝ employee.Dno = department.Dnumber	
+			
+			-- Departamentos sem localização em aveiro
+			(department - π department.Dname, department.Dnumber,department.Mgr_ssn,department.Mgr_start_date
+				(σ dept_location.Dlocation = 'Aveiro' (department ⨝ dept_location))))

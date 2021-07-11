@@ -1,0 +1,10 @@
+/*  
+Para cada farmácia, o número de fármacos de cada farmacêutica vendidos;
+*/
+γ farmacia.nome, farmaceutica.nome; count(presc_farmaco.nomeFarmaco) -> num_farmacos
+π farmacia.nome, farmaceutica.nome, presc_farmaco.nomeFarmaco
+(farmaceutica ⨝ presc_farmaco.numRegFarm = numReg
+(farmacia ⨝ prescricao.farmacia = nome 
+π prescricao.farmacia, presc_farmaco.numRegFarm, presc_farmaco.nomeFarmaco
+(prescricao ⨝ numPrescX = numPresc (ρ numPrescX←numPresc (presc_farmaco)))))
+

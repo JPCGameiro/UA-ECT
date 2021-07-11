@@ -1,0 +1,4 @@
+paciente ⨝
+	σ num_UU > 1  
+		(γ numUtente; count(numUtente)->num_UU 
+			(γ numUtente, numMedico; count(numMedico)-> numPrescricoes prescricao))

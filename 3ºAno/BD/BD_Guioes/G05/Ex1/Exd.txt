@@ -1,0 +1,4 @@
+π Fname, Lname, Pname, Dno, Hours
+	(σ works_on.Hours > 20
+		(employee ⨝ Ssn = works_on.Essn
+			((σ Pname = 'Aveiro Digital' project ) ⨝ Pnumber = Pno works_on)))

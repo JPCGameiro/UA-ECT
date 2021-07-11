@@ -1,0 +1,1 @@
+π Fname, Minit, Lname employee - π Fname, Minit, Lname (employee ⨝ Ssn = Essn σ Essn ≠ null works_on)

@@ -1,0 +1,1 @@
+π Fname, Minit, Lname (employee ⨝ Ssn = Mgr_ssn  department) - π Fname, Minit, Lname ((employee ⨝ Ssn = Mgr_ssn  department) ⨝ Ssn = Essn dependent)

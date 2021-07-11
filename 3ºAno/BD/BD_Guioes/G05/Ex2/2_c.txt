@@ -1,0 +1,3 @@
+γ avg(num_produtos) -> media_num_prod_por_encomenda
+γ item.numEnc; count(produto.codigo) -> num_produtos
+(item ⨝ codProd = codigo produto)

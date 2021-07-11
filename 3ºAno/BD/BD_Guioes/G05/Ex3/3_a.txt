@@ -1,0 +1,5 @@
+paciente ⨝ pacNoPresc=numUtente
+ρ pacNoPresc←paciente.numUtente
+(π numUtente (paciente) -
+π prescricao.numUtente 
+(prescricao ⨝ numPrescx = numPresc (ρ numPrescx←numPresc (presc_farmaco))))

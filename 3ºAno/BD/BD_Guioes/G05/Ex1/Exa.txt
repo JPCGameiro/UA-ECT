@@ -1,0 +1,1 @@
+π Pname, Pnumber, Fname , Minit, Lname, Ssn (project ⨝ Pnumber = Pno (employee ⨝ Ssn = Essn works_on))

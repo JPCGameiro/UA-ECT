@@ -1,0 +1,25 @@
+fornecedor, que ainda não fez encomendas 590972623
+
+produto.nome		unidades
+Bife da Pa		200
+Laranja Algarve		1200
+Pera Rocha		2200
+Secretos de Porco Preto	300
+Vinho Rose Plus		500
+Queijo de Cabra da Serra50
+Queijo Fresco do Dia	40
+Cerveja Preta Artesanal	10
+Lixivia de Cor		150
+Amaciador Neutro	250
+Agua Natural		1000
+Pao de Leite		200
+Arroz Agulha		625
+Iogurte Natural		200
+
+encomenda.fornecedor	avg_unidades
+509111222		250
+509121212		1866.6666666666667
+509987654		483.3333333333333
+509827353		96.66666666666667
+509294734		503.3333333333333
+509836433		200

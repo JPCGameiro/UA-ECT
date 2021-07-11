@@ -1,0 +1,3 @@
+γ produto.nome; avg(item.unidades) -> unidades
+π item.numEnc, produto.codigo, produto.nome, item.unidades
+(produto ⨝ codProd = codigo item)
