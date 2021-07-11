@@ -1,0 +1,20 @@
+C:\Users\Utilizador\Documents\BD_Project\interfaceBD\obj\Debug\interfaceBD.csprojAssemblyReference.cache
+C:\Users\Utilizador\Documents\BD_Project\interfaceBD\obj\Debug\interfaceBD.Properties.Resources.resources
+C:\Users\Utilizador\Documents\BD_Project\interfaceBD\obj\Debug\interfaceBD.csproj.GenerateResource.cache
+C:\Users\Utilizador\Documents\BD_Project\interfaceBD\obj\Debug\interfaceBD.csproj.CoreCompileInputs.cache
+C:\Users\Utilizador\Documents\BD_Project\interfaceBD\bin\Debug\interfaceBD.exe.config
+C:\Users\Utilizador\Documents\BD_Project\interfaceBD\bin\Debug\interfaceBD.exe
+C:\Users\Utilizador\Documents\BD_Project\interfaceBD\bin\Debug\interfaceBD.pdb
+C:\Users\Utilizador\Documents\BD_Project\interfaceBD\obj\Debug\interfaceBD.exe
+C:\Users\Utilizador\Documents\BD_Project\interfaceBD\obj\Debug\interfaceBD.pdb
+C:\Users\João Gameiro\Documents\Universidade\BD\BD_Project\interfaceBD\bin\Debug\interfaceBD.exe.config
+C:\Users\João Gameiro\Documents\Universidade\BD\BD_Project\interfaceBD\bin\Debug\interfaceBD.exe
+C:\Users\João Gameiro\Documents\Universidade\BD\BD_Project\interfaceBD\bin\Debug\interfaceBD.pdb
+C:\Users\João Gameiro\Documents\Universidade\BD\BD_Project\interfaceBD\obj\Debug\interfaceBD.csprojAssemblyReference.cache
+C:\Users\João Gameiro\Documents\Universidade\BD\BD_Project\interfaceBD\obj\Debug\interfaceBD.Form1.resources
+C:\Users\João Gameiro\Documents\Universidade\BD\BD_Project\interfaceBD\obj\Debug\interfaceBD.Properties.Resources.resources
+C:\Users\João Gameiro\Documents\Universidade\BD\BD_Project\interfaceBD\obj\Debug\interfaceBD.csproj.GenerateResource.cache
+C:\Users\João Gameiro\Documents\Universidade\BD\BD_Project\interfaceBD\obj\Debug\interfaceBD.csproj.CoreCompileInputs.cache
+C:\Users\João Gameiro\Documents\Universidade\BD\BD_Project\interfaceBD\obj\Debug\interfaceBD.exe
+C:\Users\João Gameiro\Documents\Universidade\BD\BD_Project\interfaceBD\obj\Debug\interfaceBD.pdb
+C:\Users\Utilizador\Documents\BD_Project\interfaceBD\obj\Debug\interfaceBD.EventoMain.resources
