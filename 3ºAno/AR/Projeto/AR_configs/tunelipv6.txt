@@ -1,0 +1,117 @@
+#R1
+ipv6 route 
+
+int Tunnel 16
+ipv6 addr 2020:0:0:16::1/64
+tunnel source f0/1
+tunnel destination 220.0.0.3
+tunnel mode ipv6ip
+
+int Tunnel 26
+ipv6 addr 2020:0:0:26::1/64
+tunnel source f0/1
+tunnel destination 220.0.0.4
+tunnel mode ipv6ip
+
+
+ipv6 route 3001:10:10:2000::/52 2020:0:0:16::3
+ipv6 route 3001:10:10:4000::/52 2020:0:0:26::4
+
+
+end
+write
+
+
+
+
+#R2
+int Tunnel 36
+ipv6 addr 2020:0:0:36::2/64
+tunnel source f0/1
+tunnel destination 220.0.0.4
+tunnel mode ipv6ip
+
+ipv6 route 3001:10:10:2000::/52 2000::3
+ipv6 route 3001:10:10:4000::/52 2020:0:0:36::4
+
+int f0/0
+ipv6 enable
+ipv6 address 2000::2/64
+
+end
+write
+
+
+
+
+#R3
+int Tunnel 16
+ipv6 addr 2020:0:0:16::3/64
+tunnel source f0/0
+tunnel destination 220.0.0.1
+tunnel mode ipv6ip
+
+int Tunnel 46
+ipv6 addr 2020:0:0:46::3/64
+tunnel source f0/0
+tunnel destination 220.0.0.4
+tunnel mode ipv6ip
+
+ipv6 route 3001:10:10::/52 2020:0:0:16::1
+ipv6 route 3001:10:10::/52 2000::2
+ipv6 route 3001:10:10:4000::/52 2020:0:0:46::4
+
+int f0/0
+ipv6 enable
+ipv6 address 2000::3/64
+
+end
+write
+
+
+
+
+#R4
+int Tunnel 26
+ipv6 addr 2020:0:0:26::4/64
+tunnel source f0/0
+tunnel destination 220.0.0.1
+tunnel mode ipv6ip
+
+int Tunnel 36
+ipv6 addr 2020:0:0:36::4/64
+tunnel source f0/0
+tunnel destination 220.0.0.2
+tunnel mode ipv6ip
+
+int Tunnel 46
+ipv6 addr 2020:0:0:46::4/64
+tunnel source f0/0
+tunnel destination 220.0.0.3
+tunnel mode ipv6ip
+
+ipv6 route 3001:10:10::/52 2020:0:0:26::1
+ipv6 route 3001:10:10::/52 2020:0:0:36::2
+ipv6 route 3001:10:10:2000::/52 2020:0:0:46::3
+
+end
+write
+
+
+
+#Rotas estáticas
+R1 -> R3 Rede Lisboaa via Tunnel16R3
+R1 -> R4 Rede S Francisco via Tunnel26R4
+
+R2 -> R3 Rede Lisboa via intf0/0R3
+R2 -> R4 Rede S Francisco via Tunnel36R4
+
+R3 -> R1 Rede Aveiro via Tunnel16R1
+R3 -> R2 Rede Aveiro via intf0/1R2
+R3 -> R4 Rede S Francisco via Tunnel46R4
+
+R4 -> R1 Rede Aveiro via Tunnel26R1
+R4 -> R2 Rede Aveiro via Tunnel36R2
+R4 -> R4 Rede S Francisco via Tunnel46R3
+
+

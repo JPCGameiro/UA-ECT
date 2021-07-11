@@ -1,0 +1,255 @@
+
+!SW5
+vlan database
+vlan 1
+vlan 206
+vlan 301
+vlan 601
+vlan 701
+vlan 702
+exit
+
+conf t
+ip routing
+ipv6 unicast-routing
+router ospf 1
+passive-interface vlan 1
+passive-interface vlan 601
+ipv6 router ospf 1
+passive-interface vlan 1
+passive-interface vlan 601
+
+int Loopback0
+no shut
+ip address 10.8.0.5 255.255.255.255
+ipv6 address 3001:10:10:0800::5/64
+ipv6 enable
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+
+int f1/0
+no shut
+switchport mode trunk
+switchport trunk allowed vlan 1,601,701,1002-1005
+
+int f1/1
+no shut
+switchport mode trunk
+switchport trunk allowed vlan 1,601,702,1002-1005
+
+int f1/2
+no shut
+switchport mode trunk
+switchport trunk encapsulation dot1q
+
+int f1/3
+no shut
+no switchport
+ip address 10.10.0.5 255.255.255.248
+ip ospf 1 area 0
+
+int f1/15
+no shut
+switchport mode trunk
+switchport trunk encapsulation dot1q
+
+int Vlan 206
+ipv6 enable
+no shut
+ip address 10.1.80.5 255.255.255.0
+ipv6 address 3001:10:10:0150::5/64
+no autostate
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+ip policy route-map ipsecRouteT1 
+ipv6 policy route-map ipsecRouteT6
+
+int Vlan 301
+ipv6 enable
+no shut
+ip address 10.2.0.5 255.255.255.0
+ip address 200.1.0.165 255.255.255.240 secondary
+ipv6 address 3001:10:10:0200::5/64
+no autostate
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+
+int Vlan 601
+ipv6 enable
+no shut
+ip address 10.5.0.5 255.255.252.0
+ipv6 address 3001:10:10:0500::5/64
+no autostate
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+
+int Vlan 701
+ipv6 enable
+no shut
+ip address 10.6.0.5 255.255.255.0
+ipv6 address 3001:10:10:0600::5/64
+no autostate
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+
+int Vlan 702
+ipv6 enable
+no shut
+ip address 10.6.1.5 255.255.255.0
+ipv6 address 3001:10:10:0601::5/64
+no autostate
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+
+int Tunnel1
+ip address 10.11.0.9 255.255.255.252
+ipv6 address 3001:10:10:0A00::9/126
+tunnel source Loopback0
+tunnel destination 10.8.0.11
+tunnel mode ipsec ipv4
+tunnel protection ipsec profile ADMINipsec
+
+ipv6 access-list L101
+sequence 20 permit ipv6 3001:10:10:0150::/64 3001:10:10:2100::/64
+sequence 21 permit ipv6 3001:10:10:0150::/64 3001:10:10:4140::/64
+
+access-list 100 permit ip 200.1.0.160 0.0.0.15 200.1.1.96 0.0.0.15
+access-list 100 permit ip 200.1.0.160 0.0.0.15 200.1.1.224 0.0.0.15
+
+route-map ipsecRouteT1 permit 10
+match ip address 100
+set interface Tunnel 1
+
+route-map ipsecRouteT6 permit 10
+match ipv6 address L101
+set ipv6 next-hop 3001:10:10:0A00::9
+
+end 
+write
+
+
+
+
+!SW6
+vlan database
+vlan 1
+vlan 206
+vlan 205
+vlan 601
+vlan 701
+vlan 702
+exit
+
+
+conf t
+ip routing
+ipv6 unicast-routing
+
+int Loopback0
+no shut
+ip address 10.8.0.6 255.255.255.255
+ipv6 address 3001:10:10:0800::6/64
+ipv6 enable
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+
+int f1/0
+no shut
+switchport mode trunk
+switchport trunk allowed vlan 1,601,701,1002-1005
+
+int f1/1
+no shut
+switchport mode trunk
+switchport trunk allowed vlan 1,601,702,1002-1005
+
+int f1/2
+no shut
+switchport mode trunk
+switchport trunk encapsulation dot1q
+
+int f1/3
+no shut
+no switchport
+ip address 10.10.0.6 255.255.255.248
+ip ospf 1 area 0
+
+int f1/15
+no shut
+switchport mode trunk
+switchport trunk encapsulation dot1q
+
+int Vlan 206
+ipv6 enable
+no shut
+ip address 10.1.80.6 255.255.255.0
+ipv6 address 3001:10:10:0150::6/64
+no autostate
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+ip policy route-map ipsecRouteT1 
+ipv6 policy route-map ipsecRouteT6
+
+int Vlan 301
+ipv6 enable
+no shut
+ip address 10.2.0.6 255.255.255.0
+ip address 200.1.0.166 255.255.255.240 secondary
+ipv6 address 3001:10:10:0200::6/64
+no autostate
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+
+int Vlan 601
+ipv6 enable
+no shut
+ip address 10.5.0.6 255.255.252.0
+ipv6 address 3001:10:10:0500::6/64
+no autostate
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+
+int Vlan 701
+ipv6 enable
+no shut
+ip address 10.6.0.6 255.255.255.0
+ipv6 address 3001:10:10:0600::6/64
+no autostate
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+
+int Vlan 702
+ipv6 enable
+no shut
+ip address 10.6.1.6 255.255.255.0
+ipv6 address 3001:10:10:0601::6/64
+no autostate
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+
+int Tunnel1
+ip address 10.11.0.13 255.255.255.252
+ipv6 address 3001:10:10:0A00::D/126
+tunnel source Loopback0
+tunnel destination 10.8.0.12
+tunnel mode ipsec ipv4
+tunnel protection ipsec profile ADMINipsec
+
+ipv6 access-list L101
+sequence 20 permit ipv6 3001:10:10:0150::/64 3001:10:10:2100::/64
+sequence 21 permit ipv6 3001:10:10:0150::/64 3001:10:10:4140::/64
+
+access-list 100 permit ip 200.1.0.160 0.0.0.15 200.1.1.96 0.0.0.15
+access-list 100 permit ip 200.1.0.160 0.0.0.15 200.1.1.224 0.0.0.15
+
+route-map ipsecRouteT1 permit 10
+match ip address 100
+set interface Tunnel 1
+
+route-map ipsecRouteT6 permit 10
+match ipv6 address L101
+set ipv6 next-hop 3001:10:10:0A00::D
+
+end 
+write
+

@@ -1,0 +1,98 @@
+!DatacenterCentral
+
+!SW7
+vlan database
+vlan 1
+exit
+
+conf t
+ip routing
+ipv6 unicast-routing
+router ospf 1
+ipv6 router ospf 1
+
+int f1/15
+ipv6 enable
+no shut
+ip address 10.9.0.7 255.255.255.0
+ipv6 address 3001:10:10:0900::7/64
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+
+int f1/14
+ipv6 enable
+no shut
+ip address 10.6.2.41 255.255.255.252
+ipv6 address 3001:10:10:0602::29/126
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+
+int f0/0
+ipv6 enable
+no shut
+ip address 10.6.2.2 255.255.255.252
+ipv6 address 3001:10:10:0602::2/126
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+
+int f0/1
+ipv6 enable
+no shut
+ip address 10.6.2.18 255.255.255.252
+ipv6 address 3001:10:10:0602::12/126
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+
+
+end
+write
+
+
+
+
+!SW8
+vlan database
+vlan 1
+exit
+
+conf t
+ip routing
+ipv6 unicast-routing
+router ospf 1
+ipv6 router ospf 1
+
+int f1/15
+ipv6 enable
+no shut
+ip address 10.9.0.8 255.255.255.0
+ipv6 address 3001:10:10:0900::8/64
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+
+int f1/14
+ipv6 enable
+no shut
+ip address 10.6.2.42 255.255.255.252
+ipv6 address 3001:10:10:0602::2A/126
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+
+int f0/0
+ipv6 enable
+no shut
+ip address 10.6.2.6 255.255.255.252
+ipv6 address 3001:10:10:0602::6/126
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+
+int f0/1
+ipv6 enable
+no shut
+ip address 10.6.2.22 255.255.255.252
+ipv6 address 3001:10:10:0602::16/126
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+
+end
+write
+

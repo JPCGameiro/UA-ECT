@@ -1,0 +1,159 @@
+!R1
+conf t
+ip nat pool POOL 200.1.0.129 200.1.0.159 netmask 255.255.255.224
+access-list 1 permit 10.1.0.0 0.0.0.255
+access-list 1 permit 10.1.16.0 0.0.0.255
+access-list 1 permit 10.1.64.0 0.0.0.255
+access-list 1 permit 10.1.80.0 0.0.0.255
+access-list 1 permit 10.5.0.0 0.0.3.255
+access-list 1 permit 10.7.0.0 0.0.0.255
+access-list 1 permit 10.8.0.0 0.0.0.255
+access-list 1 permit 10.9.0.0 0.0.0.255
+
+end
+conf t
+int f0/1
+ip nat outside
+
+int f0/0
+ip nat inside
+
+int f1/0
+ip nat inside
+
+int f1/1
+ip nat inside
+
+
+end
+conf t
+router ospf 1
+default-information originate always metric 5
+exit
+
+ip route 200.1.1.0 255.255.255.128 220.0.0.3
+ip route 200.1.1.128 255.255.255.128 220.0.0.4
+
+end
+
+conf t
+ip nat Stateful id 1
+primary 10.6.2.33
+peer 10.6.2.34
+mapping-id 10
+ip nat inside source list 1 pool POOL mapping-id 10 overload
+
+end
+write
+
+
+
+!R2
+conf t
+ip nat pool POOL 200.1.0.129 200.1.0.159 netmask 255.255.255.224
+access-list 1 permit 10.1.0.0 0.0.0.255
+access-list 1 permit 10.1.16.0 0.0.0.255
+access-list 1 permit 10.1.64.0 0.0.0.255
+access-list 1 permit 10.1.80.0 0.0.0.255
+access-list 1 permit 10.5.0.0 0.0.3.255
+access-list 1 permit 10.7.0.0 0.0.0.255
+access-list 1 permit 10.8.0.0 0.0.0.255
+access-list 1 permit 10.9.0.0 0.0.0.255
+
+end
+conf t
+int f0/1
+ip nat outside
+
+int f0/0
+ip nat inside
+
+int f1/0
+ip nat inside
+
+int f1/1
+ip nat inside
+
+
+end
+conf t
+router ospf 1
+default-information originate always metric 10
+exit
+
+ip route 200.1.1.0 255.255.255.128 220.0.0.3
+ip route 200.1.1.128 255.255.255.128 220.0.0.4
+
+end
+conf t
+ip nat Stateful id 2
+backup 10.6.2.34
+peer 10.6.2.33
+mapping-id 10
+ip nat inside source list 1 pool POOL mapping-id 10 overload
+
+end
+write
+
+
+
+
+
+!R3
+conf t
+ip nat pool POOL2 200.1.1.65 200.1.1.95 netmask 255.255.255.224
+access-list 2 permit 10.33.0.0 0.0.0.255
+access-list 2 permit 10.40.0.0 0.0.0.255
+ip nat inside source list 2 pool POOL2 overload
+end
+
+conf t
+int f0/1
+ip nat inside
+
+int f0/0
+ip nat outside
+
+end
+
+conf t
+router ospf 1
+default-information originate always metric 10
+exit
+ip route 200.1.0.0 255.255.255.0 220.0.0.1
+ip route 200.1.0.0 255.255.255.0 220.0.0.2
+ip route 200.1.1.128 255.255.255.128 220.0.0.4
+end
+write
+
+
+
+!R4
+conf t
+ip nat pool POOL3 200.1.1.193 200.1.1.223 netmask 255.255.255.224
+
+access-list 3 permit 10.65.64.0 0.0.0.255
+access-list 3 permit 10.72.0.0 0.0.0.255
+ip nat inside source list 3 pool POOL3 overload
+
+end
+conf t
+int f0/1
+ip nat inside
+
+int f0/0
+ip nat outside
+
+
+
+end
+conf t
+router ospf 1
+default-information originate always metric 10
+exit
+ip route 200.1.0.0 255.255.255.0 220.0.0.1
+ip route 200.1.0.0 255.255.255.0 220.0.0.2
+ip route 200.1.1.0 255.255.255.128 220.0.0.3
+
+end
+write

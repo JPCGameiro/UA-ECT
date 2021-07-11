@@ -1,0 +1,85 @@
+
+
+!R5
+conf t
+ip routing
+ipv6 unicast-routing
+router ospf 1
+
+int Loopback0
+no shut
+ip address 10.8.0.15 255.255.255.255
+ip ospf 1 area 0
+
+int f0/0
+no shut
+ip address 10.10.0.9 255.255.255.252
+ip policy route-map routeT1
+ipv6 policy route-map route6T1
+
+int f0/1
+no shut
+ip address 10.10.0.4 255.255.255.248
+ip ospf 1 area 0
+
+int Tunnel1
+ip address 10.11.0.2 255.255.255.252
+ipv6 address 3001:10:10:0A00::2/126
+tunnel source Loopback0
+tunnel destination 10.8.0.3
+tunnel mode gre ip
+
+int Tunnel2
+ip address 10.11.0.6 255.255.255.252
+ipv6 address 3001:10:10:0A00::6/126
+tunnel source Loopback0
+tunnel destination 10.8.0.3
+tunnel mode gre ip
+
+ipv6 access-list L1
+sequence 20 permit ipv6 3001:10:10:2100::/64 3001:10:10:0100::/64
+access-list 100 permit ip 10.33.0.0 0.0.0.255 10.1.0.0 0.0.0.255
+
+route-map routeT1 permit 10
+match ip address 100
+set ip next-hop 10.11.0.1
+
+route-map route6T1 permit 10
+match ipv6 address L1
+set ipv6 next-hop 3001:10:10:0A00::1
+
+ip route 10.33.0.0 255.255.255.0 10.10.0.10
+
+end
+write
+
+
+
+
+!R6
+conf t
+
+int Loopback0
+no shut
+ip address 10.8.0.16 255.255.255.255
+
+int f0/0
+no shut
+ip address 10.10.0.10 255.255.255.252
+
+int f0/1
+no shut
+
+int f0/1.201
+no shut
+ipv6 enable
+encapsulation dot1Q 201
+ip addr 10.33.0.6 255.255.255.0
+ip ospf 1 area 0
+ipv6 addr 3001:10:10:2100::6/64
+
+ip route 10.1.0.0 255.255.255.0 10.10.0.9
+
+end
+write
+

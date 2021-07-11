@@ -1,0 +1,185 @@
+!R1
+conf t
+ip routing
+ipv6 unicast-routing
+router ospf 1
+ipv6 router ospf 1
+
+int Loopback0
+ip address 10.8.0.11 255.255.255.255
+ipv6 address 3001:10:10:0800::11/64
+ipv6 enable
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+
+int f0/0
+no shut
+ipv6 enable
+ip address 10.6.2.33 255.255.255.252
+ipv6 address 3001:10:10:0602::21/126
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+ip policy route-map ipsecRouteT2
+
+int f0/1
+no sh
+ip address 220.0.0.1 255.255.255.0
+ip policy route-map ipsecRouteT1
+ipv6 policy route-map ipsecRouteT6
+
+int f1/0
+no shut
+ipv6 enable
+ip address 10.6.2.10 255.255.255.252
+ipv6 address 3001:10:10:0602::A/126
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+ip policy route-map ipsecRouteT2
+
+int f1/1
+no shut
+ipv6 enable
+ip address 10.6.2.26 255.255.255.252
+ipv6 address 3001:10:10:0602::1A/126
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+ip policy route-map ipsecRouteT2
+
+int Tunnel1
+ip address 10.11.0.10 255.255.255.252
+ipv6 address 3001:10:10:0A00::A/126
+tunnel source Loopback0
+tunnel destination 10.8.0.5
+tunnel mode ipsec ipv4
+ip policy route-map ipsecRouteT2
+tunnel protection ipsec profile ADMINipsec
+
+int Tunnel2
+ip unnumbered FastEthernet0/1
+ip nat outside
+tunnel source 220.0.0.1
+tunnel destination 220.0.0.3
+tunnel mode ipsec ipv4
+tunnel protection ipsec profile ADMINipsec
+
+int Tunnel3
+ip unnumbered FastEthernet0/1
+ip nat outside
+tunnel source 220.0.0.1
+tunnel destination 220.0.0.4
+tunnel mode ipsec ipv4
+tunnel protection ipsec profile ADMINipsec
+
+sequence 20 permit ipv6 3001:10:10:2100::/64 3001:10:10:0150::/64
+sequence 21 permit ipv6 3001:10:10:4140::/64 3001:10:10:0150::/64
+
+access-list 100 permit ip 200.1.1.96 0.0.0.15 200.1.0.160 0.0.0.15
+access-list 100 permit ip 200.1.1.224 0.0.0.15 200.1.0.160 0.0.0.15
+
+access-list 101 permit ip 200.1.0.160 0.0.0.15 200.1.1.96 0.0.0.15
+access-list 102 permit ip 200.1.0.160 0.0.0.15 200.1.1.224 0.0.0.15
+
+route-map ipsecRouteT1 permit 10
+match ip address 100
+set interface Tunnel 1
+
+route-map ipsecRouteT6 permit 10
+match ipv6 address L101
+set ipv6 next-hop 3001:10:10:0A00::9
+
+route-map ipsecRouteT2 permit 20
+match ip address 101
+set interface Tunnel 2
+
+route-map ipsecRouteT2 permit 30
+match ip address 102
+set interface Tunnel 3
+
+end
+write
+
+
+
+!R2
+conf t
+ipv6 unicast-routing
+router ospf 1
+ipv6 router ospf 1
+
+int Loopback0
+ip address 10.8.0.12 255.255.255.255
+ipv6 address 3001:10:10:0800::12/64
+ipv6 enable
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+
+int f0/0
+no sh
+ipv6 enable
+ip address 10.6.2.34 255.255.255.252
+ipv6 address 3001:10:10:0602::22/126
+ip ospf 1 area 0
+ipv6 ospf 1 area 0 
+
+int f0/1
+no sh
+ip address 220.0.0.2 255.255.255.0
+ip policy route-map ipsecRouteT1 
+ipv6 policy route-map ipsecRouteT6
+ 
+
+int f1/0
+ipv6 enable
+ip address 10.6.2.14 255.255.255.252
+ipv6 address 3001:10:10:0602::E/126
+ip ospf 1 area 0
+ipv6 ospf 1 area 0  
+
+int f1/1
+no sh
+ipv6 enable
+ip address 10.6.2.30 255.255.255.252
+ipv6 address 3001:10:10:0602::1E/126
+ip ospf 1 area 0
+ipv6 ospf 1 area 0 
+
+int Tunnel1
+ip address 10.11.0.14 255.255.255.252
+ipv6 address 3001:10:10:0A00::E/126
+tunnel source Loopback0
+tunnel destination 10.8.0.6
+tunnel mode ipsec ipv4
+tunnel protection ipsec profile ADMINipsec
+
+int Tunnel4
+ip unnumbered FastEthernet0/1
+tunnel source 220.0.0.2
+tunnel destination 220.0.0.3
+tunnel mode ipsec ipv4
+tunnel protection ipsec profile !!!!!ADMINipsec
+
+int Tunnel5
+ip unnumbered FastEthernet0/1
+tunnel source 220.0.0.2
+tunnel destination 220.0.0.4
+tunnel mode ipsec ipv4
+tunnel protection ipsec profile !!!!!ADMINipsec
+
+
+ipv6 access-list L101
+sequence 20 permit ipv6 3001:10:10:2100::/64 3001:10:10:0150::/64
+sequence 21 permit ipv6 3001:10:10:4140::/64 3001:10:10:0150::/64
+
+access-list 2 permit 10.33.0.0 0.0.0.255
+access-list 2 permit 10.40.0.0 0.0.0.255
+
+route-map ipsecRouteT1 permit 10
+match ip address 100
+set interface Tunnel 1
+
+route-map ipsecRouteT6 permit 10
+match ipv6 address L101
+set ipv6 next-hop 3001:10:10:0A00::D
+
+end
+write

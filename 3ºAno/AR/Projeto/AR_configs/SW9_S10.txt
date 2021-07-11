@@ -1,0 +1,73 @@
+
+
+!oldBuild
+!SW9
+ip routing
+vlan database
+vlan 1
+exit
+
+conf t
+interface f0/0
+no shut
+ip address 192.168.10.10 255.255.255.0
+router ospf 20
+
+interface f0/1
+no shut
+ip address 192.168.200.10 255.255.255.0
+ip ospf 20 area 0
+
+interface vlan 1
+ip address 192.168.100.10 255.255.252.0
+no autostate
+ip ospf 20 area 0
+no shutdown
+
+interface fastEthernet 1/14
+no shut
+switchport mode trunk
+switchport trunk encapsulation dot1q
+
+interface fastEthernet 1/15
+no shut
+switchport mode trunk
+switchport trunk encapsulation dot1q
+end
+write
+
+
+!SW10
+ip routing
+vlan database
+vlan 1
+exit
+
+conf t
+interface f0/0
+no shut
+ip address 192.168.11.11 255.255.255.0
+ip ospf 20 area 0
+
+interface f0/1
+no shut
+ip address 192.168.200.11 255.255.255.0
+ip ospf 20 area 0
+
+interface vlan 1
+ip address 192.168.100.11 255.255.252.0
+no autostate
+ip ospf 20 area 0
+
+interface fastEthernet 1/14
+no shut
+switchport mode trunk
+switchport trunk encapsulation dot1q
+
+interface fastEthernet 1/15
+no shut
+switchport mode trunk
+switchport trunk encapsulation dot1q
+
+end 
+write

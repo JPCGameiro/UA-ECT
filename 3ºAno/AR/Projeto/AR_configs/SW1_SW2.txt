@@ -1,0 +1,251 @@
+
+
+!CORE_SW1
+vlan database
+vlan 1
+vlan 601
+vlan 701
+exit
+
+conf t
+ip routing
+ipv6 unicast-routing
+
+ipv6 router ospf 1
+passive-interface vlan 1
+passive-interface vlan 601
+
+router ospf 20
+default-information originate always
+
+router ospf 1
+passive-interface vlan 1
+passive-interface vlan 601
+redistribute ospf 20 subnets
+
+int Loopback0
+no shut
+ipv6 enable
+ip address 10.8.0.1 255.255.255.255
+ipv6 address 3001:10:10:0800::1/128
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+
+int f0/0
+no shut
+ipv6 enable
+ip address 10.6.2.37 255.255.255.252
+ipv6 address 3001:10:10:0602::25/126
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+
+int f0/1
+no shut
+ipv6 enable
+ip address 10.6.2.13 255.255.255.252
+ipv6 address 3001:10:10:0602::D/126
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+
+int f1/0
+no switchport
+no shut
+ipv6 enable
+ip address 10.6.2.9 255.255.255.252
+ipv6 address 3001:10:10:0602::9/126
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+
+int f1/1
+switchport
+channel-group 1 mode on
+
+int f1/2
+no shut
+switchport mode trunk
+switchport trunk allowed vlan 1,601,701,1002-1005
+
+int f1/3
+no shut
+switchport mode trunk
+switchport trunk allowed vlan 1,601,701,1002-1005
+
+int f1/4
+no shut
+switchport mode trunk
+switchport trunk allowed vlan 1,601,701,1002-1005
+
+int f1/5
+switchport
+channel-group 1 mode on
+
+int f1/6
+no switchport
+no shut
+ipv6 enable
+ip address 10.6.2.1 255.255.255.252
+ipv6 address 3001:10:10:0602::1/126
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+
+int f1/7
+no switchport
+no shut
+ipv6 enable
+ip address 10.6.2.5 255.255.255.252
+ipv6 address 3001:10:10:0602::5/126
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+
+int f1/8
+no switchport
+no shut
+ip address 192.168.10.1 255.255.255.0
+ip ospf 20 area 0
+
+interface Port-channel 1
+switchport mode trunk
+switchport trunk allowed vlan 1,601,701,1002-1005
+
+int vlan 601
+no shut
+no autostate
+ip address 10.5.0.1 255.255.252.0
+ip ospf 1 area 0
+ipv6 address 3001:10:10:0500::1/64
+ipv6 ospf 1 area 0
+
+int vlan 701
+no shut
+no autostate
+ip address 10.6.0.1 255.255.255.0
+ip ospf 1 area 0
+ipv6 address 3001:10:10:0600::1/64
+ipv6 ospf 1 area 0
+
+end 
+write
+
+
+
+
+
+!CORE_SW2
+vlan database
+vlan 1
+vlan 601
+vlan 702
+exit
+
+conf t
+ip routing
+ipv6 unicast-routing
+
+ipv6 router ospf 1
+passive-interface vlan 1
+passive-interface vlan 601
+
+router ospf 20
+default-information originate always
+
+router ospf 1
+passive-interface vlan 1
+passive-interface vlan 601
+redistribute ospf 20 subnets
+
+int Loopback0
+no shut
+ipv6 enable
+ip address 10.8.0.2 255.255.255.255
+ipv6 address 3001:10:10:0800::2/128
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+
+int f0/0
+no shut
+ipv6 enable
+ip address 10.6.2.38 255.255.255.252
+ipv6 address 3001:10:10:0602::26/126
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+
+int f0/1
+no shut
+ipv6 enable
+ip address 10.6.2.25 255.255.255.252
+ipv6 address 3001:10:10:0602::19/126
+ip ospf 1 area 0
+ipv6 ospf 1 area 0 
+
+int f1/0
+no switchport
+no shut
+ipv6 enable
+ip address 10.6.2.29 255.255.255.252
+ipv6 address 3001:10:10:0602::1D/126
+ip ospf 1 area 0
+ipv6 ospf 1 area 0 
+
+int f1/1
+no shut
+switchport mode trunk
+switchport trunk allowed vlan 1,601,702,1002-1005
+
+int f1/2
+no shut
+switchport mode trunk
+switchport trunk allowed vlan 1,601,702,1002-1005
+
+int f1/3
+no shut
+switchport mode trunk
+switchport trunk allowed vlan 1,601,702,1002-1005
+
+int f1/4
+no shut
+switchport mode trunk
+switchport trunk allowed vlan 1,601,702,1002-1005
+
+int f1/5
+no switchport
+no shut
+ipv6 enable
+ip address 192.168.11.1 255.255.255.0
+ip ospf 20 area 0
+
+int f1/6
+no switchport
+no shut
+ipv6 enable
+ip address 10.6.2.17 255.255.255.252
+ipv6 address 3001:10:10:0602::11/126
+ip ospf 1 area 0
+ipv6 ospf 1 area 0 
+
+int f1/7
+no switchport
+no shut
+ipv6 enable
+ip address 10.6.2.21 255.255.255.252
+ipv6 address 3001:10:10:0602::15/126
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+
+int vlan 601
+no shut
+no autostate
+ip address 10.5.0.2 255.255.252.0
+ip ospf 1 area 0
+ipv6 address 3001:10:10:0500::2/64
+ipv6 ospf 1 area 0
+
+int vlan 702
+no shut
+no autostate
+ip address 10.6.1.2 255.255.255.0
+ip ospf 1 area 0
+ipv6 address 3001:10:10:0601::2/64
+ipv6 ospf 1 area 0
+
+end
+write

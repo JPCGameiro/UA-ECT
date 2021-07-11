@@ -1,0 +1,88 @@
+
+set interfaces ethernet eth0 address 10.9.0.20/24
+set interfaces ethernet eth0 address 3001:10:10:0900::20/64
+set interfaces ethernet eth1 address 10.6.2.46/30
+set interfaces ethernet eth1 address 3001:10:10:0602::2E/126
+
+set protocols ospf area 0 network 10.9.0.0/24
+set protocols ospf area 0 network 10.6.2.44/30
+set protocols ospfv3 area 0 interface eth0
+set protocols ospfv3 area 0 interface eth1 
+
+#Redes autorizadas a comunicar com a firewall - IPV4
+set firewall group network-group AUTHORIZED network 10.1.0.0/24
+set firewall group network-group AUTHORIZED network 10.1.16.0/24
+set firewall group network-group AUTHORIZED network 10.1.80.0/24
+set firewall group networl-group AUTHORIZED network 10.7.0.0/24
+set firewall group network-group AUTHORIZED network 10.6.0.0/24
+set firewall group network-group AUTHORIZED network 10.6.1.0/24
+#Redes autorizadas a comunicar com a firewall - IPV6
+set firewall group ipv6-network-group AUTHORIZEDV6 network 3001:10:10:0110::/64
+set firewall group ipv6-network-group AUTHORIZEDV6 network 3001:10:10:0600::/64
+set firewall group ipv6-network-group AUTHORIZEDV6 network 3001:10:10:0601::/64
+
+
+#Zonas
+set zone-policy zone INSIDE description "Inside (Datacenter)"
+set zone-policy zone INSIDE interface eth0
+set zone-policy zone OUTSIDE description "Outside (Network)"
+set zone-policy zone OUTSIDE interface eth1
+
+
+
+
+#Firewall pode pingar tudo lá fora - IPv4
+set firewall name FROM-INSIDE-TO-OUTSIDE rule 10 description "Accept ICMP Echo Request"
+set firewall name FROM-INSIDE-TO-OUTSIDE rule 10 action accept
+set firewall name FROM-INSIDE-TO-OUTSIDE rule 10 protocol icmp
+set firewall name FROM-INSIDE-TO-OUTSIDE rule 10 icmp type 8
+
+#Firewall pode pingar tudo lá fora - IPv6
+set firewall ipv6-name FROM-INSIDE-TO-OUTSIDE-v6 rule 10 description "Accept ICMPv6 Echo Request"
+set firewall ipv6-name FROM-INSIDE-TO-OUTSIDE-v6 rule 10 action accept
+set firewall ipv6-name FROM-INSIDE-TO-OUTSIDE-v6 rule 10 protocol icmpv6
+set firewall ipv6-name FROM-INSIDE-TO-OUTSIDE-v6 rule 10 icmpv6 type 128
+
+#Firewall deixa passar connecções de quem consegue comunicar com ela
+set firewall name FROM-INSIDE-TO-OUTSIDE rule 12 description "Accept Established-Related Connections"
+set firewall name FROM-INSIDE-TO-OUTSIDE rule 12 action accept
+set firewall name FROM-INSIDE-TO-OUTSIDE rule 12 state established enable
+set firewall name FROM-INSIDE-TO-OUTSIDE rule 12 state related enable
+
+#Firewall deixa passar connecções de quem consegue comunicar com ela - IPv6
+set firewall ipv6-name FROM-INSIDE-TO-OUTSIDE-v6 rule 12 description "Accept Established-Related Connections V6"
+set firewall ipv6-name FROM-INSIDE-TO-OUTSIDE-v6 rule 12 action accept
+set firewall ipv6-name FROM-INSIDE-TO-OUTSIDE-v6 rule 12 state established enable
+set firewall ipv6-name FROM-INSIDE-TO-OUTSIDE-v6 rule 12 state related enable
+
+set zone-policy zone OUTSIDE from INSIDE firewall name FROM-INSIDE-TO-OUTSIDE
+set zone-policy zone OUTSIDE from INSIDE firewall ipv6-name FROM-INSIDE-TO-OUTSIDE-V6
+
+
+
+
+
+#Regra que indica quais os grupos que podem comunicar com a firewall
+set firewall name FROM-OUTSIDE-TO-INSIDE rule 10 description "Accept All from Vlans"
+set firewall name FROM-OUTSIDE-TO-INSIDE rule 10 action accept
+set firewall name FROM-OUTSIDE-TO-INSIDE rule 10 protocol all
+set firewall name FROM-OUTSIDE-TO-INSIDE rule 10 source group network-group AUTHORIZED
+
+#Regra que indica que a vlan do Apoio ao client pode comunicar com a firewall - IPv6
+set firewall ipv6-name FROM-OUTSIDE-TO-INSIDE-V6 rule 10 description "Accept All from VLAN 202"
+set firewall ipv6-name FROM-OUTSIDE-TO-INSIDE-V6 rule 10 action accept
+set firewall ipv6-name FROM-OUTSIDE-TO-INSIDE-V6 rule 10 protocol all
+set firewall ipv6-name FROM-OUTSIDE-TO-INSIDE-V6 rule 10 source group network-group AUTHORIZEDV6
+
+
+#PC 10.5.0.101 pode comunicar com o host 10.9.0.1 apenas por pacotes udp para o porto 8080
+set firewall name FROM-OUTSIDE-TO-INSIDE rule 12 description "Accept UDP-8080"
+set firewall name FROM-OUTSIDE-TO-INSIDE rule 12 action accept
+set firewall name FROM-OUTSIDE-TO-INSIDE rule 12 protocol udp
+set firewall name FROM-OUTSIDE-TO-INSIDE rule 12 source address 10.5.0.101
+set firewall name FROM-OUTSIDE-TO-INSIDE rule 12 destination address 10.9.0.1
+set firewall name FROM-OUTSIDE-TO-INSIDE rule 12 destination port 8080
+
+set zone-policy zone INSIDE from OUTSIDE firewall name FROM-OUTSIDE-TO-INSIDE
+set zone-policy zone INSIDE from OUTSIDE firewall ipv6-name FROM-OUTSIDE-TO-INSIDE-V6
+

@@ -1,0 +1,110 @@
+.1dhcpd.conf
+
+option domain-name-servers 10.9.0.1;
+subnet 10.9.0.0 netmask 255.255.255.0 {
+	range 10.1.0.10 10.9.0.254 ;
+	option routers 10.9.0.7, 10.9.0.8;}
+
+VLAN201
+subnet 10.1.0.0 netmask 255.255.255.0 {
+	range 10.1.0.10 10.1.0.254 ;
+	option routers 10.1.0.3, 10.1.0.4;}
+
+VLAN206
+subnet 10.1.80.0 netmask 255.255.255.0 {
+	range 10.1.80.10 10.1.80.254 ;
+	option routers 10.1.80.5, 10.1.80.6;}
+
+VLAN801
+subnet 10.7.0.0 netmask 255.255.255.0 {
+	range 10.7.0.10 10.7.0.254;
+	option routers 10.7.0.3, 10.7.0.4;}
+
+
+
+dhcpd6.conf
+
+option domain-name-servers 3001:10:10:0900::1;
+subnet6 3001:10:10:0900::/64 {
+	range 3001:10:10:0900::a 3001:10:10:0900::fffe;
+	option routers 3001:10:10:0900::7, 3001:10:10:0900::8;}
+
+
+VLAN201
+subnet6 3001:10:10:0100::/64 {
+	range 3001:10:10:0100::a 3001:10:10:0100::fffe;
+	option routers 3001:10:10:0100::3, 3001:10:10:0100::4;}
+
+
+VLAN206
+subnet6 3001:10:10:0150::/64 {
+	range 3001:10:10:0150::a 3001:10:10:0150::fffe;
+	option routers 3001:10:10:0150::5;}
+subnet6 3001:10:10:0150::/64 {
+	range 3001:10:10:0150::a 3001:10:10:0150::fffe;
+	option routers 3001:10:10:0150::6;}
+
+
+VLAN801
+subnet6 3001:10:10:0700::/64 {
+	range 3001:10:10:0700::a 3001:10:10:0700::fffe;
+	option routers 3001:10:10:0700::3;}
+subnet6 3001:10:10:0700::/64 {
+	range 3001:10:10:0700::a 3001:10:10:0700::fffe;
+	option routers 3001:10:10:0700::4;}
+
+
+
+
+-----------------------------------------
+
+
+!SW1
+conf t
+ip helper-address 10.9.0.1
+ip helper-address 3001:10:10:0900::1
+
+!SW2
+conf t
+ip helper-address 10.9.0.1
+ip helper-address 3001:10:10:0900::1
+
+!SW3
+conf t
+service dhcp
+int vlan 201
+int vlan 801
+ip helper-address 10.9.0.1
+ip helper-address 3001:10:10:0900::1
+
+!SW4
+conf t
+service dhcp
+int vlan 201
+int vlan 801
+ip helper-address 10.9.0.1
+ip helper-address 3001:10:10:0900::1
+
+!SW5
+conf t
+service dhcp
+int vlan 206
+ip helper-address 10.9.0.1
+ip helper-address 3001:10:10:0900::1
+
+!SW6
+conf t
+service dhcp
+int vlan 206
+ip helper-address 10.9.0.1
+ip helper-address 3001:10:10:0900::1
+
+!SW7
+conf t
+ip helper-address 10.9.0.1
+ip helper-address 3001:10:10:0900::1
+
+!SW8
+conf t
+ip helper-address 10.9.0.1
+ip helper-address 3001:10:10:0900::1
