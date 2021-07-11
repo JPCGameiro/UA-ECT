@@ -1,0 +1,28 @@
+Promotor: chave - numCC
+	numCC -> telefone, email, nome
+StageManager: chave - numCC
+	numCC -> telefone, email, nome
+Evento: chave - ID
+	ID -> Nome, numBilhetes, DataInicio, numDias, DataFim, DataProposta, CC_promotor, CC_stagemanager
+Concerto: chave - ID
+	ID -> DataInicio, Duração, ID_banda, ID_evento, ID_soundcheck
+Soundcheck: chave - ID
+	ID -> DataInicio, Duração
+Banda: chave - ID
+	ID -> nome, telefone, email, numElementos, genero
+Comitiva: chave - ID
+	ID -> email, telefone, numElementos, numAcompanhantes, numTécnicos, ID_banda
+Pessoa: chave - numCC
+	numCC -> nome, email, telefone, sexo, ID_comitiva
+Tecnico: chave - numCC
+	numCC -> TipoTecnico
+Acompanhante: chave - numCC
+	numCC -> TipoAcompanhante
+Musico: chave - numCC
+	numCC -> NomeArtistico, id_banda
+Instrumento: chave - ID
+	ID -> familia, CC_musico, fabricante, modelo, marca
+Refeição: chave - ID
+	ID -> nome, id_evento, NIF_empresa, prato, sobremesa, bebida
+EmpresaCatering: chave - ID
+	NIF -> nome, email, telefone, endereço 
