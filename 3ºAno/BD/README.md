@@ -6,9 +6,10 @@
 4. Definição de Dados (Linguagem SQL – DDL)
 5. Álgebra Relacional
 6. Manipulação de Dados (Linguagem SQL – DML)
-7. Normalização
-8. Indexação e optimização
-9. Programação em SQL (Batch, Script, Cursores, Stored Procedures, User
+7. Views
+8. Normalização
+9. Indexação e optimização
+10. Programação em SQL (Batch, Script, Cursores, Stored Procedures, User
 Defined Functions e Triggers)
 10. Transações, Controlo de Concorrência e Recuperação de Falhas
 11. Segurança em Base de Dados
