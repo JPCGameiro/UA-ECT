@@ -1,0 +1,100 @@
+
+
+1) Usar máquina virtual de AC com asterisk e bind9
+
+2) Pré-requisitos
+	-> sudo apt-get install libcurl4-gnutls-dev
+	-> sudo apt-get install bison
+	-> sudo apt-get install curl
+	-> sudo apt-get install debhelper cdbs lintian build-essential
+	-> sudo apt-get install devscripts pbuilder dh-make debootstrap dpatch flex
+	-> sudo apt-get install libxml2-dev libmysqlclient15-dev ant docbook-to-man
+	-> sudo apt-get install ipsec-tools
+	-> sudo apt-get install subversion
+	-> sudo apt-get install mysql-server-5.5
+	-> sudo apt-get install openjdk-7-jre
+	-> sudo apt-get install openjdk-7-jdk
+
+3) OpenIMS - Source Code
+	-> sudo mkdir /opt/OpenIMSCore
+	-> cd /opt/OpenIMSCore
+	-> sudo mkdir ser_ims
+	-> sudo svn checkout https://svn.code.sf.net/p/openimscore/code/ser_ims/trunk ser_ims
+	-> sudo mkdir FHoSS
+	-> sudo svn checkout https://svn.code.sf.net/p/openimscore/code/FHoSS/trunk FHoSS
+
+4) OpenIMS - Compilar
+	-> cd ser_ims
+	-> sudo make install-libs all
+	-> cd ..
+
+	-> cd FHoSS
+	-> sudo ant compile
+	-> sudo ant deploy
+	-> cd ..
+
+5) Configurar DNS
+	-> sudo cp /opt/OpenIMSCore/ser_ims/cfg/open-ims.dnszone /etc/bind/
+	-> sudo vim /etc/bind/named.conf.local
+		-> Colocar lá
+			zone "open-ims.test"{
+				type master;
+				file "/etc/bind/open-ims.dnszone";
+			};
+
+	-> sudo vim /etc/resolv.conf
+	-> Se tiver lá algum nameserver <ip qualquer> meter EM CIMA desse comando
+		nameserver 127.0.0.1
+		search open-ims.test
+		doamin open-ims.test
+	-> sudo systemctl restart bind9
+	-> tentar ping pcscf.open-ims.test ou scscf.open-ims.test ou icscf.open-ims.test
+		-> GARANTIR QUE ISTO PINGA BEM
+
+6) MYSQL
+	no diretório /opt/OpenIMSCore
+	-> mysql -u root -p -h localhost < ser_ims/cfg/icscf.sql
+	-> mysql -u root -p -h localhost < FHoSS/scripts/hss_db.sql  
+	-> mysql -u root -p -h localhost < FHoSS/scripts/userdata.sql
+	(é suposto não dar erro de sintaxe)
+
+
+7) IMS Core
+	(No diretório /opt/OpenIMSCore/)
+	-> cp ser_ims/cfg/*.cfg . 
+	-> cp ser_ims/cfg/*.xml . 
+	-> cp ser_ims/cfg/*.sh .
+
+8) Correr
+	-> sudo ./pcscf.sh
+	-> sudo ./scscf.sh
+	-> sudo ./icscf.sh
+	-> cd FHoSS/deploy/
+	-> sudo ./startup.sh
+	
+	-> startup.sh deve ter a linha
+	(...)
+	$JAVA_HOME/usr/bin/java  -cp (...) 
+	
+	->Variável JAVA_HOME
+	export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-i386/jre 
+
+9) Alterações
+	-> descomentar modparam("scscf","registration_default_algorithm","MD5")
+	-> configurator.sh para mudar para o ip da máquina
+		-> caso configurator não mude os ips usar o seguinte comando no diretório /opt/OpenIMSCore/
+		sed -i 's/<old-ip>/<new-ip>/g' *.cfg
+		sed -i 's/<old-ip>/<new-ip>/g' *.xml
+		Garantir que o ip usado aqui é o mesmo que tá no ficheiro open-ims.dnszone e tb no resolv.conf
+
+10) Máquina Virtual
+	-> Briged Adapter (de preferência escolher a opção da placa wireless)
+	-> A VM tem de ter connectividade com o host e estar na mesma rede que o host e o telemóvel ou o outro user
+	-> DNS não é preciso (em principio)
+	-> Desligar a Firewall do Windows para deixar passar as cenas
+
+11) Registar utilizadores
+	-> MicroSIP , servidor: open-ims.test, Proxy: <ip-vm>:4060, usuário: bob@open-ims.test, Dominio: <ip-vm>, Login: bob@open-ims.test, senha: bob
+	-> MizuDROID , servidor: 192.168.1.117, Usuario: alice@open-ims.test, Senha: alice, Proxy: 192.168.1.117:4060
+
+
