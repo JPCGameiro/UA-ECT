@@ -1,0 +1,3 @@
+TESTED WITH ISSUES FOUND
+
+ocasionalmente a escrita/leitura da memória corre mal, não sendo escrito/lido valores corretos

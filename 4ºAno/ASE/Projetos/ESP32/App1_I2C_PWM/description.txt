@@ -1,0 +1,25 @@
+Descrição
+    Desenvolvimento de uma aplicação que medisse várias vezes as temperatura, se a temperatura
+    subir um led pisca (fade in/fade out), se descer o outro led pisca, se mantiver ambos os leds piscam. 
+
+Componentes utilizados:
+    Dois leds
+    Duas resistências de 270 Ohms
+    Sensor de temperatura TC74
+    ESP32
+
+
+Configurações
+    Inicialização de dois canais pwm ledc (Channel 2 (GPIO4) e Channel 3 (GPIO5)) para fade out e fade in dos leds
+    Configuração do master I2C (ESP32)
+
+
+Lógica do programa
+    Inicialização master I2C
+    Inicialização PWM LEDC
+
+    Configuração modo de operação do sensor (normal mode)
+    Leitura de um valor de temperatura
+    Configuração do mode de operação do sensor (standby mode)
+
+    Configuração de qual o led que tem de piscar

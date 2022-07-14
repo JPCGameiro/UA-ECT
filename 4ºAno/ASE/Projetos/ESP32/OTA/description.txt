@@ -1,0 +1,4 @@
+procuramos fazer um projecto funcional que fosse dar upgrade para outro projecto mas sem sucesso.
+
+acabamos por conseguir fazer um exemplo muito simples com base no simple_ota_example em que basicamente
+damos flash para a placa e esta dá upgrade de firmware para o projecto 3 uart_adc.

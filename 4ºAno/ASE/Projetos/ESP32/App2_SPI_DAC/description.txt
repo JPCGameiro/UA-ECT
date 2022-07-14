@@ -1,0 +1,29 @@
+ Descrição
+   Escrita de uma palavra na memória. Usando DAC, controlar o brilho de um LED.
+   Testar a entrada e saída no método light sleep para poupança de energia
+
+Componentes utilizados:
+    Um leds
+    Uma resistências de 270 Ohms
+    ESP32
+    Memória 25LC040A SPI EEPROM
+
+Configurações
+    Configuração do SPI master
+    Configuração do canal DAC_CHANNEL_1 
+    Configuração da wakeup source do modo light sleep
+
+
+Lógica do programa
+    Configuração do spi master
+    Escrita de uma palavra na memória
+    Leitura da palavra da memória
+
+    Configuração da wake up source do modo light sleep (timer)
+    Configuração do canal DAC_CHANNEL_1
+    
+    Enviar valores de tensão 0 a 255 para o canal DAC
+    Enviar valores de 255 a 0 para o canal DAC
+
+    Entrar em light sleep mode
+    Imprimir mensagem quando saída do modo ocorrer

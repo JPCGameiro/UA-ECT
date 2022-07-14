@@ -1,0 +1,6 @@
+Descrição:
+    Aplicação que para um certo vídeo deteta objectos presentes no vídeo
+    É utilizado um modelo pré-treinado yolov4
+
+Repositório usado:
+    https://code.nap.av.it.pt/atcll/object-detection-camera
