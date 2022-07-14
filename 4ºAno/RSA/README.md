@@ -16,5 +16,5 @@
 Slides das aulas teóricas e enunciados dos guiões práticos.
 
 ## Projeto
-Desenvolvimento, planemanento e simulação do modo de operação de uma rede veícular que permitesse controlar ocupação
+Desenvolvimento, planemanento e simulação do modo de operação de uma rede veícular que permita controlar ocupação
 de parques de estacionamento. Desenvolvido com Marco Ramos.
