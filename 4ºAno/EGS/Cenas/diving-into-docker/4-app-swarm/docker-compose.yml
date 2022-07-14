@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+    app:
+        image: cherrypy_app
+        build:
+            context: .
+            dockerfile: Dockerfile.app
+        volumes:
+            - www:/app/www
+        deploy:
+           replicas: 5
+    nginx:
+        image: nginx-proxy
+        build:
+            context: .
+            dockerfile: Dockerfile.nginx
+        ports:
+            - 80:80
+
+volumes:
+    www:
