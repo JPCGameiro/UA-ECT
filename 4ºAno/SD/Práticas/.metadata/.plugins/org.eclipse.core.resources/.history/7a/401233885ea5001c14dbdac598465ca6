@@ -1,0 +1,21 @@
+package ex2Hanoi;
+
+/**
+ * @author joao
+ */
+public class Hanoi {
+
+	public static void main(String[] args) {
+		
+		Stack s = new Stack(4, 'a');
+		s.push(1);
+		s.push(2);
+		s.push(3);
+		System.out.println(s.peek());
+		/*TorresHanoi t = new TorresHanoi(4);
+		System.out.println(t.toString());
+		t.resolv();		
+		System.out.println(t.toString());*/
+	}
+
+}

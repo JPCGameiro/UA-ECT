@@ -1,0 +1,103 @@
+package ex2Hanoi;
+
+import java.util.Arrays;
+
+/**
+ * @author joao
+ */
+public class TorresHanoi {
+	
+	/**
+	 * Array of towers (3 towers)
+	 */
+	private Stack [] towers;
+	/**
+	 * Number of disks
+	 */
+	private int nDisks;
+	
+	
+	
+	/**
+	 * Class constructor
+	 * @param n number of disks
+	 */
+	public TorresHanoi(int n) {
+		this.nDisks = n;
+		this.towers = new Stack[3];
+		char aux = 'A';
+		
+		//Initialize towers
+		for(int i=0; i < 3; i++) {
+			towers[i] = new Stack(n, aux);
+			aux++;
+		}
+		
+		//Insert disks in the first tower
+		for(int i = n; i > 0; i--) {
+			towers[0].push(i);
+		}
+	}
+
+	
+	/**
+	 * Move disk from one tower to another 
+	 * @param towerOrigin Origin tower
+	 * @param towerDestiny Destiny tower
+	 */
+	public void moveDisk(Stack towerOrigin, Stack towerDestiny) {
+		int origin = towerOrigin.peek();
+		int destin = towerDestiny.peek();
+		
+		if(origin < destin) {
+			towerDestiny.push(towerOrigin.pop());
+			System.out.println("Move disk "+origin+" from tower "+towerOrigin.getId()+" to "+towerDestiny.getId());	
+		}
+		else {
+			System.out.println("ERROR: Invalid move of disk "+origin+" to tower "+towerDestiny.getId());
+			System.exit(0);
+		}
+	}
+	
+	
+	/**
+	 * Move n disks from one tower to another
+	 * @param n number of disks
+	 * @param towerOrigin origin tower
+	 * @param towerDestiny destiny tower
+	 * @param towerAux auxiliary tower
+	 */
+	public void moverNDisks(int n, Stack towerOrigin, Stack towerDestiny, Stack towerAux) {
+		System.out.println("Here");
+		if(n == 1) {
+			System.out.println(towrOrigin.getId());
+			moveDisk(towerOrigin, towerDestiny);
+		}
+		moverNDisks(n-1, towerOrigin, towerAux, towerDestiny);
+		moveDisk(towerOrigin, towerDestiny);
+		//moverNDisks(n-1, towerAux, towerDestiny, towerOrigin);
+	}
+
+	/**
+	 * Resolv the hanoi tower problem
+	 */
+	public void resolv() {
+		moverNDisks(nDisks, towers[0], towers[2], towers[1]);
+	}
+	
+	
+	@Override
+	public String toString() {
+		String s = "";
+		for(int i=0; i < 3; i++) {
+			s+= ("Tower "+towers[i].getId()+": "+towers[i].toString()+"\n");
+		}
+		return s;
+	}
+	
+	
+	
+	
+	
+	
+}

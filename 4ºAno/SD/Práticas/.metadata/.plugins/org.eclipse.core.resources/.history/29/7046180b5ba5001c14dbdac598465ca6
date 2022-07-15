@@ -1,0 +1,15 @@
+package ex2Hanoi;
+
+/**
+ * @author joao
+ */
+public class Hanoi {
+
+	public static void main(String[] args) {
+		
+		TorresHanoi t = new TorresHanoi(4);
+		t.resolv();		
+		System.out.println(t.toString());
+	}
+
+}

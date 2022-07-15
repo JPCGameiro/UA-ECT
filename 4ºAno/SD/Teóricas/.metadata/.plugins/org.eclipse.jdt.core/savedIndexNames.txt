@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+/home/joao/Documents/Universidade/4ºAno/SD/Teóricas/.metadata/.plugins/org.eclipse.jdt.core
+646308851.index
+2386779788.index
+2805975171.index
+3076178380.index

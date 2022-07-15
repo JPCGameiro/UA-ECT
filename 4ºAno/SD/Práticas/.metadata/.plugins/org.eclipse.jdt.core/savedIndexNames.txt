@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+/home/joao/Documents/Universidade/4ºAno/SD/Práticas/.metadata/.plugins/org.eclipse.jdt.core
+699628217.index
+646308851.index
