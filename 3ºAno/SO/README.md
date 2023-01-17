@@ -10,4 +10,4 @@ Slides das aulas teóricas e resolução dos guiões práticos sobre programaç�
 ## Projeto
 Desenvolvimento de um conjunto de funções que implementam componentes de um sistema de ficheiros (sofs20).
 
-Projeto desenvolvido com Gabriel Ribeiro, João Martins, João Figueiredo, Marco Ramos e Miguel Nogueira.
+Projeto desenvolvido com [Gabriel Ribeiro](https://github.com/GabeRibeiro), [João Martins](https://github.com/jfngsea), [João Figueiredo](https://github.com/jedu37), [Marco Ramos](https://github.com/MarcoASRamos) e [Miguel Nogueira](https://github.com/miguelnogueira1234).

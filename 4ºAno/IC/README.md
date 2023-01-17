@@ -23,5 +23,5 @@ Slides e notas das aulas teóricas fornecidas pelo professor.
   * Desenvolvimento de um modelo de contextos finitos, e sua aplicação na deteção de linguagens.
   * Projeto: https://github.com/Torrakanor611/IC_project3
   
-Projetos desenvolvidos com Ana Filipe e Pedro Abreu.
+Projetos desenvolvidos com [Ana Filipe](https://github.com/AnaaFilipe) e [Pedro Abreu](https://github.com/Torrakanor611).
 

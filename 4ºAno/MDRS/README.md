@@ -26,4 +26,4 @@ Slides das aulas teóricas, enunciados e soluções dos guiões práticos (podem
 * Mini-Projeto 2
   * Engenharia de tráfego em redes de telecomunicações. Contém código MATLAB e relatório.
 
-Ambos desenvolvidos com Pedro Abreu.
+Ambos desenvolvidos com [Pedro Abreu](https://github.com/Torrakanor611).

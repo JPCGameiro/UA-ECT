@@ -10,5 +10,5 @@ Micro-site do projeto: https://kiua-pei.github.io/KIUA_microsite/
 Repositórios do projeto: https://github.com/KIUA-PEI
 
 
-Projeto desenvolvido com Alexandre Oliveira, Gabriel Ribeiro, Marco Ramos, Miguel Nogueira e Pedro Abreu.
-  
+Projeto desenvolvido com [Alexandre Oliveira](https://github.com/AlexOliZ), [Gabriel Ribeiro](https://github.com/GabeRibeiro), [Marco Ramos](https://github.com/MarcoASRamos), [Miguel Nogueira](https://github.com/miguelnogueira1234) e [Pedro Abreu](https://github.com/Torrakanor611).
+

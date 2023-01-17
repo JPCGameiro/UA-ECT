@@ -21,4 +21,4 @@ O projeto inclui
   * Ficheiros com exemplos que ilustram a utilização de ambas as linguagens;
   * Relatório que inclui a descrição das linguagens e modo de utilização das mesmas.
 
-Projeto desenvolvido com Alexandre Tomás, Ana Filipe, Gabriel Ribeiro e Pedro Abreu.
+Projeto desenvolvido com [Alexandre Oliveira](https://github.com/AlexOliZ), [Ana Filipe](https://github.com/AnaaFilipe), [Gabriel Ribeiro](https://github.com/GabeRibeiro) e [Pedro Abreu](https://github.com/Torrakanor611).

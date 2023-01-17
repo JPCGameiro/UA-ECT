@@ -21,4 +21,4 @@ Diretórios com o código/relatório desenvolvido e respectivo enunciado dos doi
 * Projeto Final
   * Desenvolvimento de uma calculadora com memória.
 
-Ambos desenvolvidos com Pedro Pereira.
+Ambos desenvolvidos com [Pedro Pereira](https://github.com/pedrocjdpereira)

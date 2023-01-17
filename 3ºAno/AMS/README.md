@@ -13,4 +13,4 @@ Análise e especificação de um sistema de informação aplicando métodos de a
 * Slides relativos às apresentações que foram feitas;
 * Aplicação Web desenvolvida que representa o sistema de informação identificado.
 
-Desenvolvido com João Oliveira, João Martins e Marco Ramos.
+Desenvolvido com [João Oliveira](https://github.com/JoaoRes), [João Martins](https://github.com/jfngsea) e [Marco Ramos](https://github.com/MarcoASRamos).

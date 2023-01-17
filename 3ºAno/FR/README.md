@@ -17,4 +17,4 @@ Planeamento e implementação de uma pequena rede empresarial no simulador GNS3.
 Criação de uma aplicação cliente-servidor TCP em que múltiplos clientes notificam 
 um servidor da sua percentagem de utilização de CPU e memória.
 
-Desenvolvido com Marco Ramos.
+Desenvolvido com [Marco Ramos](https://github.com/MarcoASRamos).

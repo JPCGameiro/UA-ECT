@@ -30,4 +30,4 @@ Slides das aulas teóricas e enunciados dos guiões práticos.
 
 ## Projeto
 Planeamento, desenho e implementação de uma rede empresarial completa no simulador GNS3.
-Desenvolvido com Marco Ramos.
+Desenvolvido com [Marco Ramos](https://github.com/MarcoASRamos).

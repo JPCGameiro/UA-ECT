@@ -24,4 +24,4 @@ Desenvolvimento de uma base de dados para gestão de eventos associados a uma sa
 * Interface desenvolvida em C#;
 * Relatórios descritores (1ª e 2ª entrega).
 
-Desenvolvido com Pedro Abreu.
+Desenvolvido com [Pedro Abreu](https://github.com/Torrakanor611).

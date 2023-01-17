@@ -21,4 +21,4 @@ Slides das aulas teóricas, enunciados e soluções dos guiões práticos.
 * Projeto 2
   * Optimização de uma grelha de lançamento de threads de um programa em CUDA que implementa uma tarefa computacionalmente exigente.
 
-Ambos desenvolvidos com Pedro Abreu.
+Ambos desenvolvidos com [Pedro Abreu](https://github.com/Torrakanor611)

@@ -28,4 +28,4 @@ Slides das aulas teóricas. Código fornecido pelo professor de auxilio ao desen
 * Projeto 3
   * Desenvolvimento de uma solução distribuida baseada na invocação de métodos remotos (com JavaRMI).   
 
-Todos os projetos foram desenvolvidos com Pedro Abreu.
+Todos os projetos foram desenvolvidos com [Pedro Abreu](https://github.com/Torrakanor611).

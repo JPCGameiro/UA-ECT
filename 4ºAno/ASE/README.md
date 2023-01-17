@@ -15,4 +15,4 @@ Slides e relatórios foram desenvolvidos com Pedro Abreu.
 * NVIDIA Jetson Nano - deteção de objetos usando TensorRT e yolov4 
 
 Grande parte do código desenvolvido para estes projetos foi retirado da internet. Em cada projeto está devidamente identificado o seu autor (links no código em comentário ou referências presentes nos slides das apresentações). 
-Todos os projetos foram desenvolvidos com Pedro Abreu.
+Todos os projetos foram desenvolvidos com [Pedro Abreu](https://github.com/Torrakanor611).

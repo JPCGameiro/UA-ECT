@@ -16,4 +16,4 @@ Aplicação que demonstra a utilização conjunta de:
  * Deteção de itens similares (MinHash);
  * Deteção de pertença a um conjunto (BloomFilter).
 
-Projeto desenvolvido com Marco Ramos.
+Projeto desenvolvido com [Marco Ramos](https://github.com/MarcoASRamos).

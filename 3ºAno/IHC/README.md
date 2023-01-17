@@ -41,4 +41,4 @@ que representa uma rede social para músicos, donos de estabelecimentos e outros
 * Relatório com descrição dos testes de usabilidade feitos e seus resultados;
 * Slides das duas apresentações do projeto.
 
-Desenvolvido com Pedro Abreu e Juan Lessa. 
+Desenvolvido com [Pedro Abreu](https://github.com/Torrakanor611) e [Juan Lessa](https://github.com/juanlessa). 

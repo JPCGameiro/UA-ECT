@@ -15,4 +15,4 @@ Slides das aulas teóricas e enunciados dos guiões práticos.
 Instanciação dos componentes que permitem implementar um core IMS (P-CSCF, I-CSCF, S-CSCF e HSS). Instanciação de configurações
 que permitiram fazer uma chamada SIP. Contém apresentação, relatório e capturas de pacotes da chamada SIP.
 
-Desenvolvido com Pedro Abreu.
+Desenvolvido com [Pedro Abreu](https://github.com/Torrakanor611).
